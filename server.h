@@ -1,0 +1,32 @@
+#ifndef YADI_SERVER_H
+#define YADI_SERVER_H
+#include <iostream>
+#include <string.h>
+
+
+namespace yadi
+{
+class Server
+{
+private:
+    char ip[64];
+    char cliip[64];
+    int port;
+    int cliport;
+    char logPrefix[64];
+    char logBuffer[256];
+    int servSockfd;
+
+private:
+    
+
+public:
+    Server(char *tip,int tport,char *tlogPrefix="log"):port(tport){
+        strncpy(ip,tip,63);
+        strncpy(logPrefix,tlogPrefix,63);
+    }
+    bool run();
+};
+}
+
+#endif //YADI_SERVER_H

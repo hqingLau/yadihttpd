@@ -1,0 +1,19 @@
+2021-07-30 14-17-35 INFO main.cpp(6)-<main> start main function
+2021-07-30 14-17-35 INFO server.cpp(42)-<run> localhost:10240 waiting for request...
+2021-07-30 14-17-58 INFO server.cpp(58)-<run> 127.0.0.1:39160 connected
+2021-07-30 14-18-17 INFO server.cpp(58)-<run> 127.0.0.1:39164 connected
+2021-07-30 14-22-31 INFO server.cpp(58)-<run> 127.0.0.1:39174 connected
+2021-07-30 14-22-31 INFO server.cpp(58)-<run> 127.0.0.1:39176 connected
+2021-07-30 14-22-31 INFO server.cpp(58)-<run> 127.0.0.1:39178 connected
+2021-07-30 14-22-32 INFO server.cpp(58)-<run> 127.0.0.1:39180 connected
+2021-07-30 14-22-32 INFO server.cpp(58)-<run> 127.0.0.1:39182 connected
+2021-07-30 14-22-32 INFO server.cpp(58)-<run> 127.0.0.1:39184 connected
+2021-07-30 14-22-37 INFO server.cpp(58)-<run> 127.0.0.1:39186 connected
+2021-07-30 14-22-37 INFO server.cpp(58)-<run> 127.0.0.1:39188 connected
+2021-07-30 14-22-37 INFO server.cpp(58)-<run> 127.0.0.1:39190 connected
+2021-07-30 14-23-07 INFO server.cpp(58)-<run> 127.0.0.1:39194 connected
+2021-07-30 14-23-07 INFO server.cpp(58)-<run> 127.0.0.1:39196 connected
+2021-07-30 14-23-07 INFO server.cpp(58)-<run> 127.0.0.1:39198 connected
+2021-07-30 14-24-07 INFO server.cpp(58)-<run> 127.0.0.1:39208 connected
+2021-07-30 14-24-07 INFO server.cpp(58)-<run> 127.0.0.1:39210 connected
+2021-07-30 14-24-07 INFO server.cpp(58)-<run> 127.0.0.1:39212 connected
