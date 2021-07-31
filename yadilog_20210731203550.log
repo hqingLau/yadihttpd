@@ -1,9 +1,0 @@
-2021-07-31 20:35:50 INFO main.cpp(6)-<main> start main function
-2021-07-31 20:35:50 INFO server.cpp(42)-<run> localhost:1024 waiting for request...
-2021-07-31 20:36:01 INFO server.cpp(58)-<run> 127.0.0.1:35166 connected
-2021-07-31 20:36:01 INFO server.cpp(78)-<run> req method: GET
-2021-07-31 20:36:01 INFO server.cpp(94)-<run> req filepath: /img/eg_tulip.jpg
-2021-07-31 20:36:01 INFO server.cpp(58)-<run> 127.0.0.1:35168 connected
-2021-07-31 20:36:01 INFO server.cpp(78)-<run> req method: GET
-2021-07-31 20:36:01 INFO server.cpp(94)-<run> req filepath: /favicon.ico
-2021-07-31 20:36:01 INFO server.cpp(101)-<run> 404 no such file.
