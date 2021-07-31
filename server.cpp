@@ -59,8 +59,67 @@ bool yadi::Server::run()
         char req_content[1024];
         int reqlen = recv(cfd,req_content,1023,0);
         req_content[reqlen] = 0;
-        printf("%s\n",req_content);
-        printf("recv done!\n");
+        
+        char head[128];
+        int ditmpi = 0;
+        while(!(req_content[ditmpi]=='\r'&&req_content[ditmpi+1]=='\n'))
+        {
+            ditmpi++;
+        }
+        strncpy(head,req_content,ditmpi);
+        head[ditmpi] = 0;
+        ditmpi = 0;
+        while(isspace(head[ditmpi])) ++ditmpi;
+        int ditmpj = ditmpi;
+        while(!isspace(head[ditmpi])) ++ditmpi;
+        strncpy(method,&head[ditmpj],ditmpi-ditmpj);
+        method[ditmpi-ditmpj] = 0;
+        sprintf(logBuffer,"req method: %s",method); 
+        YADILOGINFO(logBuffer); 
+        if(strncmp(method,"GET",3)!=0)
+        {
+
+            sprintf(logBuffer,"only GET method supported now! Got: %s\n",method);
+            YADILOGINFO(logBuffer); 
+            send(cfd,logBuffer,strlen(logBuffer),0);
+            shutdown(cfd,SHUT_RDWR);
+            continue;
+        }
+        while(isspace(head[ditmpi])) ++ditmpi;
+        ditmpj =ditmpi;
+        while(!isspace(head[ditmpi])) ++ditmpi;
+        strncpy(filepath,&head[ditmpj],ditmpi-ditmpj);
+        filepath[ditmpi-ditmpj] = 0;
+        sprintf(logBuffer,"req filepath: %s",filepath); 
+        YADILOGINFO(logBuffer);
+        sprintf(absoluteFilePath,"%s%s",rootdir,filepath);
+        unsigned char *fileBuffer = (unsigned char *)malloc(sizeof(unsigned char)*1024*100);
+        FILE *direqfd = fopen(absoluteFilePath,"rb");
+        if(direqfd==NULL)
+        {
+            sprintf(logBuffer,"404 no such file."); 
+            YADILOGINFO(logBuffer);
+            send(cfd,logBuffer,strlen(logBuffer),0);
+            continue;
+        }
+        size_t fileBufferlen = fread(fileBuffer,1,1024*100,direqfd);
+        printf("file buffer len: %d\n",fileBufferlen);
+        char outputhead[1024];
+        char suffix[16];
+        char * pos = strrchr(filepath,'.');
+        snprintf(suffix,15,"%s",&filepath[pos-filepath+1]);
+        printf("req type: %s\n",suffix);
+        if(strncmp(suffix,"jpg",3)==0)
+            sprintf(outputhead,"HTTP/1.1 200 OK\r\nServer:dihttpd\r\nContent-Type:image/jpeg\r\n\r\n");
+        else if(strncmp(suffix,"html",4)==0)
+            sprintf(outputhead,"HTTP/1.1 200 OK\r\nServer:dihttpd\r\nContent-Type:text/html\r\n\r\n");
+        else
+            sprintf(outputhead,"HTTP/1.1 200 OK\r\nServer:dihttpd\r\nContent-Type:text/plain\r\n\r\n");
+        send(cfd,outputhead,strlen(outputhead),0);
+        send(cfd,fileBuffer,fileBufferlen,0);
+        
+        free(fileBuffer);
+        fclose(direqfd);
         shutdown(cfd,SHUT_RDWR);
     }
     return true;

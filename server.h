@@ -15,8 +15,12 @@ private:
     int cliport;
     char logPrefix[64];
     char logBuffer[256];
+    char rootdir[64];
     int servSockfd;
-
+    char method[16];
+    char filepath[128];
+    char absoluteFilePath[256];
+    char httpversion[16];
 private:
     
 
@@ -24,6 +28,7 @@ public:
     Server(char *tip,int tport,char *tlogPrefix="log"):port(tport){
         strncpy(ip,tip,63);
         strncpy(logPrefix,tlogPrefix,63);
+        strcpy(rootdir,"/home/pi/www");
     }
     bool run();
 };

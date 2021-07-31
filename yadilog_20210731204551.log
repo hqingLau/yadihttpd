@@ -1,0 +1,12 @@
+2021-07-31 20:45:51 INFO main.cpp(6)-<main> start main function
+2021-07-31 20:45:51 INFO server.cpp(42)-<run> localhost:1024 waiting for request...
+2021-07-31 20:45:56 INFO server.cpp(58)-<run> 127.0.0.1:35262 connected
+2021-07-31 20:45:56 INFO server.cpp(78)-<run> req method: GET
+2021-07-31 20:45:56 INFO server.cpp(94)-<run> req filepath: /img/eg_tulip.jpg
+2021-07-31 20:45:56 INFO server.cpp(58)-<run> 127.0.0.1:35264 connected
+2021-07-31 20:45:57 INFO server.cpp(78)-<run> req method: GET
+2021-07-31 20:45:57 INFO server.cpp(94)-<run> req filepath: /img/eg_tulip.jpg
+2021-07-31 20:45:57 INFO server.cpp(58)-<run> 127.0.0.1:35266 connected
+2021-07-31 20:46:02 INFO server.cpp(78)-<run> req method: GET
+2021-07-31 20:46:02 INFO server.cpp(94)-<run> req filepath: /img/eg_tulip.jpg
+2021-07-31 20:46:02 INFO server.cpp(58)-<run> 127.0.0.1:35270 connected
