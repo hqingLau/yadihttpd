@@ -40,87 +40,133 @@ bool yadi::Server::run()
     sprintf(logBuffer,"%s:%d waiting for request...",ip,port);
     puts(logBuffer);
     YADILOGINFO(logBuffer);
-    sockaddr_in sacli;
-    socklen_t saclilen = sizeof(sacli);
-    int cfd;
-    while(1)
-    {
-        cfd = accept(servSockfd,(sockaddr *)&sacli,&saclilen);
-        if(cfd == -1) 
-        {
-            sprintf(logBuffer,"%s: %s","accept",strerror(errno)); 
-            YADILOGERROR(logBuffer); 
-            handle_error("accept");
-        }
-        inet_ntop(AF_INET,&sacli.sin_addr,cliip,sizeof(cliip));
-        cliport = ntohs(sacli.sin_port);
-        sprintf(logBuffer,"%s:%d connected",cliip,cliport); 
-        YADILOGINFO(logBuffer); 
-        char req_content[1024];
-        int reqlen = recv(cfd,req_content,1023,0);
-        req_content[reqlen] = 0;
-        
-        char head[128];
-        int ditmpi = 0;
-        while(!(req_content[ditmpi]=='\r'&&req_content[ditmpi+1]=='\n'))
-        {
-            ditmpi++;
-        }
-        strncpy(head,req_content,ditmpi);
-        head[ditmpi] = 0;
-        ditmpi = 0;
-        while(isspace(head[ditmpi])) ++ditmpi;
-        int ditmpj = ditmpi;
-        while(!isspace(head[ditmpi])) ++ditmpi;
-        strncpy(method,&head[ditmpj],ditmpi-ditmpj);
-        method[ditmpi-ditmpj] = 0;
-        sprintf(logBuffer,"req method: %s",method); 
-        YADILOGINFO(logBuffer); 
-        if(strncmp(method,"GET",3)!=0)
-        {
+    epoll_event ev;
+    ev.events = EPOLLIN;
+    ev.data.fd = servSockfd;
+    epoll_ctl(epollfd,EPOLL_CTL_ADD,servSockfd,&ev);
 
-            sprintf(logBuffer,"only GET method supported now! Got: %s\n",method);
-            YADILOGINFO(logBuffer); 
-            send(cfd,logBuffer,strlen(logBuffer),0);
-            shutdown(cfd,SHUT_RDWR);
-            continue;
-        }
-        while(isspace(head[ditmpi])) ++ditmpi;
-        ditmpj =ditmpi;
-        while(!isspace(head[ditmpi])) ++ditmpi;
-        strncpy(filepath,&head[ditmpj],ditmpi-ditmpj);
-        filepath[ditmpi-ditmpj] = 0;
-        sprintf(logBuffer,"req filepath: %s",filepath); 
-        YADILOGINFO(logBuffer);
-        sprintf(absoluteFilePath,"%s%s",rootdir,filepath);
-        unsigned char *fileBuffer = (unsigned char *)malloc(sizeof(unsigned char)*1024*100);
-        FILE *direqfd = fopen(absoluteFilePath,"rb");
-        if(direqfd==NULL)
+    int readyFdNum;
+    int curfd;
+    for(;;)
+    {
+        readyFdNum = epoll_wait(epollfd,srvEvents,epollEvNum,-1);
+        for(int i=0;i<readyFdNum;i++)
         {
-            sprintf(logBuffer,"404 no such file."); 
+            curfd = srvEvents[i].data.fd;
+            if(curfd==servSockfd)
+            {
+                sockaddr_in sacli;
+                socklen_t saclilen = sizeof(sacli);
+                int cfd;
+                cfd = accept(servSockfd,(sockaddr *)&sacli,&saclilen);
+                if(cfd == -1) 
+                {
+                    if(errno==EAGAIN||errno==EWOULDBLOCK) continue;
+                    sprintf(logBuffer,"%s: %s","accept",strerror(errno)); 
+                    YADILOGERROR(logBuffer); 
+                    continue;
+                }
+                ClientInfo *cliinfo = (ClientInfo *)malloc(sizeof(ClientInfo));
+                inet_ntop(AF_INET,&sacli.sin_addr,cliinfo->cliip,sizeof(cliinfo->cliip));
+                cliinfo->cliport = ntohs(sacli.sin_port);
+                cliinfo->cfd = cfd;
+                sprintf(logBuffer,"%s:%d connected",cliinfo->cliip,cliinfo->cliport); 
+                YADILOGINFO(logBuffer); 
+                epoll_event ev;
+                ev.events = EPOLLIN;
+                ev.data.fd = cfd;
+                epoll_ctl(epollfd,EPOLL_CTL_ADD,cfd,&ev);
+                climap[cfd] = cliinfo;
+                continue;
+            }
+            //char req_content[1024];
+            //int cur_req_content;
+            // printf("cfd pollin\n");
+            if(climap.find(curfd)==climap.end()) continue;
+            ClientInfo *cliinfo = climap[curfd];
+            int reqlen = recv(curfd,cliinfo->req_content,1023,0);
+            cliinfo->req_content[reqlen] = 0;
+            
+            char head[128];
+            int ditmpi = 0;
+            while(!(cliinfo->req_content[ditmpi]=='\r'&&cliinfo->req_content[ditmpi+1]=='\n'))
+            {
+                ditmpi++;
+            }
+            cliinfo->cur_req_content = ditmpi+2;
+            strncpy(head,cliinfo->req_content,ditmpi);
+            head[ditmpi] = 0;
+            ditmpi = 0;
+            while(isspace(head[ditmpi])) ++ditmpi;
+            int ditmpj = ditmpi;
+            while(!isspace(head[ditmpi])) ++ditmpi;
+            strncpy(cliinfo->method,&head[ditmpj],ditmpi-ditmpj);
+            cliinfo->method[ditmpi-ditmpj] = 0;
+            sprintf(logBuffer,"%s:%d req method: %s",cliinfo->cliip,cliinfo->cliport,cliinfo->method); 
+            YADILOGINFO(logBuffer); 
+            if(strncmp(cliinfo->method,"GET",3)!=0)
+            {
+
+                sprintf(logBuffer,"%s:%d only GET method supported now! Got: %s\n",cliinfo->cliip,cliinfo->cliport,cliinfo->method);
+                YADILOGINFO(logBuffer); 
+                send(cliinfo->cfd,logBuffer,strlen(logBuffer),0);
+                shutdown(cliinfo->cfd,SHUT_RDWR);
+                continue;
+            }
+            while(isspace(head[ditmpi])) ++ditmpi;
+            ditmpj =ditmpi;
+            while(!isspace(head[ditmpi])) ++ditmpi;
+            strncpy(cliinfo->filepath,&head[ditmpj],ditmpi-ditmpj);
+            cliinfo->filepath[ditmpi-ditmpj] = 0;
+            sprintf(logBuffer,"%s:%d req filepath: %s",cliinfo->cliip,cliinfo->cliport,cliinfo->filepath); 
             YADILOGINFO(logBuffer);
-            send(cfd,logBuffer,strlen(logBuffer),0);
-            continue;
+            sprintf(cliinfo->absoluteFilePath,"%s%s",rootdir,cliinfo->filepath);
+            unsigned char *fileBuffer = (unsigned char *)malloc(sizeof(unsigned char)*1024*100);
+            FILE *direqfd = fopen(cliinfo->absoluteFilePath,"rb");
+            if(direqfd==NULL)
+            {
+                sprintf(logBuffer,"%s:%d 404 no such file.",cliinfo->cliip,cliinfo->cliport); 
+                YADILOGINFO(logBuffer);
+                send(cliinfo->cfd,logBuffer,strlen(logBuffer),0);
+                // method1: 直接关闭链接，有点生硬
+                shutdown(cliinfo->cfd,SHUT_RDWR);
+                sprintf(logBuffer,"%s:%d closed",cliinfo->cliip,cliinfo->cliport); 
+                free(climap[cliinfo->cfd]);
+                climap.erase(cliinfo->cfd);
+                epoll_ctl(epollfd,EPOLL_CTL_DEL,curfd,NULL);
+                YADILOGINFO(logBuffer); 
+                continue;
+            }
+            size_t fileBufferlen = fread(fileBuffer,1,1024*100,direqfd);
+            printf("file buffer len: %d\n",fileBufferlen);
+            char outputhead[1024];
+            char suffix[16];
+            char * pos = strrchr(cliinfo->filepath,'.');
+            snprintf(suffix,15,"%s",&cliinfo->filepath[pos-cliinfo->filepath+1]);
+            printf("req type: %s\n",suffix);
+            if(strncmp(suffix,"jpg",3)==0)
+                sprintf(outputhead,"HTTP/1.1 200 OK\r\nServer:dihttpd\r\nContent-Type:image/jpeg\r\n\r\n");
+            else if(strncmp(suffix,"html",4)==0)
+                sprintf(outputhead,"HTTP/1.1 200 OK\r\nServer:dihttpd\r\nContent-Type:text/html\r\n\r\n");
+            else
+                sprintf(outputhead,"HTTP/1.1 200 OK\r\nServer:dihttpd\r\nContent-Type:text/plain\r\n\r\n");
+            send(cliinfo->cfd,outputhead,strlen(outputhead),0);
+            send(cliinfo->cfd,fileBuffer,fileBufferlen,0);
+            
+            free(fileBuffer);
+            fclose(direqfd);
+
+            // method1: 直接关闭链接，有点生硬
+            shutdown(cliinfo->cfd,SHUT_RDWR);
+            sprintf(logBuffer,"%s:%d closed",cliinfo->cliip,cliinfo->cliport); 
+            free(climap[cliinfo->cfd]);
+            climap.erase(cliinfo->cfd);
+            epoll_ctl(epollfd,EPOLL_CTL_DEL,curfd,NULL);
+            YADILOGINFO(logBuffer); 
+
+            // method2： 等10s没有请求再关
+            // todo
         }
-        size_t fileBufferlen = fread(fileBuffer,1,1024*100,direqfd);
-        printf("file buffer len: %d\n",fileBufferlen);
-        char outputhead[1024];
-        char suffix[16];
-        char * pos = strrchr(filepath,'.');
-        snprintf(suffix,15,"%s",&filepath[pos-filepath+1]);
-        printf("req type: %s\n",suffix);
-        if(strncmp(suffix,"jpg",3)==0)
-            sprintf(outputhead,"HTTP/1.1 200 OK\r\nServer:dihttpd\r\nContent-Type:image/jpeg\r\n\r\n");
-        else if(strncmp(suffix,"html",4)==0)
-            sprintf(outputhead,"HTTP/1.1 200 OK\r\nServer:dihttpd\r\nContent-Type:text/html\r\n\r\n");
-        else
-            sprintf(outputhead,"HTTP/1.1 200 OK\r\nServer:dihttpd\r\nContent-Type:text/plain\r\n\r\n");
-        send(cfd,outputhead,strlen(outputhead),0);
-        send(cfd,fileBuffer,fileBufferlen,0);
-        
-        free(fileBuffer);
-        fclose(direqfd);
-        shutdown(cfd,SHUT_RDWR);
     }
     return true;
 }
