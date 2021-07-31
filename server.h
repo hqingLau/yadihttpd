@@ -20,6 +20,7 @@ struct ClientInfo
     char filepath[128];
     char absoluteFilePath[256];
     char httpversion[16];
+    int tfd;
 };
 class Server
 {
@@ -31,6 +32,7 @@ private:
     char rootdir[64];
     int servSockfd;
     map<int,ClientInfo *> climap; // cfd->cline struct
+    map<int,int> tfd2cfd; //tfd->cfd 定时用，超过时间断开链接
     int epollfd;
     int epollEvNum;
     epoll_event *srvEvents;

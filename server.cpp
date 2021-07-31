@@ -4,6 +4,7 @@
 #include <sys/types.h>
 #include <string.h>
 #include <sys/socket.h>
+#include <sys/timerfd.h>
 #include <arpa/inet.h>
 
 
@@ -72,19 +73,64 @@ bool yadi::Server::run()
                 cliinfo->cfd = cfd;
                 sprintf(logBuffer,"%s:%d connected",cliinfo->cliip,cliinfo->cliport); 
                 YADILOGINFO(logBuffer); 
+                printf("%s\n",logBuffer);
                 epoll_event ev;
                 ev.events = EPOLLIN;
                 ev.data.fd = cfd;
                 epoll_ctl(epollfd,EPOLL_CTL_ADD,cfd,&ev);
+                int tfd = timerfd_create(CLOCK_MONOTONIC,0);
+                itimerspec time_intv;
+                time_intv.it_value.tv_sec = 3;
+                time_intv.it_value.tv_nsec = 0;
+                timerfd_settime(tfd,0,&time_intv,NULL);
+                ev.data.fd = tfd;
+                epoll_ctl(epollfd,EPOLL_CTL_ADD,tfd,&ev);
+                tfd2cfd[tfd] = cfd;
                 climap[cfd] = cliinfo;
                 continue;
             }
             //char req_content[1024];
             //int cur_req_content;
             // printf("cfd pollin\n");
+
+            // 如是时间fd,说明超时了，服务器主动断开链接,客户端可能已经挂了
+            // 清除缓存
+            if(tfd2cfd.find(curfd)!=tfd2cfd.end())
+            {
+                ClientInfo *cliinfo = climap[tfd2cfd[curfd]];
+                if(cliinfo==NULL) continue;
+                shutdown(cliinfo->cfd,SHUT_RDWR);
+                sprintf(logBuffer,"%s:%d timeout server closed",cliinfo->cliip,cliinfo->cliport); 
+                free(climap[cliinfo->cfd]);
+                auto iterclimap = climap.find(cliinfo->cfd);
+                if(iterclimap!=climap.end()) climap.erase(iterclimap);
+                auto itertfdmap = tfd2cfd.find(cliinfo->tfd);
+                if(itertfdmap!=tfd2cfd.end()) tfd2cfd.erase(itertfdmap);
+                epoll_ctl(epollfd,EPOLL_CTL_DEL,curfd,NULL);
+                epoll_ctl(epollfd,EPOLL_CTL_DEL,cliinfo->tfd,NULL);
+                YADILOGINFO(logBuffer); 
+                continue;
+            }
             if(climap.find(curfd)==climap.end()) continue;
             ClientInfo *cliinfo = climap[curfd];
             int reqlen = recv(curfd,cliinfo->req_content,1023,0);
+            if(reqlen==-1||reqlen==0)
+            {
+                if(reqlen==-1&&(errno==EAGAIN||errno==EWOULDBLOCK))
+                    continue;
+                // method2: 对方关闭链接
+                // shutdown(cliinfo->cfd,SHUT_RDWR);
+                sprintf(logBuffer,"%s:%d client closed",cliinfo->cliip,cliinfo->cliport); 
+                free(climap[cliinfo->cfd]);
+                auto iterclimap = climap.find(cliinfo->cfd);
+                if(iterclimap!=climap.end()) climap.erase(iterclimap);
+                auto itertfdmap = tfd2cfd.find(cliinfo->tfd);
+                if(itertfdmap!=tfd2cfd.end()) tfd2cfd.erase(itertfdmap);
+                epoll_ctl(epollfd,EPOLL_CTL_DEL,curfd,NULL);
+                epoll_ctl(epollfd,EPOLL_CTL_DEL,cliinfo->tfd,NULL);
+                YADILOGINFO(logBuffer); 
+                continue;
+            }
             cliinfo->req_content[reqlen] = 0;
             
             char head[128];
@@ -123,27 +169,23 @@ bool yadi::Server::run()
             sprintf(cliinfo->absoluteFilePath,"%s%s",rootdir,cliinfo->filepath);
             unsigned char *fileBuffer = (unsigned char *)malloc(sizeof(unsigned char)*1024*100);
             FILE *direqfd = fopen(cliinfo->absoluteFilePath,"rb");
+            char outputhead[1024];
+            char suffix[16];
             if(direqfd==NULL)
             {
                 sprintf(logBuffer,"%s:%d 404 no such file.",cliinfo->cliip,cliinfo->cliport); 
                 YADILOGINFO(logBuffer);
+                sprintf(outputhead,"HTTP/1.1 404 not found\r\nServer:dihttpd\r\nContent-Type:text/plain\r\n\r\n");
+                send(cliinfo->cfd,outputhead,strlen(outputhead),0);
                 send(cliinfo->cfd,logBuffer,strlen(logBuffer),0);
-                // method1: 直接关闭链接，有点生硬
                 shutdown(cliinfo->cfd,SHUT_RDWR);
-                sprintf(logBuffer,"%s:%d closed",cliinfo->cliip,cliinfo->cliport); 
-                free(climap[cliinfo->cfd]);
-                climap.erase(cliinfo->cfd);
-                epoll_ctl(epollfd,EPOLL_CTL_DEL,curfd,NULL);
-                YADILOGINFO(logBuffer); 
                 continue;
             }
             size_t fileBufferlen = fread(fileBuffer,1,1024*100,direqfd);
-            printf("file buffer len: %d\n",fileBufferlen);
-            char outputhead[1024];
-            char suffix[16];
+            // printf("file buffer len: %d\n",fileBufferlen);
             char * pos = strrchr(cliinfo->filepath,'.');
             snprintf(suffix,15,"%s",&cliinfo->filepath[pos-cliinfo->filepath+1]);
-            printf("req type: %s\n",suffix);
+            // printf("req type: %s\n",suffix);
             if(strncmp(suffix,"jpg",3)==0)
                 sprintf(outputhead,"HTTP/1.1 200 OK\r\nServer:dihttpd\r\nContent-Type:image/jpeg\r\n\r\n");
             else if(strncmp(suffix,"html",4)==0)
@@ -155,17 +197,7 @@ bool yadi::Server::run()
             
             free(fileBuffer);
             fclose(direqfd);
-
-            // method1: 直接关闭链接，有点生硬
             shutdown(cliinfo->cfd,SHUT_RDWR);
-            sprintf(logBuffer,"%s:%d closed",cliinfo->cliip,cliinfo->cliport); 
-            free(climap[cliinfo->cfd]);
-            climap.erase(cliinfo->cfd);
-            epoll_ctl(epollfd,EPOLL_CTL_DEL,curfd,NULL);
-            YADILOGINFO(logBuffer); 
-
-            // method2： 等10s没有请求再关
-            // todo
         }
     }
     return true;
