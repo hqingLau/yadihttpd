@@ -12,15 +12,19 @@ struct ClientInfo
 {
     // cli info
     int cfd;
+    FILE *fp;
     char req_content[1024];
     int cur_req_content;
     char cliip[64];
     int cliport;
     char method[16];
+    ssize_t fileBytesSent;
+    int fileSize;
     char filepath[128];
     char absoluteFilePath[256];
     char httpversion[16];
     int tfd;
+    unsigned char fileBuffer[1024*64];
 };
 class Server
 {
