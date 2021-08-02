@@ -61,61 +61,16 @@ bool yadi::Server::run()
             {
                 if(curfd==servSockfd)
                 {
-                    sockaddr_in sacli;
-                    socklen_t saclilen = sizeof(sacli);
-                    int cfd;
-                    cfd = accept(servSockfd,(sockaddr *)&sacli,&saclilen);
-                    if(cfd == -1) 
-                    {
-                        if(errno==EAGAIN||errno==EWOULDBLOCK) continue;
-                        sprintf(logBuffer,"%s: %s","accept",strerror(errno)); 
-                        YADILOGERROR(logBuffer); 
-                        continue;
-                    }
-                    ClientInfo *cliinfo = (ClientInfo *)malloc(sizeof(ClientInfo));
-                    inet_ntop(AF_INET,&sacli.sin_addr,cliinfo->cliip,sizeof(cliinfo->cliip));
-                    cliinfo->cliport = ntohs(sacli.sin_port);
-                    cliinfo->cfd = cfd;
-                    cliinfo->fileBytesSent = 0;
-                    sprintf(logBuffer,"%s:%d connected",cliinfo->cliip,cliinfo->cliport); 
-                    YADILOGINFO(logBuffer); 
-                    printf("%s\n",logBuffer);
-                    epoll_event ev;
-                    ev.events = EPOLLIN;
-                    ev.data.fd = cfd;
-                    setNonblock(cfd);
-                    epoll_ctl(epollfd,EPOLL_CTL_ADD,cfd,&ev);
-                    int tfd = timerfd_create(CLOCK_MONOTONIC,0);
-                    itimerspec time_intv;
-                    time_intv.it_value.tv_sec = 30;
-                    time_intv.it_value.tv_nsec = 0;
-                    timerfd_settime(tfd,0,&time_intv,NULL);
-                    ev.data.fd = tfd;
-                    epoll_ctl(epollfd,EPOLL_CTL_ADD,tfd,&ev);
-                    tfd2cfd[tfd] = cfd;
-                    climap[cfd] = cliinfo;
+                    handAccept();
                     continue;
                 }
-                //char req_content[1024];
-                //int cur_req_content;
-                // printf("cfd pollin\n");
+
 
                 // 如是时间fd,说明超时了，服务器主动断开链接,客户端可能已经挂了
                 // 清除缓存
                 if(tfd2cfd.find(curfd)!=tfd2cfd.end())
                 {
-                    ClientInfo *cliinfo = climap[tfd2cfd[curfd]];
-                    if(cliinfo==NULL) continue;
-                    shutdown(cliinfo->cfd,SHUT_RDWR);
-                    sprintf(logBuffer,"%s:%d timeout server closed",cliinfo->cliip,cliinfo->cliport); 
-                    free(climap[cliinfo->cfd]);
-                    auto iterclimap = climap.find(cliinfo->cfd);
-                    if(iterclimap!=climap.end()) climap.erase(iterclimap);
-                    auto itertfdmap = tfd2cfd.find(cliinfo->tfd);
-                    if(itertfdmap!=tfd2cfd.end()) tfd2cfd.erase(itertfdmap);
-                    epoll_ctl(epollfd,EPOLL_CTL_DEL,curfd,NULL);
-                    epoll_ctl(epollfd,EPOLL_CTL_DEL,cliinfo->tfd,NULL);
-                    YADILOGINFO(logBuffer); 
+                    handCliTimeout(curfd);
                     continue;
                 }
                 if(climap.find(curfd)==climap.end()) continue;
@@ -127,15 +82,7 @@ bool yadi::Server::run()
                         continue;
                     // method2: 对方关闭链接
                     // shutdown(cliinfo->cfd,SHUT_RDWR);
-                    sprintf(logBuffer,"%s:%d client closed",cliinfo->cliip,cliinfo->cliport); 
-                    free(climap[cliinfo->cfd]);
-                    auto iterclimap = climap.find(cliinfo->cfd);
-                    if(iterclimap!=climap.end()) climap.erase(iterclimap);
-                    auto itertfdmap = tfd2cfd.find(cliinfo->tfd);
-                    if(itertfdmap!=tfd2cfd.end()) tfd2cfd.erase(itertfdmap);
-                    epoll_ctl(epollfd,EPOLL_CTL_DEL,curfd,NULL);
-                    epoll_ctl(epollfd,EPOLL_CTL_DEL,cliinfo->tfd,NULL);
-                    YADILOGINFO(logBuffer); 
+                    cliCleaner(cliinfo);
                     continue;
                 }
                 cliinfo->req_content[reqlen] = 0;
@@ -177,7 +124,7 @@ bool yadi::Server::run()
                 
                 FILE *direqfd = fopen(cliinfo->absoluteFilePath,"rb");
                 char outputhead[1024];
-                char suffix[16];
+                
                 if(direqfd==NULL)
                 {
                     sprintf(logBuffer,"%s:%d 404 no such file.",cliinfo->cliip,cliinfo->cliport); 
@@ -196,6 +143,7 @@ bool yadi::Server::run()
                 
                 
                 // printf("file buffer len: %d\n",fileBufferlen);
+                char suffix[16];
                 char * pos = strrchr(cliinfo->filepath,'.');
                 snprintf(suffix,15,"%s",&cliinfo->filepath[pos-cliinfo->filepath+1]);
                 // printf("req type: %s\n",suffix);
@@ -207,25 +155,7 @@ bool yadi::Server::run()
                     sprintf(outputhead,"HTTP/1.1 200 OK\r\nServer:dihttpd\r\nContent-Type:text/plain\r\n\r\n");
                 write(cliinfo->cfd,outputhead,strlen(outputhead));
 
-                // 一次发送8kB
-                size_t fileBufferlen =  fread(cliinfo->fileBuffer,1,1024*64,direqfd);
-                size_t writensum = 0;
-                size_t writen;
-                while((writen = write(cliinfo->cfd,&cliinfo->fileBuffer[writensum],fileBufferlen))!=-1)
-                {
-                    writensum += writen;
-                    cliinfo->fileBytesSent += writen;
-                    // 正常发送了，再读
-                    if(writensum==fileBufferlen)
-                    {
-                        fileBufferlen =  fread(cliinfo->fileBuffer,1,1024*64,direqfd);
-                        if(fileBufferlen==0) break;
-                        writensum = 0;
-                    }
-
-                }
-                if(writen==-1)
-                    fseek(cliinfo->fp,-(fileBufferlen-writensum),SEEK_CUR);   
+                handSend(cliinfo);
                 // printf("filebytessent: %d, filesize: %d\n",cliinfo->fileBytesSent,cliinfo->fileSize);
                 if(cliinfo->fileBytesSent==cliinfo->fileSize)
                 {
@@ -245,26 +175,8 @@ bool yadi::Server::run()
                 // 到这里的都是第一次没读完，接着读的
                 ClientInfo *cliinfo = climap[curfd];
                 if(cliinfo==NULL) continue;
-                
-                // 一次发送8kB
-                size_t fileBufferlen =  fread(cliinfo->fileBuffer,1,1024*64,cliinfo->fp);
-                size_t writensum = 0;
-                size_t writen;
-                while((writen = write(cliinfo->cfd,cliinfo->fileBuffer+writensum,fileBufferlen))!=-1)
-                {
-                    writensum += writen;
-                    cliinfo->fileBytesSent += writen;
-                    // 正常发送了，再读
-                    if(writensum==fileBufferlen)
-                    {
-                        writensum = 0;
-                        fileBufferlen =  fread(cliinfo->fileBuffer,1,1024*64,cliinfo->fp);
-                        if(fileBufferlen==0) break;
-                        
-                    } 
-                }
-                if(writen==-1)
-                    fseek(cliinfo->fp,-(fileBufferlen-writensum),SEEK_CUR);  
+                handSend(cliinfo);
+
                 // printf("%s:%d sent: %d,size: %d\n",cliinfo->cliip,cliinfo->cliport,cliinfo->fileBytesSent,cliinfo->fileSize);
                 if(cliinfo->fileBytesSent==cliinfo->fileSize)
                 {
@@ -279,4 +191,97 @@ bool yadi::Server::run()
         }
     }
     return true;
+}
+
+void yadi::Server::handAccept()
+{
+    sockaddr_in sacli;
+    socklen_t saclilen = sizeof(sacli);
+    int cfd;
+    cfd = accept(servSockfd,(sockaddr *)&sacli,&saclilen);
+    if(cfd == -1) 
+    {
+        if(errno==EAGAIN||errno==EWOULDBLOCK) return;
+        sprintf(logBuffer,"%s: %s","accept",strerror(errno)); 
+        YADILOGERROR(logBuffer); 
+        return;
+    }
+    ClientInfo *cliinfo = (ClientInfo *)malloc(sizeof(ClientInfo));
+    inet_ntop(AF_INET,&sacli.sin_addr,cliinfo->cliip,sizeof(cliinfo->cliip));
+    cliinfo->cliport = ntohs(sacli.sin_port);
+    cliinfo->cfd = cfd;
+    cliinfo->fileBytesSent = 0;
+    sprintf(logBuffer,"%s:%d connected",cliinfo->cliip,cliinfo->cliport); 
+    YADILOGINFO(logBuffer); 
+    printf("%s\n",logBuffer);
+    epoll_event ev;
+    ev.events = EPOLLIN;
+    ev.data.fd = cfd;
+    setNonblock(cfd);
+    epoll_ctl(epollfd,EPOLL_CTL_ADD,cfd,&ev);
+    int tfd = timerfd_create(CLOCK_MONOTONIC,0);
+    itimerspec time_intv;
+    time_intv.it_value.tv_sec = 30;
+    time_intv.it_value.tv_nsec = 0;
+    timerfd_settime(tfd,0,&time_intv,NULL);
+    ev.data.fd = tfd;
+    epoll_ctl(epollfd,EPOLL_CTL_ADD,tfd,&ev);
+    tfd2cfd[tfd] = cfd;
+    climap[cfd] = cliinfo;
+}
+
+
+void yadi::Server::handCliTimeout(int curfd)
+{
+    ClientInfo *cliinfo = climap[tfd2cfd[curfd]];
+    if(cliinfo==NULL) return;
+    shutdown(cliinfo->cfd,SHUT_RDWR);
+    sprintf(logBuffer,"%s:%d timeout server closed",cliinfo->cliip,cliinfo->cliport); 
+    free(climap[cliinfo->cfd]);
+    auto iterclimap = climap.find(cliinfo->cfd);
+    if(iterclimap!=climap.end()) climap.erase(iterclimap);
+    auto itertfdmap = tfd2cfd.find(cliinfo->tfd);
+    if(itertfdmap!=tfd2cfd.end()) tfd2cfd.erase(itertfdmap);
+    epoll_ctl(epollfd,EPOLL_CTL_DEL,curfd,NULL);
+    epoll_ctl(epollfd,EPOLL_CTL_DEL,cliinfo->tfd,NULL);
+    YADILOGINFO(logBuffer); 
+}
+
+void yadi::Server::cliCleaner(ClientInfo *cliinfo)
+{
+    sprintf(logBuffer,"%s:%d client closed",cliinfo->cliip,cliinfo->cliport); 
+    
+    auto iterclimap = climap.find(cliinfo->cfd);
+    if(iterclimap!=climap.end()) 
+    {
+        free(climap[cliinfo->cfd]);
+        climap.erase(iterclimap);
+    }
+    auto itertfdmap = tfd2cfd.find(cliinfo->tfd);
+    if(itertfdmap!=tfd2cfd.end()) tfd2cfd.erase(itertfdmap);
+    epoll_ctl(epollfd,EPOLL_CTL_DEL,cliinfo->cfd,NULL);
+    epoll_ctl(epollfd,EPOLL_CTL_DEL,cliinfo->tfd,NULL);
+    YADILOGINFO(logBuffer); 
+}
+
+void yadi::Server::handSend(ClientInfo *cliinfo)
+{
+    // 一次发送64kB
+    size_t fileBufferlen =  fread(cliinfo->fileBuffer,1,1024*64,cliinfo->fp);
+    size_t writensum = 0;
+    size_t writen;
+    while((writen = write(cliinfo->cfd,cliinfo->fileBuffer+writensum,fileBufferlen))!=-1)
+    {
+        writensum += writen;
+        cliinfo->fileBytesSent += writen;
+        // 正常发送了，再读
+        if(writensum==fileBufferlen)
+        {
+            writensum = 0;
+            fileBufferlen =  fread(cliinfo->fileBuffer,1,1024*64,cliinfo->fp);
+            if(fileBufferlen==0) break;
+        } 
+    }
+    if(writen==-1)
+        fseek(cliinfo->fp,-(fileBufferlen-writensum),SEEK_CUR);  
 }

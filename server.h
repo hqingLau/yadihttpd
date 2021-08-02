@@ -41,7 +41,10 @@ private:
     int epollEvNum;
     epoll_event *srvEvents;
 private:
-    
+    void handAccept();
+    void handCliTimeout(int tfd);
+    void cliCleaner(ClientInfo *cliinfo);
+    void handSend(ClientInfo *cliinfo);
 
 public:
     Server(char *tip,int tport,char *tlogPrefix="log"):port(tport){
