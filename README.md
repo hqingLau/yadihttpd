@@ -6,6 +6,8 @@
 
 📚 日志消息队列(todo)
 
+📚 大文件支持
+
 function completed:
 
 ### 日志
@@ -33,3 +35,9 @@ bind: Address already in use
 📚 图片读取
 
 ![image-20210731210945081](https://gitee.com/hqinglau/img/raw/master/img/20210731210950.png)
+
+📚 大文件支持 （may be some bugs)
+
+epollout处理缓冲区、设置非阻塞fd, 服务器可以同时处理多个请求。
+
+![image-20210802174121489](https://gitee.com/hqinglau/img/raw/master/img/20210802174123.png)
