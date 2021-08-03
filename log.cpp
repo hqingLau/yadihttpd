@@ -3,21 +3,34 @@
 #include <string.h>
 #include <iostream>
 #include <time.h>
-pthread_cond_t logCond = PTHREAD_COND_INITIALIZER;
-pthread_mutex_t logCondMtx = PTHREAD_MUTEX_INITIALIZER;
 
-void *curStack2file(void *parg)
+pthread_mutex_t logFileMtx = PTHREAD_MUTEX_INITIALIZER;
+
+void *curQueue2file(void *parg)
 {
-    yadi::curStack2fileArg arg = *(yadi::curStack2fileArg *)parg;
+    yadi::recordArg arg = *(yadi::recordArg *)parg;
+    queue<yadi::logMsg *> *logQ = arg.logQ;
     // printf("len: %d\n",*(int *)arg.length);
+
     for(;;)
     {
-        pthread_mutex_lock(&logCondMtx);
-        pthread_cond_wait(&logCond,&logCondMtx);
-        // printf("%d\n",*(int *)arg.length);
-        fwrite(*(arg.curStackPointer),*arg.length,1,*arg.fpp);
+        // 队列前面不需要加锁
+        pthread_mutex_lock(&logFileMtx);
+        if(logQ->empty()) 
+        {
+            pthread_mutex_unlock(&logFileMtx);
+            sleep(1);
+            continue;
+        }
+        yadi::logMsg *headMsg = logQ->front();
+        
+        fwrite(headMsg->msg,headMsg->length,1,*arg.fpp);
+        free(headMsg->msg);
+        free(headMsg);
+        headMsg = nullptr;
+        logQ->pop();
+        pthread_mutex_unlock(&logFileMtx);
         fflush(*arg.fpp);
-        pthread_mutex_unlock(&logCondMtx);
     }
 }
 
@@ -28,14 +41,9 @@ yadi::LOG::LOG()
     lastRecord = time(NULL);
     recordInterval = 3; //3s记录到文件一次
     stackSize = 1024;
-    curStack = (char *)malloc(sizeof(char)*stackSize);
-    backStack = (char *)malloc(sizeof(char)*stackSize);
-
     mtx = PTHREAD_MUTEX_INITIALIZER;
     maxMsgNum = 10000;
-    curStackIndex = (int *)malloc(sizeof(int));
-    backStackIndex = (int *)malloc(sizeof(int));
-    *curStackIndex = *backStackIndex = 0;
+
     strncpy(prefix,"yadilog",63);
     timeval tv;
     gettimeofday(&tv,0);
@@ -46,13 +54,10 @@ yadi::LOG::LOG()
     // printf("%s\n",filename);
     fp = fopen(filename,"a");
     if(!fp) handle_error("log file open");
-    
-    arg.curStackPointer =  &backStack;
-    arg.length = backStackIndex;
-
     arg.fpp = &fp;
+    arg.logQ = &logQ;
     // curStack2file((void *)&arg);
-    pthread_create(&pid,NULL,curStack2file,(void *)&arg);
+    pthread_create(&pid,NULL,curQueue2file,(void *)&arg);
     pthread_detach(pid);
 }
 
@@ -71,29 +76,15 @@ void yadi::LOG::log(LOGLEVEL level, char *msg,const char *file,const int line,co
 }
 
 
-void yadi::LOG::swapStackAndSignal()
-{
-    pthread_mutex_lock(&mtx);
-    char *tmp = curStack;
-    curStack = backStack;
-    backStack = tmp;
-
-    *backStackIndex = *curStackIndex;
-    *curStackIndex = 0;
-    pthread_cond_signal(&logCond);
-    pthread_mutex_unlock(&mtx);
-}
 
 void yadi::LOG::insertStack(char *buffer,int sizeBuffer)
 {
-    // 单独搞个计时器好像没必要，会造成延迟，但是影响不大
-    if((difftime(time(NULL),lastRecord)>recordInterval)||(*curStackIndex+sizeBuffer>stackSize-1))
-    {
-        // write buffer
-        // 另开一个线程，条件量一直等待
-        swapStackAndSignal();
-        lastRecord = time(NULL);
-    }
-    strncpy(curStack+*curStackIndex,buffer,sizeBuffer);
-    *curStackIndex+=sizeBuffer;
+    char *msg = (char *)malloc(sizeof(char)*sizeBuffer);
+    strncpy(msg,buffer,sizeBuffer);
+    logMsg *lm = (logMsg *)malloc(sizeof(logMsg));
+    lm->length = sizeBuffer;
+    lm->msg = msg;
+    pthread_mutex_lock(&logFileMtx);
+    logQ.push(lm);
+    pthread_mutex_unlock(&logFileMtx);
 }

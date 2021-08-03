@@ -7,7 +7,8 @@
 #include <stdlib.h>
 #include <pthread.h>
 #include <sys/time.h>
-
+#include <queue>
+using std::queue;
 
 /**
 常见的日志格式中对于每一条日志应含有的信息包括日期、时间、日志级别、代码位置、日志内容、
@@ -26,9 +27,16 @@ static const char *loglevelStr[8] = {"OFF","FATAL","ERROR","WARN","INFO","DEBUG"
 
 namespace yadi
 {
-struct curStack2fileArg{
-    char **curStackPointer;
-    int *length;
+
+struct logMsg
+{
+    char *msg;
+    int length;
+};
+
+struct recordArg
+{
+    queue<logMsg *> *logQ;
     FILE **fpp;
 };
 
@@ -39,16 +47,12 @@ private:
     char filename[64];
     int msgNum; // log num
     int maxMsgNum; // change file if msgn>maxmsgn
-    char *curStack;
-    char *backStack;
-    char *stack2filePointer;
-    int *curStackIndex;
-    int *backStackIndex;
+    queue<logMsg *> logQ; 
     pthread_t pid; // 专门写curStack到磁盘的线程
     FILE *fp;
     time_t lastRecord;
     double recordInterval;
-    curStack2fileArg arg;
+    recordArg arg;
     pthread_mutex_t mtx;
     int stackSize;
 
@@ -67,10 +71,6 @@ public:
     ~LOG() 
     {
         fclose(fp);
-        free(curStack);
-        free(backStack);
-        free(curStackIndex);
-        free(backStackIndex);
         pthread_mutex_destroy(&mtx);
     }
     void log(LOGLEVEL level, char *msg,const char *file,const int line,const char *function);
