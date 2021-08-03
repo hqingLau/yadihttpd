@@ -9,7 +9,8 @@
                 // "${file}",
                 "*.cpp",
                 "-o",
-                "${fileDirname}/${fileBasenameNoExtension}"
+                "${fileDirname}/${fileBasenameNoExtension}",
+                "-pthread"
             ],
             "options": {
                 "cwd": "${fileDirname}"

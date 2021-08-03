@@ -1,6 +1,11 @@
 // 注：命名diXXX中，di无实际意义
+#ifndef YADI_LOG_H
+#define YADI_LOG_H
+
 #include "commonfunc.h"
 #include <stdio.h>
+#include <stdlib.h>
+#include <pthread.h>
 #include <sys/time.h>
 
 
@@ -21,19 +26,37 @@ static const char *loglevelStr[8] = {"OFF","FATAL","ERROR","WARN","INFO","DEBUG"
 
 namespace yadi
 {
+struct curStack2fileArg{
+    char **curStackPointer;
+    int *length;
+    FILE **fpp;
+};
+
 class LOG
 {
 private:
     char prefix[64];
     char filename[64];
-    char buffer[1024];
     int msgNum; // log num
     int maxMsgNum; // change file if msgn>maxmsgn
+    char *curStack;
+    char *backStack;
+    char *stack2filePointer;
+    int *curStackIndex;
+    int *backStackIndex;
+    pthread_t pid; // 专门写curStack到磁盘的线程
     FILE *fp;
+    time_t lastRecord;
+    double recordInterval;
+    curStack2fileArg arg;
+    pthread_mutex_t mtx;
+    int stackSize;
+
 
 private:
     LOG();
-    
+    void insertStack(char *bufer,int sizeBuffer);
+    void swapStackAndSignal();
 
 public:
     static LOG* getInstance()
@@ -41,7 +64,15 @@ public:
         static LOG instance;
         return &instance;
     }
-    ~LOG() {fclose(fp);}
+    ~LOG() 
+    {
+        fclose(fp);
+        free(curStack);
+        free(backStack);
+        free(curStackIndex);
+        free(backStackIndex);
+        pthread_mutex_destroy(&mtx);
+    }
     void log(LOGLEVEL level, char *msg,const char *file,const int line,const char *function);
 };
 
@@ -54,3 +85,5 @@ public:
 #define YADILOGINFO(msg) yadi::LOG::getInstance()->log(LOGLEVEL_INFO, msg,__FILE__,__LINE__,__FUNCTION__)
 #define YADILOGDEBUG(msg) yadi::LOG::getInstance()->log(LOGLEVEL_DEBUG, msg,__FILE__,__LINE__,__FUNCTION__)
 #define YADILOGTRACE(msg) yadi::LOG::getInstance()->log(LOGLEVEL_TRACE, msg,__FILE__,__LINE__,__FUNCTION__)
+
+#endif /* YADI_LOG_H */
