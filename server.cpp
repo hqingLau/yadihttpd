@@ -124,7 +124,8 @@ bool yadi::Server::run()
                 
                 FILE *direqfd = fopen(cliinfo->absoluteFilePath,"rb");
                 char outputhead[1024];
-                
+                char * pos = strrchr(cliinfo->filepath,'.');
+                snprintf(cliinfo->suffix,15,"%s",&cliinfo->filepath[pos-cliinfo->filepath+1]);
                 if(direqfd==NULL)
                 {
                     sprintf(logBuffer,"%s:%d 404 no such file.",cliinfo->cliip,cliinfo->cliport); 
@@ -135,6 +136,7 @@ bool yadi::Server::run()
                     shutdown(cliinfo->cfd,SHUT_RDWR);
                     continue;
                 }
+     
                 cliinfo->fp = direqfd;
                 // 读取文件大小
                 struct stat statbuf;
@@ -143,22 +145,48 @@ bool yadi::Server::run()
                 
                 
                 // printf("file buffer len: %d\n",fileBufferlen);
-                char suffix[16];
-                char * pos = strrchr(cliinfo->filepath,'.');
-                snprintf(suffix,15,"%s",&cliinfo->filepath[pos-cliinfo->filepath+1]);
+
                 // printf("req type: %s\n",suffix);
-                if(strncmp(suffix,"jpg",3)==0)
+                if(strncmp(cliinfo->suffix,"jpg",3)==0)
                     sprintf(outputhead,"HTTP/1.1 200 OK\r\nServer:dihttpd\r\nContent-Type:image/jpeg\r\n\r\n");
-                else if(strncmp(suffix,"html",4)==0)
+                else if(strncmp(cliinfo->suffix,"html",4)==0)
+                {
+                    cliinfo->md2html = true;
                     sprintf(outputhead,"HTTP/1.1 200 OK\r\nServer:dihttpd\r\nContent-Type:text/html\r\n\r\n");
+                }
+                else if(strncmp(cliinfo->suffix,"js",2)==0)
+                {
+                    sprintf(outputhead,"HTTP/1.1 200 OK\r\nServer:dihttpd\r\nContent-Type:application/javascript\r\n\r\n");
+                }
+                else if(strncmp(cliinfo->suffix,"css",3)==0)
+                {
+                    sprintf(outputhead,"HTTP/1.1 200 OK\r\nServer:dihttpd\r\nContent-Type:text/css\r\n\r\n");
+                }
                 else
                     sprintf(outputhead,"HTTP/1.1 200 OK\r\nServer:dihttpd\r\nContent-Type:text/plain\r\n\r\n");
                 write(cliinfo->cfd,outputhead,strlen(outputhead));
 
+                // 如果是html，要发送个头
+                if(cliinfo->md2html)
+                {
+                    sprintf(outputhead,"%s","<!doctype html>"
+                        "<html><head><meta charset=\"utf-8\"/><title>Marked in the browser</title>"
+                        "<link href=\"../css/my.css\"  rel=\"stylesheet\" />"
+                        "<link href=\"../css/prism.css\" rel=\"stylesheet\" />"
+                        "</head><body>"
+                    );
+                    write(cliinfo->cfd,outputhead,strlen(outputhead));
+                }
                 handSend(cliinfo);
+
                 // printf("filebytessent: %d, filesize: %d\n",cliinfo->fileBytesSent,cliinfo->fileSize);
                 if(cliinfo->fileBytesSent==cliinfo->fileSize)
                 {
+                    if(cliinfo->md2html)
+                    {
+                        sprintf(outputhead,"%s","<script src=\"../js/prism.js\"></script></body></html>");
+                        write(cliinfo->cfd,outputhead,strlen(outputhead));
+                    }
                     fclose(direqfd);
                     shutdown(cliinfo->cfd,SHUT_RDWR);
                 }
@@ -180,6 +208,12 @@ bool yadi::Server::run()
                 // printf("%s:%d sent: %d,size: %d\n",cliinfo->cliip,cliinfo->cliport,cliinfo->fileBytesSent,cliinfo->fileSize);
                 if(cliinfo->fileBytesSent==cliinfo->fileSize)
                 {
+                    if(cliinfo->md2html)
+                    {
+                        char outputhead[256];
+                        sprintf(outputhead,"%s","<script src=\"../js/prism.js\"></script></body></html>");
+                        write(cliinfo->cfd,outputhead,strlen(outputhead));
+                    }
                     epoll_event diev;
                     diev.data.fd = cliinfo->cfd;
                     diev.events = EPOLLIN;
@@ -211,6 +245,7 @@ void yadi::Server::handAccept()
     cliinfo->cliport = ntohs(sacli.sin_port);
     cliinfo->cfd = cfd;
     cliinfo->fileBytesSent = 0;
+    cliinfo->md2html = false;
     sprintf(logBuffer,"%s:%d connected",cliinfo->cliip,cliinfo->cliport); 
     YADILOGINFO(logBuffer); 
     printf("%s\n",logBuffer);

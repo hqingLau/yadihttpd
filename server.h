@@ -18,6 +18,8 @@ struct ClientInfo
     char cliip[64];
     int cliport;
     char method[16];
+    char suffix[16];
+    bool md2html;
     ssize_t fileBytesSent;
     int fileSize;
     char filepath[128];
