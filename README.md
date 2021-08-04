@@ -88,4 +88,4 @@ pi@raspberrypi:~/www $ tree
 
 这样看起来还可以。
 
-<img src="https://gitee.com/hqinglau/img/raw/master/img/20210804184835.png" alt="image-20210804184834030" style="zoom:50%;" />
+<img src="https://gitee.com/hqinglau/img/raw/master/img/20210804184835.png" alt="image-20210804184834030" height="100" />
