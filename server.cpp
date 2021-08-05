@@ -118,14 +118,19 @@ bool yadi::Server::run()
                 while(!isspace(head[ditmpi])) ++ditmpi;
                 strncpy(cliinfo->filepath,&head[ditmpj],ditmpi-ditmpj);
                 cliinfo->filepath[ditmpi-ditmpj] = 0;
-                sprintf(logBuffer,"%s:%d req filepath: %s",cliinfo->cliip,cliinfo->cliport,cliinfo->filepath); 
-                YADILOGINFO(logBuffer);
+
+                if(cliinfo->filepath[ditmpi-ditmpj-1]=='/')
+                {
+                    sprintf(cliinfo->filepath,"%s%s",cliinfo->filepath,"index.html");
+                }
                 sprintf(cliinfo->absoluteFilePath,"%s%s",rootdir,cliinfo->filepath);
                 
+                sprintf(logBuffer,"%s:%d req filepath: %s",cliinfo->cliip,cliinfo->cliport,cliinfo->filepath); 
+                YADILOGINFO(logBuffer);
+
                 FILE *direqfd = fopen(cliinfo->absoluteFilePath,"rb");
                 char outputhead[1024];
-                char * pos = strrchr(cliinfo->filepath,'.');
-                snprintf(cliinfo->suffix,15,"%s",&cliinfo->filepath[pos-cliinfo->filepath+1]);
+                
                 if(direqfd==NULL)
                 {
                     sprintf(logBuffer,"%s:%d 404 no such file.",cliinfo->cliip,cliinfo->cliport); 
@@ -136,7 +141,8 @@ bool yadi::Server::run()
                     shutdown(cliinfo->cfd,SHUT_RDWR);
                     continue;
                 }
-     
+                char * pos = strrchr(cliinfo->filepath,'.');
+                snprintf(cliinfo->suffix,15,"%s",&cliinfo->filepath[pos-cliinfo->filepath+1]);
                 cliinfo->fp = direqfd;
                 // 读取文件大小
                 struct stat statbuf;
