@@ -201,7 +201,8 @@ bool yadi::Server::run()
                         write(cliinfo->cfd,outputhead,headlen);
                         fclose(fakehtml2);
                     }
-                    fclose(direqfd);
+                    fclose(cliinfo->fp);
+                    cliinfo->fp = nullptr;
                     shutdown(cliinfo->cfd,SHUT_RDWR);
                 }
                 else
@@ -237,6 +238,7 @@ bool yadi::Server::run()
                     diev.events = EPOLLIN;
                     epoll_ctl(epollfd,EPOLL_CTL_MOD,cliinfo->cfd,&diev);
                     fclose(cliinfo->fp);
+                    cliinfo->fp = nullptr;
                     shutdown(cliinfo->cfd,SHUT_RDWR);
                 }
             }
@@ -280,6 +282,7 @@ void yadi::Server::handAccept()
     ev.data.fd = tfd;
     epoll_ctl(epollfd,EPOLL_CTL_ADD,tfd,&ev);
     tfd2cfd[tfd] = cfd;
+    cliinfo->tfd = tfd;
     climap[cfd] = cliinfo;
 }
 
@@ -287,33 +290,44 @@ void yadi::Server::handAccept()
 void yadi::Server::handCliTimeout(int curfd)
 {
     ClientInfo *cliinfo = climap[tfd2cfd[curfd]];
+    
     if(cliinfo==NULL) return;
-    shutdown(cliinfo->cfd,SHUT_RDWR);
+    if(cliinfo->fp) fclose(cliinfo->fp);
+    int tfd = cliinfo->tfd;
+    int cfd = cliinfo->cfd;
+    shutdown(cfd,SHUT_RDWR);
     sprintf(logBuffer,"%s:%d timeout server closed",cliinfo->cliip,cliinfo->cliport); 
-    free(climap[cliinfo->cfd]);
-    auto iterclimap = climap.find(cliinfo->cfd);
+    free(climap[cfd]);
+    auto iterclimap = climap.find(cfd);
     if(iterclimap!=climap.end()) climap.erase(iterclimap);
-    auto itertfdmap = tfd2cfd.find(cliinfo->tfd);
+    auto itertfdmap = tfd2cfd.find(tfd);
     if(itertfdmap!=tfd2cfd.end()) tfd2cfd.erase(itertfdmap);
     epoll_ctl(epollfd,EPOLL_CTL_DEL,curfd,NULL);
-    epoll_ctl(epollfd,EPOLL_CTL_DEL,cliinfo->tfd,NULL);
+    epoll_ctl(epollfd,EPOLL_CTL_DEL,tfd,NULL);
+    close(cfd);
+    close(tfd);
     YADILOGINFO(logBuffer); 
 }
 
 void yadi::Server::cliCleaner(ClientInfo *cliinfo)
 {
     sprintf(logBuffer,"%s:%d client closed",cliinfo->cliip,cliinfo->cliport); 
-    
+    int tfd = cliinfo->tfd;
+    int cfd = cliinfo->cfd;
+    if(cliinfo->fp) fclose(cliinfo->fp);
     auto iterclimap = climap.find(cliinfo->cfd);
     if(iterclimap!=climap.end()) 
     {
         free(climap[cliinfo->cfd]);
         climap.erase(iterclimap);
     }
-    auto itertfdmap = tfd2cfd.find(cliinfo->tfd);
+    auto itertfdmap = tfd2cfd.find(tfd);
     if(itertfdmap!=tfd2cfd.end()) tfd2cfd.erase(itertfdmap);
-    epoll_ctl(epollfd,EPOLL_CTL_DEL,cliinfo->cfd,NULL);
-    epoll_ctl(epollfd,EPOLL_CTL_DEL,cliinfo->tfd,NULL);
+    epoll_ctl(epollfd,EPOLL_CTL_DEL,cfd,NULL);
+    epoll_ctl(epollfd,EPOLL_CTL_DEL,tfd,NULL);
+    close(cfd);
+    close(tfd);
+
     YADILOGINFO(logBuffer); 
 }
 
