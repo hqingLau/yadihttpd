@@ -4,13 +4,11 @@
 
 ✅ epoll版本并返回相应文件
 
-✅ 日志队列
-
-✅ 队列写日志单独线程
+✅ 日志队列，自动切换，写日志单独线程
 
 ✅ 大文件支持
 
-✅ 超简易博客
+✅ 简易博客
 
 function completed:
 
@@ -33,6 +31,8 @@ function completed:
 🟢 访问链接后日志：
 
 ![image-20210803150932453](https://gitee.com/hqinglau/img/raw/master/img/20210803150935.png)
+
+🟢 日志记录一定条数时（如5000），自动切换文件。
 
 ### 网页
 
@@ -80,12 +80,25 @@ pi@raspberrypi:~/www $ tree
 
 📚 大致效果
 
-![image-20210804184250558](https://gitee.com/hqinglau/img/raw/master/img/20210804184251.png)
+![image-20210806230216317](https://gitee.com/hqinglau/img/raw/master/img/20210806230217.png)
+
+
 
 点击`linux_notes`进入以下网页：
 
-![image-20210804184525458](https://gitee.com/hqinglau/img/raw/master/img/20210804184527.png)
+![image-20210806230235704](https://gitee.com/hqinglau/img/raw/master/img/20210806230237.png)
 
 这样看起来还可以。
 
 <img src="https://gitee.com/hqinglau/img/raw/master/img/20210804184835.png" alt="image-20210804184834030" height="100" />
+
+
+### bug排查记录
+
+🔍 fd泄露排查
+
+![image-20210806225824541](https://gitee.com/hqinglau/img/raw/master/img/20210806225826.png)
+
+是有地方忘了close了。测试了一会，如下图，貌似没有fd泄露的问题了，但是还有个偶尔段错误还没查出来。
+
+![image-20210806225741355](https://gitee.com/hqinglau/img/raw/master/img/20210806225742.png)

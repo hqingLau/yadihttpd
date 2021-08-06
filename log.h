@@ -38,13 +38,14 @@ struct recordArg
 {
     queue<logMsg *> *logQ;
     FILE **fpp;
+    char **filename;
 };
 
 class LOG
 {
 private:
     char prefix[64];
-    char filename[64];
+    char *filename;
     int msgNum; // log num
     int maxMsgNum; // change file if msgn>maxmsgn
     queue<logMsg *> logQ; 
@@ -63,6 +64,9 @@ private:
     void swapStackAndSignal();
 
 public:
+    static int logMsgCount; //5000条记录自动新建日志
+
+public:
     static LOG* getInstance()
     {
         static LOG instance;
@@ -71,6 +75,7 @@ public:
     ~LOG() 
     {
         fclose(fp);
+        free(filename);
         pthread_mutex_destroy(&mtx);
     }
     void log(LOGLEVEL level, char *msg,const char *file,const int line,const char *function);

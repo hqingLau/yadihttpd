@@ -4,12 +4,14 @@
 #include <iostream>
 #include <time.h>
 
+int yadi::LOG::logMsgCount = 0;
 pthread_mutex_t logFileMtx = PTHREAD_MUTEX_INITIALIZER;
 
 void *curQueue2file(void *parg)
 {
     yadi::recordArg arg = *(yadi::recordArg *)parg;
     queue<yadi::logMsg *> *logQ = arg.logQ;
+    char *filename = *arg.filename;
     // printf("len: %d\n",*(int *)arg.length);
 
     for(;;)
@@ -23,12 +25,24 @@ void *curQueue2file(void *parg)
             continue;
         }
         yadi::logMsg *headMsg = logQ->front();
-        
+        if(yadi::LOG::logMsgCount==5000)
+        {
+            yadi::LOG::logMsgCount=0;
+            timeval tv;
+            gettimeofday(&tv,0);
+            tm *ditm = localtime(&tv.tv_sec);
+            char suffix[64];
+            strftime(suffix,sizeof(suffix),"%Y%m%d%H%M%S",ditm);
+            snprintf(filename,63,"%s_%s.log","yadilog",suffix);
+            // printf("%s\n",filename);
+            *arg.fpp = fopen(filename,"a");
+        }
         fwrite(headMsg->msg,headMsg->length,1,*arg.fpp);
         free(headMsg->msg);
         free(headMsg);
         headMsg = nullptr;
         logQ->pop();
+        yadi::LOG::logMsgCount+=1;
         pthread_mutex_unlock(&logFileMtx);
         fflush(*arg.fpp);
     }
@@ -44,18 +58,20 @@ yadi::LOG::LOG()
     mtx = PTHREAD_MUTEX_INITIALIZER;
     maxMsgNum = 10000;
 
+    filename = (char *)malloc(64);
     strncpy(prefix,"yadilog",63);
     timeval tv;
     gettimeofday(&tv,0);
     tm *ditm = localtime(&tv.tv_sec);
     char suffix[64];
     strftime(suffix,sizeof(suffix),"%Y%m%d%H%M%S",ditm);
-    snprintf(filename,sizeof(filename),"%s_%s.log",prefix,suffix);
+    snprintf(filename,63,"%s_%s.log",prefix,suffix);
     // printf("%s\n",filename);
     fp = fopen(filename,"a");
     if(!fp) handle_error("log file open");
     arg.fpp = &fp;
     arg.logQ = &logQ;
+    arg.filename = &filename;
     // curStack2file((void *)&arg);
     pthread_create(&pid,NULL,curQueue2file,(void *)&arg);
     pthread_detach(pid);
