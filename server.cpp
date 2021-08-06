@@ -129,7 +129,7 @@ bool yadi::Server::run()
                 YADILOGINFO(logBuffer);
 
                 FILE *direqfd = fopen(cliinfo->absoluteFilePath,"rb");
-                char outputhead[1024];
+                char outputhead[1024*4];
                 
                 if(direqfd==NULL)
                 {
@@ -155,6 +155,11 @@ bool yadi::Server::run()
                 // printf("req type: %s\n",suffix);
                 if(strncmp(cliinfo->suffix,"jpg",3)==0)
                     sprintf(outputhead,"HTTP/1.1 200 OK\r\nServer:dihttpd\r\nContent-Type:image/jpeg\r\n\r\n");
+                if(strncmp(cliinfo->suffix,"png",3)==0)
+                    sprintf(outputhead,"HTTP/1.1 200 OK\r\nServer:dihttpd\r\nContent-Type:image/png\r\n\r\n");
+
+                if(strncmp(cliinfo->suffix,"ico",3)==0)
+                    sprintf(outputhead,"HTTP/1.1 200 OK\r\nServer:dihttpd\r\nContent-Type:image/x-icon\r\n\r\n");
                 else if(strncmp(cliinfo->suffix,"html",4)==0)
                 {
                     cliinfo->md2html = true;
@@ -175,13 +180,12 @@ bool yadi::Server::run()
                 // 如果是html，要发送个头
                 if(cliinfo->md2html)
                 {
-                    sprintf(outputhead,"%s","<!doctype html>"
-                        "<html><head><meta charset=\"utf-8\"/><title>Marked in the browser</title>"
-                        "<link href=\"../css/my.css\"  rel=\"stylesheet\" />"
-                        "<link href=\"../css/prism.css\" rel=\"stylesheet\" />"
-                        "</head><body>"
-                    );
-                    write(cliinfo->cfd,outputhead,strlen(outputhead));
+                    char fakehtmlPath[64];
+                    sprintf(fakehtmlPath,"%s%s",rootdir,"/md/fakeblog1.html");
+                    FILE *fakehtml1 = fopen(fakehtmlPath,"rb");
+                    size_t headlen = fread(outputhead,1,1024*4,fakehtml1);
+                    fclose(fakehtml1);
+                    write(cliinfo->cfd,outputhead,headlen);
                 }
                 handSend(cliinfo);
 
@@ -190,8 +194,12 @@ bool yadi::Server::run()
                 {
                     if(cliinfo->md2html)
                     {
-                        sprintf(outputhead,"%s","<script src=\"../js/prism.js\"></script></body></html>");
-                        write(cliinfo->cfd,outputhead,strlen(outputhead));
+                        char fakehtmlPath[64];
+                        sprintf(fakehtmlPath,"%s%s",rootdir,"/md/fakeblog2.html");
+                        FILE *fakehtml2 = fopen(fakehtmlPath,"rb");
+                        size_t headlen = fread(outputhead,1,1024*4,fakehtml2);
+                        write(cliinfo->cfd,outputhead,headlen);
+                        fclose(fakehtml2);
                     }
                     fclose(direqfd);
                     shutdown(cliinfo->cfd,SHUT_RDWR);
@@ -216,9 +224,13 @@ bool yadi::Server::run()
                 {
                     if(cliinfo->md2html)
                     {
-                        char outputhead[256];
-                        sprintf(outputhead,"%s","<script src=\"../js/prism.js\"></script></body></html>");
-                        write(cliinfo->cfd,outputhead,strlen(outputhead));
+                        char outputhead[1024];
+                        char fakehtmlPath[64];
+                        sprintf(fakehtmlPath,"%s%s",rootdir,"/md/fakeblog2.html");
+                        FILE *fakehtml2 = fopen(fakehtmlPath,"rb");
+                        size_t headlen = fread(outputhead,1,1024,fakehtml2);
+                        write(cliinfo->cfd,outputhead,headlen);
+                        fclose(fakehtml2);
                     }
                     epoll_event diev;
                     diev.data.fd = cliinfo->cfd;
