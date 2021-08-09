@@ -3,6 +3,7 @@
 #include <signal.h>
 int main(int argc,char *argv[])
 {
+    daemon(0,0);
     if(argc<2)
     {
         printf("usage: %s <port>\n",argv[0]);

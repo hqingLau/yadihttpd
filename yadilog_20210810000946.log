@@ -1,0 +1,2316 @@
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26104 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26104 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26108 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26104 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26106 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26106 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26110 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26106 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26108 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26108 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26112 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26108 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26110 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26110 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26114 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26110 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26112 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26112 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26116 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26112 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26114 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26114 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26118 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26114 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26116 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26116 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26120 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26116 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26118 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26118 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26122 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26118 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26120 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26120 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26124 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26120 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26122 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26122 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26126 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26122 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26124 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26124 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26128 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26124 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26126 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26126 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26130 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26126 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26128 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26128 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26132 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26128 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26130 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26130 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26134 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26130 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26132 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26132 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26136 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26132 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26134 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26134 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26138 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26134 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26136 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26136 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26140 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26136 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26138 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26138 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26142 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26138 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26140 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26140 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26144 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26140 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26142 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26142 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26146 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26142 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26144 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26144 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26148 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26144 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26146 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26146 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26150 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26146 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26148 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26148 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26152 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26148 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26150 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26150 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26154 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26150 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26152 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26152 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26156 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26152 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26154 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26154 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26158 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26154 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26156 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26156 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26160 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26156 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26158 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26158 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26162 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26158 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26160 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26160 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26164 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26160 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26162 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26162 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26166 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26162 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26164 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26164 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26168 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26164 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26166 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26166 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26170 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26166 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26168 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26168 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26172 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26168 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26170 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26170 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26174 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26170 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26172 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26172 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26176 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26172 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26174 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26174 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26178 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26174 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26176 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26176 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26180 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26176 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26178 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26178 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26182 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26178 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26180 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26180 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26184 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26180 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26182 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26182 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26186 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26182 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26184 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26184 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26188 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26184 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26186 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26186 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26190 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26186 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26188 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26188 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26192 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26188 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26190 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26190 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26194 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26190 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26192 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26192 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26196 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26192 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26194 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26194 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26198 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26194 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26196 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26196 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26200 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26196 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26198 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26198 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26202 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26198 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26200 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26200 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26204 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26200 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26202 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26202 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26206 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26202 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26204 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26204 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26208 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26204 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26206 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26206 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26210 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26206 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26208 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26208 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26212 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26208 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26210 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26210 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26214 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26210 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26212 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26212 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26216 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26212 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26214 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26214 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26218 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26214 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26216 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26216 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26220 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26216 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26218 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26218 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26222 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26218 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26220 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26220 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26224 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26220 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26222 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26222 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26226 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26222 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26224 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26224 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26228 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26224 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26226 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26226 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26230 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26226 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26228 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26228 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26232 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26228 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26230 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26230 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26234 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26230 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26232 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26232 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26236 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26232 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26234 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26234 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26238 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26234 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26236 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26236 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26240 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26236 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26238 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26238 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26242 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26238 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26240 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26240 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26244 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26240 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26242 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26242 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26246 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26242 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26244 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26244 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26248 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26244 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26246 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26246 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26250 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26246 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26248 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26248 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26252 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26248 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26250 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26250 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26254 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26250 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26252 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26252 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26256 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26252 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26254 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26254 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26258 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26254 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26256 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26256 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26260 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26256 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26258 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26258 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26262 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26258 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26260 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26260 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26264 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26260 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26262 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26262 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26266 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26262 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26264 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26264 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26268 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26264 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26266 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26266 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26270 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26266 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26268 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26268 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26272 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26268 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26270 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26270 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26274 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26270 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26272 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26272 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26276 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26272 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26274 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26274 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26278 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26274 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26276 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26276 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26280 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26276 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26278 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26278 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26282 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26278 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26280 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26280 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26284 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26280 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26282 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26282 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26286 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26282 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26284 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26284 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26288 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26284 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26286 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26286 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26290 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26286 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26288 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26288 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26292 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26288 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26290 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26290 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26294 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26290 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26292 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26292 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26296 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26292 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26294 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26294 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26298 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26294 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26296 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26296 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26300 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26296 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26298 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26298 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26302 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26298 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26300 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26300 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26304 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26300 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26302 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26302 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26306 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26302 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26304 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26304 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26308 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26304 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26306 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26306 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26310 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26306 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26308 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26308 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26312 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26308 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26310 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26310 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26314 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26310 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26312 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26312 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26316 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26312 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26314 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26314 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26318 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26314 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26316 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26316 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26320 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26316 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26318 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26318 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26322 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26318 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26320 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26320 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26324 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26320 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26322 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26322 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26326 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26322 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26324 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26324 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26328 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26324 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26326 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26326 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26330 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26326 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26328 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26328 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26332 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26328 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26330 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26330 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26334 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26330 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26332 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26332 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26336 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26332 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26334 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26334 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:25922 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26334 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26336 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26336 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26340 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26336 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:25922 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:25922 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26342 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:25922 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26340 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26340 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26344 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26340 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26342 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26342 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26346 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26342 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26344 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26344 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26348 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26344 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26346 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26346 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:23854 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26346 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26348 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26348 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26352 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26348 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:23854 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:23854 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26354 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:23854 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26352 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26352 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26356 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26352 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26354 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26354 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26358 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26354 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26356 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26356 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26360 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26356 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26358 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26358 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26362 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26358 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26360 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26360 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26364 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26360 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26362 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26362 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26366 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26362 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26364 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26364 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26368 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26364 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26366 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26366 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26370 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26366 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26368 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26368 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26372 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26368 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26370 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26370 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26374 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26370 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26372 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26372 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26376 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26372 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26374 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26374 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26378 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26374 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26376 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26376 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26380 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26376 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26378 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26378 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26382 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26378 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26380 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26380 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26384 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26380 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26382 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26382 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26386 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26382 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26384 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26384 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:24306 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26384 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26386 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26386 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26390 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26386 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:24306 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:24306 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26392 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:24306 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26390 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26390 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26394 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26390 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26392 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26392 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26396 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26392 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26394 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26394 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26398 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26394 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26396 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26396 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26400 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26396 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26398 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26398 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26402 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26398 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26400 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26400 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26404 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26400 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26402 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26402 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26406 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26402 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26404 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26404 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26408 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26404 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26406 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26406 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26410 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26406 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26408 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26408 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26412 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26408 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26410 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26410 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26414 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26410 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26412 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26412 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26416 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26412 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26414 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26414 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26418 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26414 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26416 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26416 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26420 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26416 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26418 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26418 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26422 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26418 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26420 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26420 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26424 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26420 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26422 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26422 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26426 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26422 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26424 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26424 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26428 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26424 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26426 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26426 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26430 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26426 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26428 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26428 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26432 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26428 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26430 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26430 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26434 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26430 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26432 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26432 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26436 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26432 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26434 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26434 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26438 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26434 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26436 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26436 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26440 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26436 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26438 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26438 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26442 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26438 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26440 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26440 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26444 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26440 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26442 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26442 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26446 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26442 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26444 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26444 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26448 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26444 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26446 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26446 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26450 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26446 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26448 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26448 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26452 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26448 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26450 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26450 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26454 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26450 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26452 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26452 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26456 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26452 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26454 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26454 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26458 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26454 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26456 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26456 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26460 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26456 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26458 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26458 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26462 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26458 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26460 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26460 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26464 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26460 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26462 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26462 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26466 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26462 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26464 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26464 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26468 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26464 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26466 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26466 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26470 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26466 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26468 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26468 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26472 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26468 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26470 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26470 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26474 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26470 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26472 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26472 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26476 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26472 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26474 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26474 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26478 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26474 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26476 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26476 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26480 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26476 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26478 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26478 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26482 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26478 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26480 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26480 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26484 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26480 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26482 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26482 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26486 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26482 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26484 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26484 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26488 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26484 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26486 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26486 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26490 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26486 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26488 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26488 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26492 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26488 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26490 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26490 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26494 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26490 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26492 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26492 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26496 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26492 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26494 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26494 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26498 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26494 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26496 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26496 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26500 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26496 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26498 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26498 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26502 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26498 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26500 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26500 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26504 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26500 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26502 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26502 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26506 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26502 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26504 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26504 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26508 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26504 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26506 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26506 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26510 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26506 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26508 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26508 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26512 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26508 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26510 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26510 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26514 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26510 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26512 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26512 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26516 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26512 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26514 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26514 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26518 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26514 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26516 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26516 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26520 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26516 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26518 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26518 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26522 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26518 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26520 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26520 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26524 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26520 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26522 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26522 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26526 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26522 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26524 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26524 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26528 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26524 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26526 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26526 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26530 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26526 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26528 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26528 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26532 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26528 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26530 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26530 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26534 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26530 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26532 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26532 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26536 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26532 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26534 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26534 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26538 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26534 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26536 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26536 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26540 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26536 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26538 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26538 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26542 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26538 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26540 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26540 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26544 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26540 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26542 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26542 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26546 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26542 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26544 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26544 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26548 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26544 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26546 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26546 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26550 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26546 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26548 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26548 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26552 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26548 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26550 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26550 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26554 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26550 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26552 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26552 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26556 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26552 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26554 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26554 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26558 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26554 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26556 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26556 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26560 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26556 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26558 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26558 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26562 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26558 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26560 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26560 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26564 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26560 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26562 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26562 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26566 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26562 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26564 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26564 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26568 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26564 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26566 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26566 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26570 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26566 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26568 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26568 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26572 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26568 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26570 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26570 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26574 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26570 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26572 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26572 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26576 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26572 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26574 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26574 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26578 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26574 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26576 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26576 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26580 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26576 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26578 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26578 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26582 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26578 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26580 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26580 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26584 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26580 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26582 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26582 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26586 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26582 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26584 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26584 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26588 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26584 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26586 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26586 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26590 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26586 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26588 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26588 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26592 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26588 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26590 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26590 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26594 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26590 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26592 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26592 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26596 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26592 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26594 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26594 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26598 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26594 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26596 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26596 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26600 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26596 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26598 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26598 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26602 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26598 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26600 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26600 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26604 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26600 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26602 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26602 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26606 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26602 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26604 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26604 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26608 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26604 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26606 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26606 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26610 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26606 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26608 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26608 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26612 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26608 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26610 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26610 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26614 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26610 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26612 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26612 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26616 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26612 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26614 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26614 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26618 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26614 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26616 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26616 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26620 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26616 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26618 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26618 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26622 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26618 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26620 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26620 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26624 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26620 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26622 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26622 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26626 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26622 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26624 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26624 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26628 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26624 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26626 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26626 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26630 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26626 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26628 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26628 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26632 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26628 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26630 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26630 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26634 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26630 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26632 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26632 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26636 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26632 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26634 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26634 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26638 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26634 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26636 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26636 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26640 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26636 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26638 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26638 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26642 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26638 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26640 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26640 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26644 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26640 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26642 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26642 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26646 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26642 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26644 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26644 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26648 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26644 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26646 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26646 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26650 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26646 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26648 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26648 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26652 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26648 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26650 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26650 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26654 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26650 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26652 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26652 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26656 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26652 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26654 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26654 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26658 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26654 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26656 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26656 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26660 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26656 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26658 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26658 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26662 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26658 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26660 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26660 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26664 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26660 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26662 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26662 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26666 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26662 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26664 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26664 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26668 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26664 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26666 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26666 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26670 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26666 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26668 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26668 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26672 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26668 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26670 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26670 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26674 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26670 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26672 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26672 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26676 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26672 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26674 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26674 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26678 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26674 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26676 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26676 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26680 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26676 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26678 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26678 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26682 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26678 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26680 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26680 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26684 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26680 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26682 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26682 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26686 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26682 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26684 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26684 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26688 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26684 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26686 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26686 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26690 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26686 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26688 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26688 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26692 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26688 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26690 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26690 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26694 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26690 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26692 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26692 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26696 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26692 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26694 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26694 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26698 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26694 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26696 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26696 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26700 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26696 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26698 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26698 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26702 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26698 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26700 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26700 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26704 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26700 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26702 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26702 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26706 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26702 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26704 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26704 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26708 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26704 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26706 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26706 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26710 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26706 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26708 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26708 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26712 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26708 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26710 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26710 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26714 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26710 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26712 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26712 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26716 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26712 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26714 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26714 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26718 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26714 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26716 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26716 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26720 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26716 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26718 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26718 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26722 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26718 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26720 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26720 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26724 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26720 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26722 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26722 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26726 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26722 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26724 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26724 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26728 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26724 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26726 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26726 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26730 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26726 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26728 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26728 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26732 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26728 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26730 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26730 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26734 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26730 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26732 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26732 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26338 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26732 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26734 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26734 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26738 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26734 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26338 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26338 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26740 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26338 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26738 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26738 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26742 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26738 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26740 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26740 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26744 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26740 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26742 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26742 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26746 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26742 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26744 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26744 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26350 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26744 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26746 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26746 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26750 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26746 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26350 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26350 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26752 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26350 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26750 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26750 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26754 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26750 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26752 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26752 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26756 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26752 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26754 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26754 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26758 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26754 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26756 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26756 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26760 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26756 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26758 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26758 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26762 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26758 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26760 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26760 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26764 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26760 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26762 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26762 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:24690 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26762 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26764 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26764 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26768 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26764 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:24690 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:24690 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:24694 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:24690 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26768 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26768 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26772 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26768 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:24694 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:24694 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26774 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:24694 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26772 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26772 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26776 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26772 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26774 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26774 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26778 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26774 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26776 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26776 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26780 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26776 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26778 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26778 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26782 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26778 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26780 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26780 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26784 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26780 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26782 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26782 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26786 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26782 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26784 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26784 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26788 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26784 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26786 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26786 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26790 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26786 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26788 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26788 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26792 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26788 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26790 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26790 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26794 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26790 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26792 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26792 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26796 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26792 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26794 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26794 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26798 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26794 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26796 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26796 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26800 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26796 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26798 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26798 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26802 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26798 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26800 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26800 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26804 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26800 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26802 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26802 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26806 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26802 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26804 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26804 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26808 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26804 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26806 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26806 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26810 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26806 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26808 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26808 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26812 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26808 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26810 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26810 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26814 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26810 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26812 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26812 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26816 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26812 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26814 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26814 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26818 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26814 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26816 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26816 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26820 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26816 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26818 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26818 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26822 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26818 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26820 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26820 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26824 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26820 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26822 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26822 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26826 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26822 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26824 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26824 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26828 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26824 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26826 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26826 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26830 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26826 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26828 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26828 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26832 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26828 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26830 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26830 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26834 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26830 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26832 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26832 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26836 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26832 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26834 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26834 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26838 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26834 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26836 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26836 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26840 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26836 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26838 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26838 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26842 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26838 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26840 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26840 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26844 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26840 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26842 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26842 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26846 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26842 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26844 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26844 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26848 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26844 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26846 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26846 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26850 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26846 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26848 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26848 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26852 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26848 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26850 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26850 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26854 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26850 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26852 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26852 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26856 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26852 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26854 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26854 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26858 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26854 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26856 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26856 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26860 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26856 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26858 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26858 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26862 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26858 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26860 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26860 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26864 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26860 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26862 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26862 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26866 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26862 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26864 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26864 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26868 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26864 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26866 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26866 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26870 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26866 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26868 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26868 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26872 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26868 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26870 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26870 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26874 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26870 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26872 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26872 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26876 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26872 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26874 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26874 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26878 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26874 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26876 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26876 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26880 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26876 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26878 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26878 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26882 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26878 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26880 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26880 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26884 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26880 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26882 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26882 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26886 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26882 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26884 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26884 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26888 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26884 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26886 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26886 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26890 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26886 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26888 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26888 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26892 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26888 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26890 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26890 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26894 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26890 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26892 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26892 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26896 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26892 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26894 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26894 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26898 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26894 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26896 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26896 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26900 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26896 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26898 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26898 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26902 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26898 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26900 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26900 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26904 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26900 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26902 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26902 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26906 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26902 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26904 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26904 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26908 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26904 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26906 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26906 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26910 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26906 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26908 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26908 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26912 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26908 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26910 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26910 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26914 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26910 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26912 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26912 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26916 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26912 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26914 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26914 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26918 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26914 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26916 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26916 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26920 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26916 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26918 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26918 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26922 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26918 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26920 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26920 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26924 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26920 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26922 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26922 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26926 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26922 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26924 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26924 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26928 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26924 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26926 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26926 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26930 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26926 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26928 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26928 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26932 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26928 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26930 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26930 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26934 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26930 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26932 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26932 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26936 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26932 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26934 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26934 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26938 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26934 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26936 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26936 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26940 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26936 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26938 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26938 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26942 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26938 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26940 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26940 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26944 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26940 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26942 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26942 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26946 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26942 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26944 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26944 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26948 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26944 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26946 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26946 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26950 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26946 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26948 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26948 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26952 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26948 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26950 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26950 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26954 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26950 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26952 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26952 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26956 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26952 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26954 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26954 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26958 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26954 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26956 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26956 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26960 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26956 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26958 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26958 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26962 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26958 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26960 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26960 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26964 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26960 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26962 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26962 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26966 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26962 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26964 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26964 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26968 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26964 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26966 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26966 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26970 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26966 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26968 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26968 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26972 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26968 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26970 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26970 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26974 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26970 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26972 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26972 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26976 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26972 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26974 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26974 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26978 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26974 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26976 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26976 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26980 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26976 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26978 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26978 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26982 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26978 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26980 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26980 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26984 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26980 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26982 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26982 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26986 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26982 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26984 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26984 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26988 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26984 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26986 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26986 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26990 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26986 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26988 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26988 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26992 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26988 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26990 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26990 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26994 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26990 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26992 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26992 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26996 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26992 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26994 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26994 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26998 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26994 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26996 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26996 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:27000 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26996 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26998 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26998 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:27002 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26998 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:27000 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:27000 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:27004 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:27000 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:27002 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:27002 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:27006 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:27002 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:27004 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:27004 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:27008 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:27004 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:27006 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:27006 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:27010 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:27006 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:27008 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:27008 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:27012 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:27008 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:27010 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:27010 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:27014 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:27010 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:27012 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:27012 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:27016 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:27012 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:27014 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:27014 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:27018 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:27014 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:27016 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:27016 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:27020 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:27016 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:27018 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:27018 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:27022 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:27018 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:27020 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:27020 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:27024 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:27020 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:27022 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:27022 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:27026 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:27022 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:27024 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:27024 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:27028 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:27024 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:27026 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:27026 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:27030 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:27026 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:27028 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:27028 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:27032 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:27028 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:27030 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:27030 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:27034 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:27030 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:27032 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:27032 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:27036 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:27032 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:27034 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:27034 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:27038 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:27034 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:27036 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:27036 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:27040 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:27036 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:27038 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:27038 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:27042 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:27038 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:27040 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:27040 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:27044 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:27040 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:27042 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:27042 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:27046 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:27042 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:27044 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:27044 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:27048 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:27044 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:27046 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:27046 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:27050 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:27046 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:27048 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:27048 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:27052 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:27048 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:27050 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:27050 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:27054 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:27050 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:27052 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:27052 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:27056 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:27052 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:27054 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:27054 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:27058 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:27054 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:27056 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:27056 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:27060 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:27056 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:27058 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:27058 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:27062 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:27058 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:27060 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:27060 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:27064 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:27060 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:27062 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:27062 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:27066 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:27062 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:27064 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:27064 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:27068 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:27064 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:27066 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:27066 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:27070 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:27066 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:27068 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:27068 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:27072 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:27068 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:27070 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:27070 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:27074 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:27070 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:27072 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:27072 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:27076 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:27072 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:27074 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:27074 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:27078 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:27074 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:27076 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:27076 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:27080 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:27076 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:27078 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:27078 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:27082 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:27078 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:27080 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:27080 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:27084 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:27080 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:27082 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:27082 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:27086 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:27082 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:27084 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:27084 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:27088 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:27084 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:27086 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:27086 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:27090 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:27086 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:27088 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:27088 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:27092 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:27088 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:27090 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:27090 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:27094 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:27090 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:27092 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:27092 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:27096 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:27092 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:27094 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:27094 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:27098 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:27094 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:27096 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:27096 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:27100 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:27096 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:27098 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:27098 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:27102 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:27098 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:27100 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:27100 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:27104 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:27100 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:27102 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:27102 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:27106 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:27102 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:27104 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:27104 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:27108 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:27104 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:27106 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:27106 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:27110 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:27106 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:27108 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:27108 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:27112 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:27108 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:27110 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:27110 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:27114 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:27110 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:27112 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:27112 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:27116 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:27112 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:27114 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:27114 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:27118 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:27114 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:27116 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:27116 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:27120 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:27116 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:27118 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:27118 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:27122 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:27118 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:27120 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:27120 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:27124 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:27120 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:27122 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:27122 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:27126 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:27122 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:27124 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:27124 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:27128 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:27124 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:27126 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:27126 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:27130 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:27126 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:27128 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:27128 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:27132 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:27128 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:27130 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:27130 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:27134 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:27130 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:27132 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:27132 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:27136 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:27132 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:27134 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:27134 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26736 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:27134 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:27136 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:27136 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(270)-<handAccept> 127.0.0.1:26748 connected
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:27136 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26736 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26736 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26736 client closed
+2021-08-10 00:09:46 INFO server.cpp(106)-<run> 127.0.0.1:26748 req method: GET
+2021-08-10 00:09:46 INFO server.cpp(129)-<run> 127.0.0.1:26748 req filepath: /img/1.jpg
+2021-08-10 00:09:46 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:26748 client closed
+2021-08-10 00:09:50 INFO server.cpp(106)-<run> 183.159.192.247:38884 req method: GET
+2021-08-10 00:09:50 INFO server.cpp(129)-<run> 183.159.192.247:38884 req filepath: /blog/linux_notes.html
+2021-08-10 00:09:50 INFO server.cpp(332)-<cliCleaner> 183.159.192.247:38884 client closed
+2021-08-10 00:09:50 INFO server.cpp(106)-<run> 183.159.192.247:38886 req method: GET
+2021-08-10 00:09:50 INFO server.cpp(129)-<run> 183.159.192.247:38886 req filepath: /css/index.css
+2021-08-10 00:09:50 INFO server.cpp(332)-<cliCleaner> 183.159.192.247:38886 client closed
+2021-08-10 00:09:50 INFO server.cpp(270)-<handAccept> 183.159.192.247:38888 connected
+2021-08-10 00:09:50 INFO server.cpp(270)-<handAccept> 183.159.192.247:38890 connected
+2021-08-10 00:09:50 INFO server.cpp(106)-<run> 183.159.192.247:38888 req method: GET
+2021-08-10 00:09:50 INFO server.cpp(129)-<run> 183.159.192.247:38888 req filepath: /css/my.css
+2021-08-10 00:09:50 INFO server.cpp(332)-<cliCleaner> 183.159.192.247:38888 client closed
+2021-08-10 00:09:50 INFO server.cpp(106)-<run> 183.159.192.247:38890 req method: GET
+2021-08-10 00:09:50 INFO server.cpp(129)-<run> 183.159.192.247:38890 req filepath: /css/prism.css
+2021-08-10 00:09:50 INFO server.cpp(332)-<cliCleaner> 183.159.192.247:38890 client closed
+2021-08-10 00:09:50 INFO server.cpp(270)-<handAccept> 183.159.192.247:38902 connected
+2021-08-10 00:09:50 INFO server.cpp(106)-<run> 183.159.192.247:38902 req method: GET
+2021-08-10 00:09:50 INFO server.cpp(129)-<run> 183.159.192.247:38902 req filepath: /js/prism.js
+2021-08-10 00:09:52 INFO server.cpp(332)-<cliCleaner> 183.159.192.247:38902 client closed
+2021-08-10 00:09:53 INFO server.cpp(270)-<handAccept> 183.159.192.247:38904 connected
+2021-08-10 00:09:53 INFO server.cpp(270)-<handAccept> 183.159.192.247:38906 connected
+2021-08-10 00:10:12 INFO server.cpp(270)-<handAccept> 127.0.0.1:27162 connected
+2021-08-10 00:10:12 INFO server.cpp(106)-<run> 127.0.0.1:27162 req method: HEAD
+2021-08-10 00:10:12 INFO server.cpp(111)-<run> 127.0.0.1:27162 only GET method supported now! Got: HEAD
+
+2021-08-10 00:10:12 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:27162 client closed
+2021-08-10 00:10:13 INFO server.cpp(270)-<handAccept> 127.0.0.1:27166 connected
+2021-08-10 00:10:13 INFO server.cpp(106)-<run> 127.0.0.1:27166 req method: HEAD
+2021-08-10 00:10:13 INFO server.cpp(111)-<run> 127.0.0.1:27166 only GET method supported now! Got: HEAD
+
+2021-08-10 00:10:13 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:27166 client closed
+2021-08-10 00:10:14 INFO server.cpp(270)-<handAccept> 127.0.0.1:27170 connected
+2021-08-10 00:10:14 INFO server.cpp(106)-<run> 127.0.0.1:27170 req method: HEAD
+2021-08-10 00:10:14 INFO server.cpp(111)-<run> 127.0.0.1:27170 only GET method supported now! Got: HEAD
+
+2021-08-10 00:10:14 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:27170 client closed
+2021-08-10 00:10:15 INFO server.cpp(270)-<handAccept> 127.0.0.1:27172 connected
+2021-08-10 00:10:15 INFO server.cpp(106)-<run> 127.0.0.1:27172 req method: HEAD
+2021-08-10 00:10:15 INFO server.cpp(111)-<run> 127.0.0.1:27172 only GET method supported now! Got: HEAD
+
+2021-08-10 00:10:15 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:27172 client closed
+2021-08-10 00:10:16 INFO server.cpp(270)-<handAccept> 127.0.0.1:27176 connected
+2021-08-10 00:10:16 INFO server.cpp(106)-<run> 127.0.0.1:27176 req method: HEAD
+2021-08-10 00:10:16 INFO server.cpp(111)-<run> 127.0.0.1:27176 only GET method supported now! Got: HEAD
+
+2021-08-10 00:10:16 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:27176 client closed
+2021-08-10 00:10:17 INFO server.cpp(270)-<handAccept> 127.0.0.1:27184 connected
+2021-08-10 00:10:17 INFO server.cpp(106)-<run> 127.0.0.1:27184 req method: HEAD
+2021-08-10 00:10:17 INFO server.cpp(111)-<run> 127.0.0.1:27184 only GET method supported now! Got: HEAD
+
+2021-08-10 00:10:17 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:27184 client closed
+2021-08-10 00:10:18 INFO server.cpp(270)-<handAccept> 127.0.0.1:27188 connected
+2021-08-10 00:10:18 INFO server.cpp(106)-<run> 127.0.0.1:27188 req method: HEAD
+2021-08-10 00:10:18 INFO server.cpp(111)-<run> 127.0.0.1:27188 only GET method supported now! Got: HEAD
+
+2021-08-10 00:10:18 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:27188 client closed
+2021-08-10 00:10:19 INFO server.cpp(270)-<handAccept> 127.0.0.1:27192 connected
+2021-08-10 00:10:19 INFO server.cpp(106)-<run> 127.0.0.1:27192 req method: HEAD
+2021-08-10 00:10:19 INFO server.cpp(111)-<run> 127.0.0.1:27192 only GET method supported now! Got: HEAD
+
+2021-08-10 00:10:19 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:27192 client closed
+2021-08-10 00:10:20 INFO server.cpp(270)-<handAccept> 127.0.0.1:27194 connected
+2021-08-10 00:10:20 INFO server.cpp(106)-<run> 127.0.0.1:27194 req method: HEAD
+2021-08-10 00:10:20 INFO server.cpp(111)-<run> 127.0.0.1:27194 only GET method supported now! Got: HEAD
+
+2021-08-10 00:10:20 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:27194 client closed
+2021-08-10 00:10:22 INFO server.cpp(270)-<handAccept> 127.0.0.1:27196 connected
+2021-08-10 00:10:22 INFO server.cpp(106)-<run> 127.0.0.1:27196 req method: HEAD
+2021-08-10 00:10:22 INFO server.cpp(111)-<run> 127.0.0.1:27196 only GET method supported now! Got: HEAD
+
+2021-08-10 00:10:22 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:27196 client closed
+2021-08-10 00:10:23 INFO server.cpp(270)-<handAccept> 127.0.0.1:27198 connected
+2021-08-10 00:10:23 INFO server.cpp(106)-<run> 127.0.0.1:27198 req method: HEAD
+2021-08-10 00:10:23 INFO server.cpp(111)-<run> 127.0.0.1:27198 only GET method supported now! Got: HEAD
+
+2021-08-10 00:10:23 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:27198 client closed
+2021-08-10 00:10:24 INFO server.cpp(270)-<handAccept> 127.0.0.1:27200 connected
+2021-08-10 00:10:24 INFO server.cpp(106)-<run> 127.0.0.1:27200 req method: HEAD
+2021-08-10 00:10:24 INFO server.cpp(111)-<run> 127.0.0.1:27200 only GET method supported now! Got: HEAD
+
+2021-08-10 00:10:24 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:27200 client closed
+2021-08-10 00:10:25 INFO server.cpp(270)-<handAccept> 127.0.0.1:27204 connected
+2021-08-10 00:10:25 INFO server.cpp(106)-<run> 127.0.0.1:27204 req method: HEAD
+2021-08-10 00:10:25 INFO server.cpp(111)-<run> 127.0.0.1:27204 only GET method supported now! Got: HEAD
+
+2021-08-10 00:10:25 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:27204 client closed
+2021-08-10 00:10:26 INFO server.cpp(270)-<handAccept> 127.0.0.1:27206 connected
+2021-08-10 00:10:26 INFO server.cpp(106)-<run> 127.0.0.1:27206 req method: HEAD
+2021-08-10 00:10:26 INFO server.cpp(111)-<run> 127.0.0.1:27206 only GET method supported now! Got: HEAD
+
+2021-08-10 00:10:26 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:27206 client closed
+2021-08-10 00:10:27 INFO server.cpp(270)-<handAccept> 127.0.0.1:27208 connected
+2021-08-10 00:10:27 INFO server.cpp(106)-<run> 127.0.0.1:27208 req method: HEAD
+2021-08-10 00:10:27 INFO server.cpp(111)-<run> 127.0.0.1:27208 only GET method supported now! Got: HEAD
+
+2021-08-10 00:10:27 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:27208 client closed
+2021-08-10 00:10:28 INFO server.cpp(270)-<handAccept> 127.0.0.1:27212 connected
+2021-08-10 00:10:28 INFO server.cpp(106)-<run> 127.0.0.1:27212 req method: HEAD
+2021-08-10 00:10:28 INFO server.cpp(111)-<run> 127.0.0.1:27212 only GET method supported now! Got: HEAD
+
+2021-08-10 00:10:28 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:27212 client closed
+2021-08-10 00:10:28 INFO server.cpp(106)-<run> 183.159.192.247:38904 req method: GET
+2021-08-10 00:10:28 INFO server.cpp(129)-<run> 183.159.192.247:38904 req filepath: /blog/md_generate_html.html
+2021-08-10 00:10:28 INFO server.cpp(332)-<cliCleaner> 183.159.192.247:38904 client closed
+2021-08-10 00:10:28 INFO server.cpp(106)-<run> 183.159.192.247:38906 req method: GET
+2021-08-10 00:10:28 INFO server.cpp(129)-<run> 183.159.192.247:38906 req filepath: /css/index.css
+2021-08-10 00:10:28 INFO server.cpp(332)-<cliCleaner> 183.159.192.247:38906 client closed
+2021-08-10 00:10:28 INFO server.cpp(270)-<handAccept> 183.159.192.247:38912 connected
+2021-08-10 00:10:28 INFO server.cpp(106)-<run> 183.159.192.247:38912 req method: GET
+2021-08-10 00:10:28 INFO server.cpp(129)-<run> 183.159.192.247:38912 req filepath: /css/my.css
+2021-08-10 00:10:28 INFO server.cpp(332)-<cliCleaner> 183.159.192.247:38912 client closed
+2021-08-10 00:10:28 INFO server.cpp(270)-<handAccept> 183.159.192.247:38914 connected
+2021-08-10 00:10:28 INFO server.cpp(270)-<handAccept> 183.159.192.247:38910 connected
+2021-08-10 00:10:28 INFO server.cpp(106)-<run> 183.159.192.247:38914 req method: GET
+2021-08-10 00:10:28 INFO server.cpp(129)-<run> 183.159.192.247:38914 req filepath: /css/prism.css
+2021-08-10 00:10:28 INFO server.cpp(332)-<cliCleaner> 183.159.192.247:38914 client closed
+2021-08-10 00:10:28 INFO server.cpp(106)-<run> 183.159.192.247:38910 req method: GET
+2021-08-10 00:10:28 INFO server.cpp(129)-<run> 183.159.192.247:38910 req filepath: /js/prism.js
+2021-08-10 00:10:28 INFO server.cpp(332)-<cliCleaner> 183.159.192.247:38910 client closed
+2021-08-10 00:10:28 INFO server.cpp(270)-<handAccept> 183.159.192.247:38916 connected
+2021-08-10 00:10:28 INFO server.cpp(270)-<handAccept> 183.159.192.247:38918 connected
+2021-08-10 00:10:29 INFO server.cpp(270)-<handAccept> 127.0.0.1:27216 connected
+2021-08-10 00:10:29 INFO server.cpp(106)-<run> 127.0.0.1:27216 req method: HEAD
+2021-08-10 00:10:29 INFO server.cpp(111)-<run> 127.0.0.1:27216 only GET method supported now! Got: HEAD
+
+2021-08-10 00:10:29 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:27216 client closed
+2021-08-10 00:10:29 INFO server.cpp(106)-<run> 183.159.192.247:38916 req method: GET
+2021-08-10 00:10:29 INFO server.cpp(129)-<run> 183.159.192.247:38916 req filepath: /index.html
+2021-08-10 00:10:29 INFO server.cpp(332)-<cliCleaner> 183.159.192.247:38916 client closed
+2021-08-10 00:10:29 INFO server.cpp(106)-<run> 183.159.192.247:38918 req method: GET
+2021-08-10 00:10:29 INFO server.cpp(129)-<run> 183.159.192.247:38918 req filepath: /css/index.css
+2021-08-10 00:10:29 INFO server.cpp(332)-<cliCleaner> 183.159.192.247:38918 client closed
+2021-08-10 00:10:29 INFO server.cpp(270)-<handAccept> 183.159.192.247:38920 connected
+2021-08-10 00:10:29 INFO server.cpp(106)-<run> 183.159.192.247:38920 req method: GET
+2021-08-10 00:10:29 INFO server.cpp(129)-<run> 183.159.192.247:38920 req filepath: /css/my.css
+2021-08-10 00:10:29 INFO server.cpp(332)-<cliCleaner> 183.159.192.247:38920 client closed
+2021-08-10 00:10:29 INFO server.cpp(270)-<handAccept> 183.159.192.247:38922 connected
+2021-08-10 00:10:29 INFO server.cpp(106)-<run> 183.159.192.247:38922 req method: GET
+2021-08-10 00:10:29 INFO server.cpp(129)-<run> 183.159.192.247:38922 req filepath: /css/prism.css
+2021-08-10 00:10:29 INFO server.cpp(332)-<cliCleaner> 183.159.192.247:38922 client closed
+2021-08-10 00:10:29 INFO server.cpp(270)-<handAccept> 183.159.192.247:38924 connected
+2021-08-10 00:10:29 INFO server.cpp(106)-<run> 183.159.192.247:38924 req method: GET
+2021-08-10 00:10:29 INFO server.cpp(129)-<run> 183.159.192.247:38924 req filepath: /js/prism.js
+2021-08-10 00:10:29 INFO server.cpp(332)-<cliCleaner> 183.159.192.247:38924 client closed
+2021-08-10 00:10:29 INFO server.cpp(270)-<handAccept> 183.159.192.247:38926 connected
+2021-08-10 00:10:29 INFO server.cpp(270)-<handAccept> 183.159.192.247:38928 connected
+2021-08-10 00:10:30 INFO server.cpp(270)-<handAccept> 127.0.0.1:27220 connected
+2021-08-10 00:10:30 INFO server.cpp(106)-<run> 127.0.0.1:27220 req method: HEAD
+2021-08-10 00:10:30 INFO server.cpp(111)-<run> 127.0.0.1:27220 only GET method supported now! Got: HEAD
+
+2021-08-10 00:10:30 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:27220 client closed
+2021-08-10 00:10:30 INFO server.cpp(106)-<run> 183.159.192.247:38926 req method: GET
+2021-08-10 00:10:30 INFO server.cpp(129)-<run> 183.159.192.247:38926 req filepath: /blog/linux_notes.html
+2021-08-10 00:10:30 INFO server.cpp(106)-<run> 183.159.192.247:38928 req method: GET
+2021-08-10 00:10:30 INFO server.cpp(129)-<run> 183.159.192.247:38928 req filepath: /css/index.css
+2021-08-10 00:10:30 INFO server.cpp(332)-<cliCleaner> 183.159.192.247:38928 client closed
+2021-08-10 00:10:30 INFO server.cpp(270)-<handAccept> 183.159.192.247:38930 connected
+2021-08-10 00:10:30 INFO server.cpp(270)-<handAccept> 183.159.192.247:38932 connected
+2021-08-10 00:10:30 INFO server.cpp(106)-<run> 183.159.192.247:38930 req method: GET
+2021-08-10 00:10:30 INFO server.cpp(129)-<run> 183.159.192.247:38930 req filepath: /css/my.css
+2021-08-10 00:10:30 INFO server.cpp(332)-<cliCleaner> 183.159.192.247:38930 client closed
+2021-08-10 00:10:30 INFO server.cpp(106)-<run> 183.159.192.247:38932 req method: GET
+2021-08-10 00:10:30 INFO server.cpp(129)-<run> 183.159.192.247:38932 req filepath: /css/prism.css
+2021-08-10 00:10:30 INFO server.cpp(332)-<cliCleaner> 183.159.192.247:38932 client closed
+2021-08-10 00:10:30 INFO server.cpp(332)-<cliCleaner> 183.159.192.247:38926 client closed
+2021-08-10 00:10:30 INFO server.cpp(270)-<handAccept> 183.159.192.247:38934 connected
+2021-08-10 00:10:30 INFO server.cpp(106)-<run> 183.159.192.247:38934 req method: GET
+2021-08-10 00:10:30 INFO server.cpp(129)-<run> 183.159.192.247:38934 req filepath: /js/prism.js
+2021-08-10 00:10:31 INFO server.cpp(270)-<handAccept> 127.0.0.1:27222 connected
+2021-08-10 00:10:31 INFO server.cpp(106)-<run> 127.0.0.1:27222 req method: HEAD
+2021-08-10 00:10:31 INFO server.cpp(111)-<run> 127.0.0.1:27222 only GET method supported now! Got: HEAD
+
+2021-08-10 00:10:31 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:27222 client closed
+2021-08-10 00:10:31 INFO server.cpp(332)-<cliCleaner> 183.159.192.247:38934 client closed
+2021-08-10 00:10:31 INFO server.cpp(270)-<handAccept> 183.159.192.247:38936 connected
+2021-08-10 00:10:31 INFO server.cpp(106)-<run> 183.159.192.247:38936 req method: GET
+2021-08-10 00:10:31 INFO server.cpp(129)-<run> 183.159.192.247:38936 req filepath: /index.html
+2021-08-10 00:10:31 INFO server.cpp(332)-<cliCleaner> 183.159.192.247:38936 client closed
+2021-08-10 00:10:31 INFO server.cpp(270)-<handAccept> 183.159.192.247:38938 connected
+2021-08-10 00:10:32 INFO server.cpp(270)-<handAccept> 127.0.0.1:27224 connected
+2021-08-10 00:10:32 INFO server.cpp(106)-<run> 127.0.0.1:27224 req method: HEAD
+2021-08-10 00:10:32 INFO server.cpp(111)-<run> 127.0.0.1:27224 only GET method supported now! Got: HEAD
+
+2021-08-10 00:10:32 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:27224 client closed
+2021-08-10 00:10:32 INFO server.cpp(106)-<run> 183.159.192.247:38938 req method: GET
+2021-08-10 00:10:32 INFO server.cpp(129)-<run> 183.159.192.247:38938 req filepath: /css/index.css
+2021-08-10 00:10:32 INFO server.cpp(332)-<cliCleaner> 183.159.192.247:38938 client closed
+2021-08-10 00:10:32 INFO server.cpp(270)-<handAccept> 183.159.192.247:38940 connected
+2021-08-10 00:10:32 INFO server.cpp(106)-<run> 183.159.192.247:38940 req method: GET
+2021-08-10 00:10:32 INFO server.cpp(129)-<run> 183.159.192.247:38940 req filepath: /css/my.css
+2021-08-10 00:10:32 INFO server.cpp(332)-<cliCleaner> 183.159.192.247:38940 client closed
+2021-08-10 00:10:32 INFO server.cpp(270)-<handAccept> 183.159.192.247:38942 connected
+2021-08-10 00:10:32 INFO server.cpp(106)-<run> 183.159.192.247:38942 req method: GET
+2021-08-10 00:10:32 INFO server.cpp(129)-<run> 183.159.192.247:38942 req filepath: /css/prism.css
+2021-08-10 00:10:32 INFO server.cpp(332)-<cliCleaner> 183.159.192.247:38942 client closed
+2021-08-10 00:10:32 INFO server.cpp(270)-<handAccept> 183.159.192.247:38944 connected
+2021-08-10 00:10:32 INFO server.cpp(106)-<run> 183.159.192.247:38944 req method: GET
+2021-08-10 00:10:32 INFO server.cpp(129)-<run> 183.159.192.247:38944 req filepath: /js/prism.js
+2021-08-10 00:10:32 INFO server.cpp(332)-<cliCleaner> 183.159.192.247:38944 client closed
+2021-08-10 00:10:32 INFO server.cpp(270)-<handAccept> 183.159.192.247:38946 connected
+2021-08-10 00:10:32 INFO server.cpp(270)-<handAccept> 183.159.192.247:38948 connected
+2021-08-10 00:10:33 INFO server.cpp(270)-<handAccept> 127.0.0.1:27226 connected
+2021-08-10 00:10:33 INFO server.cpp(106)-<run> 127.0.0.1:27226 req method: HEAD
+2021-08-10 00:10:33 INFO server.cpp(111)-<run> 127.0.0.1:27226 only GET method supported now! Got: HEAD
+
+2021-08-10 00:10:33 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:27226 client closed
+2021-08-10 00:10:34 INFO server.cpp(270)-<handAccept> 127.0.0.1:27228 connected
+2021-08-10 00:10:34 INFO server.cpp(106)-<run> 127.0.0.1:27228 req method: HEAD
+2021-08-10 00:10:34 INFO server.cpp(111)-<run> 127.0.0.1:27228 only GET method supported now! Got: HEAD
+
+2021-08-10 00:10:34 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:27228 client closed
+2021-08-10 00:10:35 INFO server.cpp(270)-<handAccept> 127.0.0.1:27232 connected
+2021-08-10 00:10:35 INFO server.cpp(106)-<run> 127.0.0.1:27232 req method: HEAD
+2021-08-10 00:10:35 INFO server.cpp(111)-<run> 127.0.0.1:27232 only GET method supported now! Got: HEAD
+
+2021-08-10 00:10:35 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:27232 client closed
+2021-08-10 00:10:36 INFO server.cpp(270)-<handAccept> 127.0.0.1:27234 connected
+2021-08-10 00:10:36 INFO server.cpp(106)-<run> 127.0.0.1:27234 req method: HEAD
+2021-08-10 00:10:36 INFO server.cpp(111)-<run> 127.0.0.1:27234 only GET method supported now! Got: HEAD
+
+2021-08-10 00:10:36 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:27234 client closed
+2021-08-10 00:10:37 INFO server.cpp(270)-<handAccept> 127.0.0.1:27236 connected
+2021-08-10 00:10:37 INFO server.cpp(106)-<run> 127.0.0.1:27236 req method: HEAD
+2021-08-10 00:10:37 INFO server.cpp(111)-<run> 127.0.0.1:27236 only GET method supported now! Got: HEAD
+
+2021-08-10 00:10:37 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:27236 client closed
+2021-08-10 00:10:38 INFO server.cpp(270)-<handAccept> 127.0.0.1:27240 connected
+2021-08-10 00:10:38 INFO server.cpp(106)-<run> 127.0.0.1:27240 req method: HEAD
+2021-08-10 00:10:38 INFO server.cpp(111)-<run> 127.0.0.1:27240 only GET method supported now! Got: HEAD
+
+2021-08-10 00:10:38 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:27240 client closed
+2021-08-10 00:10:39 INFO server.cpp(270)-<handAccept> 127.0.0.1:27244 connected
+2021-08-10 00:10:39 INFO server.cpp(106)-<run> 127.0.0.1:27244 req method: HEAD
+2021-08-10 00:10:39 INFO server.cpp(111)-<run> 127.0.0.1:27244 only GET method supported now! Got: HEAD
+
+2021-08-10 00:10:39 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:27244 client closed
+2021-08-10 00:10:40 INFO server.cpp(270)-<handAccept> 127.0.0.1:27248 connected
+2021-08-10 00:10:40 INFO server.cpp(106)-<run> 127.0.0.1:27248 req method: HEAD
+2021-08-10 00:10:40 INFO server.cpp(111)-<run> 127.0.0.1:27248 only GET method supported now! Got: HEAD
+
+2021-08-10 00:10:40 INFO server.cpp(332)-<cliCleaner> 127.0.0.1:27248 client closed
+2021-08-10 00:11:45 INFO server.cpp(332)-<cliCleaner> 183.159.192.247:38946 client closed
+2021-08-10 00:11:45 INFO server.cpp(332)-<cliCleaner> 183.159.192.247:38948 client closed
