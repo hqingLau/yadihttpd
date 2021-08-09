@@ -38,6 +38,7 @@ void *curQueue2file(void *parg)
             char suffix[64];
             strftime(suffix,sizeof(suffix),"%Y%m%d%H%M%S",ditm);
             snprintf(filename,63,"%s_%s.log","yadilog",suffix);
+	    fclose(*arg.fpp);
             // printf("%s\n",filename);
             *arg.fpp = fopen(filename,"a");
         }
