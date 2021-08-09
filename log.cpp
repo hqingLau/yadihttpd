@@ -1,3 +1,7 @@
+/**
+ ** by hqinglau 
+ */
+
 #include "log.h"
 #include "commonfunc.h"
 #include <string.h>

@@ -1,3 +1,7 @@
+/**
+ ** by hqinglau 
+ */
+
 #include "commonfunc.h"
 
 int setNonblock(int fd)

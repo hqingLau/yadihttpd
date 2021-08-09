@@ -1,3 +1,7 @@
+/**
+ ** by hqinglau 
+ */
+
 // 注：命名diXXX中，di无实际意义
 #ifndef YADI_LOG_H
 #define YADI_LOG_H

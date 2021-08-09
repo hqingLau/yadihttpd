@@ -104,8 +104,18 @@ pi@raspberrypi:~/www $ tree
 ![image-20210806225741355](https://gitee.com/hqinglau/img/raw/master/img/20210806225742.png)
 
 
+🔍 段错误排查
+
+
+![image-20210809105458451](https://gitee.com/hqinglau/img/raw/master/img/20210809105500.png)
+
+![image-20210809105519757](https://gitee.com/hqinglau/img/raw/master/img/20210809105521.png)
+
+
 ### 性能测试
 
 ![image-20210807123007436](https://gitee.com/hqinglau/img/raw/master/img/20210807123009.png)
 
 用webbench测试了一下，不考虑网速的情况下，一秒能处理1600条请求，写入5000条数据。暂且这样，远超我云服务器网速所能处理的上限了，后续再改进。
+
+

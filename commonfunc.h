@@ -1,3 +1,7 @@
+/**
+ ** by hqinglau 
+ */
+
 #ifndef YADI_COMMONFUNC_H
 #define YADI_COMMONFUNC_H
 #include <unistd.h>

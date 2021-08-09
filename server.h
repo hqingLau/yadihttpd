@@ -1,3 +1,7 @@
+/**
+ ** by hqinglau 
+ */
+
 #ifndef YADI_SERVER_H
 #define YADI_SERVER_H
 #include <iostream>

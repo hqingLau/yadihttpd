@@ -283,6 +283,7 @@ void yadi::Server::handAccept()
     epoll_ctl(epollfd,EPOLL_CTL_ADD,tfd,&ev);
     tfd2cfd[tfd] = cfd;
     cliinfo->tfd = tfd;
+    cliinfo->fp = nullptr;
     climap[cfd] = cliinfo;
 }
 
