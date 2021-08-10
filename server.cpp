@@ -92,7 +92,19 @@ bool yadi::Server::run()
                 while(!(cliinfo->req_content[ditmpi]=='\r'&&cliinfo->req_content[ditmpi+1]=='\n'))
                 {
                     ditmpi++;
-                }
+		    // 不符合的url
+		    if(ditmpi==125)
+			break;
+		}  
+		if(ditmpi==125)
+		{
+			sprintf(logBuffer,"%s:%d url too long.",cliinfo->cliip,cliinfo->cliport,cliinfo->method);
+			YADILOGINFO(logBuffer); 
+			send(cliinfo->cfd,logBuffer,strlen(logBuffer),MSG_NOSIGNAL);
+			shutdown(cliinfo->cfd,SHUT_RDWR);
+			continue;
+		}
+                
                 cliinfo->cur_req_content = ditmpi+2;
                 strncpy(head,cliinfo->req_content,ditmpi);
                 head[ditmpi] = 0;
@@ -109,7 +121,8 @@ bool yadi::Server::run()
 
                     sprintf(logBuffer,"%s:%d only GET method supported now! Got: %s\n",cliinfo->cliip,cliinfo->cliport,cliinfo->method);
                     YADILOGINFO(logBuffer); 
-                    send(cliinfo->cfd,logBuffer,strlen(logBuffer),0);
+		    sprintf(logBuffer,"%s","yadihttpd error: url too long.");
+                    send(cliinfo->cfd,logBuffer,strlen(logBuffer),MSG_NOSIGNAL);
                     shutdown(cliinfo->cfd,SHUT_RDWR);
                     continue;
                 }
@@ -135,9 +148,23 @@ bool yadi::Server::run()
                 {
                     sprintf(logBuffer,"%s:%d 404 no such file.",cliinfo->cliip,cliinfo->cliport); 
                     YADILOGINFO(logBuffer);
-                    sprintf(outputhead,"HTTP/1.1 404 not found\r\nServer:dihttpd\r\nContent-Type:text/plain\r\n\r\n");
-                    send(cliinfo->cfd,outputhead,strlen(outputhead),0);
-                    send(cliinfo->cfd,logBuffer,strlen(logBuffer),0);
+                    sprintf(outputhead,"HTTP/1.1 404 not found\r\nServer:dihttpd\r\nContent-Type:text/html\r\n\r\n");
+                    send(cliinfo->cfd,outputhead,strlen(outputhead),MSG_NOSIGNAL);
+
+			char fakehtmlPath[64];
+			sprintf(fakehtmlPath,"%s%s",rootdir,"/md/fakeblog1.html");
+			FILE *fakehtml1 = fopen(fakehtmlPath,"rb");
+			size_t headlen = fread(outputhead,1,1024*4,fakehtml1);
+			fclose(fakehtml1);
+			write(cliinfo->cfd,outputhead,headlen);
+			headlen = sprintf(outputhead,"<img src=\"https://gitee.com/hqinglau/img/raw/master/img/20210810112624.png\" alt=\"image-20210810112623229\" />");
+
+			write(cliinfo->cfd,outputhead,headlen);
+			sprintf(fakehtmlPath,"%s%s",rootdir,"/md/fakeblog2.html");
+			FILE *fakehtml2 = fopen(fakehtmlPath,"rb");
+			headlen = fread(outputhead,1,1024*4,fakehtml2);
+			fclose(fakehtml2);
+			write(cliinfo->cfd,outputhead,headlen);
                     shutdown(cliinfo->cfd,SHUT_RDWR);
                     continue;
                 }
