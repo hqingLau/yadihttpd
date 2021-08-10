@@ -1,5 +1,22 @@
 ## 0.04版本
 
+📚 大致效果
+
+![image-20210806230216317](https://gitee.com/hqinglau/img/raw/master/img/20210806230217.png)
+
+
+
+点击`linux_notes`进入以下网页：
+
+![image-20210806230235704](https://gitee.com/hqinglau/img/raw/master/img/20210806230237.png)
+
+这样看起来还可以。
+
+<img src="https://gitee.com/hqinglau/img/raw/master/img/20210804184835.png" alt="image-20210804184834030" height="100" />
+
+function completed:
+
+
 ✅ 打印日志，读取消息头，日志文件名根据时间生成
 
 ✅ epoll版本并返回相应文件
@@ -10,7 +27,6 @@
 
 ✅ 简易博客
 
-function completed:
 
 ### 日志
 
@@ -77,20 +93,6 @@ pi@raspberrypi:~/www $ tree
 [marked](https://github.com/markedjs/marked)：markdown -> html
 
 [prismjs](https://prismjs.com/): 代码高亮等布局
-
-📚 大致效果
-
-![image-20210806230216317](https://gitee.com/hqinglau/img/raw/master/img/20210806230217.png)
-
-
-
-点击`linux_notes`进入以下网页：
-
-![image-20210806230235704](https://gitee.com/hqinglau/img/raw/master/img/20210806230237.png)
-
-这样看起来还可以。
-
-<img src="https://gitee.com/hqinglau/img/raw/master/img/20210804184835.png" alt="image-20210804184834030" height="100" />
 
 
 ### bug排查记录
