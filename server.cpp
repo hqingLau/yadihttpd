@@ -59,6 +59,7 @@ bool yadi::Server::run()
             curfd = srvEvents[i].data.fd;
             if(srvEvents[i].events & EPOLLIN)
             {
+		//printf("curfd: %d\n",curfd);
                 if(curfd==servSockfd)
                 {
                     handAccept();
@@ -301,15 +302,19 @@ void yadi::Server::handAccept()
     ev.data.fd = cfd;
     setNonblock(cfd);
     epoll_ctl(epollfd,EPOLL_CTL_ADD,cfd,&ev);
-    int tfd = timerfd_create(CLOCK_MONOTONIC,0);
+    int tfd = timerfd_create(CLOCK_MONOTONIC,TFD_NONBLOCK);
     itimerspec time_intv;
-    time_intv.it_value.tv_sec = 30;
+    time_intv.it_value.tv_sec = 60;
     time_intv.it_value.tv_nsec = 0;
-    timerfd_settime(tfd,0,&time_intv,NULL);
+	time_intv.it_interval.tv_sec = 0;
+     time_intv.it_interval.tv_nsec = 0;
+    if(timerfd_settime(tfd,0,&time_intv,NULL)==-1)
+	perror("timerfd settime\n");
     ev.data.fd = tfd;
     epoll_ctl(epollfd,EPOLL_CTL_ADD,tfd,&ev);
     tfd2cfd[tfd] = cfd;
     cliinfo->tfd = tfd;
+//	printf("tfd: %d\n",tfd);
     cliinfo->fp = nullptr;
     climap[cfd] = cliinfo;
 }
@@ -317,6 +322,7 @@ void yadi::Server::handAccept()
 
 void yadi::Server::handCliTimeout(int curfd)
 {
+	//printf("in handCliTimeout\n");
     ClientInfo *cliinfo = climap[tfd2cfd[curfd]];
     
     if(cliinfo==NULL) return;

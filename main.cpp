@@ -11,7 +11,7 @@ int main(int argc,char *argv[])
         printf("usage: %s <port>\n",argv[0]);
         exit(1);
     }
-    daemon(1,0);
+    //daemon(1,0);
     struct sigaction action;
     action.sa_handler = handle_pipe;
     sigemptyset(&action.sa_mask);
