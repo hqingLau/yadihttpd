@@ -149,7 +149,7 @@ bool yadi::Server::run()
                 {
                     sprintf(logBuffer,"%s:%d 404 no such file.",cliinfo->cliip,cliinfo->cliport); 
                     YADILOGINFO(logBuffer);
-                    sprintf(outputhead,"HTTP/1.1 404 not found\r\nServer:dihttpd\r\nContent-Type:text/html\r\n\r\n");
+                    sprintf(outputhead,"HTTP/1.1 404 not found\r\nConnection:close\r\nServer:dihttpd\r\nContent-Type:text/html\r\n\r\n");
                     send(cliinfo->cfd,outputhead,strlen(outputhead),MSG_NOSIGNAL);
 
                     char fakehtmlPath[64];
@@ -175,27 +175,27 @@ bool yadi::Server::run()
 
                 // printf("req type: %s\n",suffix);
                 if(strncmp(cliinfo->suffix,"jpg",3)==0)
-                    sprintf(outputhead,"HTTP/1.1 200 OK\r\nServer:dihttpd\r\nContent-Type:image/jpeg\r\n\r\n");
+                    sprintf(outputhead,"HTTP/1.1 200 OK\r\nConnection:close\r\nServer:dihttpd\r\nContent-Type:image/jpeg\r\n\r\n");
                 if(strncmp(cliinfo->suffix,"png",3)==0)
-                    sprintf(outputhead,"HTTP/1.1 200 OK\r\nServer:dihttpd\r\nContent-Type:image/png\r\n\r\n");
+                    sprintf(outputhead,"HTTP/1.1 200 OK\r\nConnection:close\r\nServer:dihttpd\r\nContent-Type:image/png\r\n\r\n");
 
                 if(strncmp(cliinfo->suffix,"ico",3)==0)
-                    sprintf(outputhead,"HTTP/1.1 200 OK\r\nServer:dihttpd\r\nContent-Type:image/x-icon\r\n\r\n");
+                    sprintf(outputhead,"HTTP/1.1 200 OK\r\nConnection:close\r\nServer:dihttpd\r\nContent-Type:image/x-icon\r\n\r\n");
                 else if(strncmp(cliinfo->suffix,"html",4)==0)
                 {
                     cliinfo->md2html = true;
-                    sprintf(outputhead,"HTTP/1.1 200 OK\r\nServer:dihttpd\r\nContent-Type:text/html\r\n\r\n");
+                    sprintf(outputhead,"HTTP/1.1 200 OK\r\nServer:dihttpd\r\nConnection:close\r\nContent-Type:text/html\r\n\r\n");
                 }
                 else if(strncmp(cliinfo->suffix,"js",2)==0)
                 {
-                    sprintf(outputhead,"HTTP/1.1 200 OK\r\nServer:dihttpd\r\nContent-Type:application/javascript\r\n\r\n");
+                    sprintf(outputhead,"HTTP/1.1 200 OK\r\nServer:dihttpd\r\nConnection:close\r\nContent-Type:application/javascript\r\n\r\n");
                 }
                 else if(strncmp(cliinfo->suffix,"css",3)==0)
                 {
-                    sprintf(outputhead,"HTTP/1.1 200 OK\r\nServer:dihttpd\r\nContent-Type:text/css\r\n\r\n");
+                    sprintf(outputhead,"HTTP/1.1 200 OK\r\nServer:dihttpd\r\nConnection:close\r\nContent-Type:text/css\r\n\r\n");
                 }
                 else
-                    sprintf(outputhead,"HTTP/1.1 200 OK\r\nServer:dihttpd\r\nContent-Type:text/plain\r\n\r\n");
+                    sprintf(outputhead,"HTTP/1.1 200 OK\r\nServer:dihttpd\r\nConnection:close\r\nContent-Type:text/plain\r\n\r\n");
                 write(cliinfo->cfd,outputhead,strlen(outputhead));
 
                 handSend(cliinfo);
