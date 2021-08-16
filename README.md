@@ -1,5 +1,11 @@
 ## 0.04版本
 
+示例博客项目：[博客文件树](https://github.com/hqingLau/blog_yadihttpd_example)
+
+
+[【博客主页】](https://www.orzlinux.cn)
+
+
 📚 大致效果
 
 ![image-20210806230216317](https://gitee.com/hqinglau/img/raw/master/img/20210806230217.png)
