@@ -122,7 +122,7 @@ bool yadi::Server::run()
 
                     sprintf(logBuffer,"%s:%d only GET method supported now! Got: %s\n",cliinfo->cliip,cliinfo->cliport,cliinfo->method);
                     YADILOGINFO(logBuffer); 
-		    sprintf(logBuffer,"%s","yadihttpd error: url too long.");
+		            sprintf(logBuffer,"%s","yadihttpd error: url too long.");
                     send(cliinfo->cfd,logBuffer,strlen(logBuffer),MSG_NOSIGNAL);
                     shutdown(cliinfo->cfd,SHUT_RDWR);
                     continue;
@@ -152,20 +152,13 @@ bool yadi::Server::run()
                     sprintf(outputhead,"HTTP/1.1 404 not found\r\nServer:dihttpd\r\nContent-Type:text/html\r\n\r\n");
                     send(cliinfo->cfd,outputhead,strlen(outputhead),MSG_NOSIGNAL);
 
-			char fakehtmlPath[64];
-			sprintf(fakehtmlPath,"%s%s",rootdir,"/md/fakeblog1.html");
-			FILE *fakehtml1 = fopen(fakehtmlPath,"rb");
-			size_t headlen = fread(outputhead,1,1024*4,fakehtml1);
-			fclose(fakehtml1);
-			write(cliinfo->cfd,outputhead,headlen);
-			headlen = sprintf(outputhead,"<img src=\"https://gitee.com/hqinglau/img/raw/master/img/20210810112624.png\" alt=\"image-20210810112623229\" />");
-
-			write(cliinfo->cfd,outputhead,headlen);
-			sprintf(fakehtmlPath,"%s%s",rootdir,"/md/fakeblog2.html");
-			FILE *fakehtml2 = fopen(fakehtmlPath,"rb");
-			headlen = fread(outputhead,1,1024*4,fakehtml2);
-			fclose(fakehtml2);
-			write(cliinfo->cfd,outputhead,headlen);
+                    char fakehtmlPath[64];
+                    sprintf(fakehtmlPath,"%s%s",rootdir,"/404.html");
+                    FILE *fakehtml1 = fopen(fakehtmlPath,"rb");
+                    size_t headlen = fread(outputhead,1,1024*4,fakehtml1);
+                    fclose(fakehtml1);
+                    write(cliinfo->cfd,outputhead,headlen);
+		
                     shutdown(cliinfo->cfd,SHUT_RDWR);
                     continue;
                 }
@@ -205,30 +198,11 @@ bool yadi::Server::run()
                     sprintf(outputhead,"HTTP/1.1 200 OK\r\nServer:dihttpd\r\nContent-Type:text/plain\r\n\r\n");
                 write(cliinfo->cfd,outputhead,strlen(outputhead));
 
-                // 如果是html，要发送个头
-                if(cliinfo->md2html)
-                {
-                    char fakehtmlPath[64];
-                    sprintf(fakehtmlPath,"%s%s",rootdir,"/md/fakeblog1.html");
-                    FILE *fakehtml1 = fopen(fakehtmlPath,"rb");
-                    size_t headlen = fread(outputhead,1,1024*4,fakehtml1);
-                    fclose(fakehtml1);
-                    write(cliinfo->cfd,outputhead,headlen);
-                }
                 handSend(cliinfo);
 
                 // printf("filebytessent: %d, filesize: %d\n",cliinfo->fileBytesSent,cliinfo->fileSize);
                 if(cliinfo->fileBytesSent==cliinfo->fileSize)
                 {
-                    if(cliinfo->md2html)
-                    {
-                        char fakehtmlPath[64];
-                        sprintf(fakehtmlPath,"%s%s",rootdir,"/md/fakeblog2.html");
-                        FILE *fakehtml2 = fopen(fakehtmlPath,"rb");
-                        size_t headlen = fread(outputhead,1,1024*4,fakehtml2);
-                        write(cliinfo->cfd,outputhead,headlen);
-                        fclose(fakehtml2);
-                    }
                     fclose(cliinfo->fp);
                     cliinfo->fp = nullptr;
                     shutdown(cliinfo->cfd,SHUT_RDWR);
@@ -251,16 +225,6 @@ bool yadi::Server::run()
                 // printf("%s:%d sent: %d,size: %d\n",cliinfo->cliip,cliinfo->cliport,cliinfo->fileBytesSent,cliinfo->fileSize);
                 if(cliinfo->fileBytesSent==cliinfo->fileSize)
                 {
-                    if(cliinfo->md2html)
-                    {
-                        char outputhead[1024];
-                        char fakehtmlPath[64];
-                        sprintf(fakehtmlPath,"%s%s",rootdir,"/md/fakeblog2.html");
-                        FILE *fakehtml2 = fopen(fakehtmlPath,"rb");
-                        size_t headlen = fread(outputhead,1,1024,fakehtml2);
-                        write(cliinfo->cfd,outputhead,headlen);
-                        fclose(fakehtml2);
-                    }
                     epoll_event diev;
                     diev.data.fd = cliinfo->cfd;
                     diev.events = EPOLLIN;
