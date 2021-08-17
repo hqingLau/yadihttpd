@@ -8,6 +8,7 @@
 #include <sys/stat.h>
 #include <arpa/inet.h>
 #include <unistd.h>
+#include <sys/stat.h>
 
 
 bool yadi::Server::run()
@@ -89,6 +90,7 @@ bool yadi::Server::run()
                 cliinfo->req_content[reqlen] = 0;
                 
                 char head[128];
+                char outputhead[1024*4];
                 int ditmpi = 0;
                 while(!(cliinfo->req_content[ditmpi]=='\r'&&cliinfo->req_content[ditmpi+1]=='\n'))
                 {
@@ -101,9 +103,18 @@ bool yadi::Server::run()
 		{
 			sprintf(logBuffer,"%s:%d url too long.",cliinfo->cliip,cliinfo->cliport,cliinfo->method);
 			YADILOGINFO(logBuffer); 
-			send(cliinfo->cfd,logBuffer,strlen(logBuffer),MSG_NOSIGNAL);
-			shutdown(cliinfo->cfd,SHUT_RDWR);
-			continue;
+			sprintf(outputhead,"HTTP/1.1 404 not found\r\nConnection:close\r\nServer:dihttpd\r\nContent-Type:text/html\r\n\r\n");
+                    send(cliinfo->cfd,outputhead,strlen(outputhead),MSG_NOSIGNAL);
+
+                    char fakehtmlPath[64];
+                    sprintf(fakehtmlPath,"%s%s",rootdir,"/404.html");
+                    FILE *fakehtml1 = fopen(fakehtmlPath,"rb");
+                    size_t headlen = fread(outputhead,1,1024*4,fakehtml1);
+                    fclose(fakehtml1);
+                    write(cliinfo->cfd,outputhead,headlen);
+		
+                    shutdown(cliinfo->cfd,SHUT_RDWR);
+                    continue;
 		}
                 
                 cliinfo->cur_req_content = ditmpi+2;
@@ -122,8 +133,16 @@ bool yadi::Server::run()
 
                     sprintf(logBuffer,"%s:%d only GET method supported now! Got: %s\n",cliinfo->cliip,cliinfo->cliport,cliinfo->method);
                     YADILOGINFO(logBuffer); 
-		            sprintf(logBuffer,"%s","yadihttpd error: url too long.");
-                    send(cliinfo->cfd,logBuffer,strlen(logBuffer),MSG_NOSIGNAL);
+                    sprintf(outputhead,"HTTP/1.1 404 not found\r\nConnection:close\r\nServer:dihttpd\r\nContent-Type:text/html\r\n\r\n");
+                    send(cliinfo->cfd,outputhead,strlen(outputhead),MSG_NOSIGNAL);
+
+                    char fakehtmlPath[64];
+                    sprintf(fakehtmlPath,"%s%s",rootdir,"/404.html");
+                    FILE *fakehtml1 = fopen(fakehtmlPath,"rb");
+                    size_t headlen = fread(outputhead,1,1024*4,fakehtml1);
+                    fclose(fakehtml1);
+                    write(cliinfo->cfd,outputhead,headlen);
+		
                     shutdown(cliinfo->cfd,SHUT_RDWR);
                     continue;
                 }
@@ -141,11 +160,21 @@ bool yadi::Server::run()
                 
                 sprintf(logBuffer,"%s:%d req filepath: %s",cliinfo->cliip,cliinfo->cliport,cliinfo->filepath); 
                 YADILOGINFO(logBuffer);
-
-                FILE *direqfd = fopen(cliinfo->absoluteFilePath,"rb");
-                char outputhead[1024*4];
+                FILE *direqfd = NULL;
+		int is404 = 0;
+		struct stat statbuf;
+		int fileStat = stat(cliinfo->absoluteFilePath,&statbuf);
+		if(fileStat!=0)
+		{
+			is404 = 1;
+		}
+		else if(S_ISDIR(statbuf.st_mode)==1)
+		{
+			is404 = 1;
+		}
+		direqfd = fopen(cliinfo->absoluteFilePath,"rb");
                 
-                if(direqfd==NULL)
+                if(direqfd==NULL||is404==1)
                 {
                     sprintf(logBuffer,"%s:%d 404 no such file.",cliinfo->cliip,cliinfo->cliport); 
                     YADILOGINFO(logBuffer);
@@ -166,8 +195,6 @@ bool yadi::Server::run()
                 snprintf(cliinfo->suffix,15,"%s",&cliinfo->filepath[pos-cliinfo->filepath+1]);
                 cliinfo->fp = direqfd;
                 // 读取文件大小
-                struct stat statbuf;
-                stat(cliinfo->absoluteFilePath,&statbuf);
                 cliinfo->fileSize = statbuf.st_size;
                 
                 
