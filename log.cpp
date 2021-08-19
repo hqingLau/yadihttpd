@@ -20,7 +20,6 @@ void *curQueue2file(void *parg)
 
     for(;;)
     {
-        // 队列前面不需要加锁
         pthread_mutex_lock(&logFileMtx);
         if(logQ->empty()) 
         {
@@ -29,6 +28,9 @@ void *curQueue2file(void *parg)
             continue;
         }
         yadi::logMsg *headMsg = logQ->front();
+        // 这里设置5000就换文件了，但是日志里超5000了
+        // 找到原因了，log post的时候有个换行，其实还是5000条换文件
+        // 不改了，特性。。。
         if(yadi::LOG::logMsgCount==5000)
         {
             yadi::LOG::logMsgCount=0;
@@ -38,7 +40,7 @@ void *curQueue2file(void *parg)
             char suffix[64];
             strftime(suffix,sizeof(suffix),"%Y%m%d%H%M%S",ditm);
             snprintf(filename,63,"%s_%s.log","yadilog",suffix);
-	    fclose(*arg.fpp);
+	        fclose(*arg.fpp);
             // printf("%s\n",filename);
             *arg.fpp = fopen(filename,"a");
         }
@@ -62,28 +64,9 @@ yadi::LOG::LOG()
     stackSize = 1024;
     mtx = PTHREAD_MUTEX_INITIALIZER;
     maxMsgNum = 10000;
-
-    filename = (char *)malloc(64);
-    strncpy(prefix,"yadilog",63);
-    timeval tv;
-    gettimeofday(&tv,0);
-    tm *ditm = localtime(&tv.tv_sec);
-    char suffix[64];
-    strftime(suffix,sizeof(suffix),"%Y%m%d%H%M%S",ditm);
-    snprintf(filename,63,"%s_%s.log",prefix,suffix);
-    // printf("%s\n",filename);
-    fp = fopen(filename,"a");
-    if(!fp) handle_error("log file open");
-    arg.fpp = &fp;
-    arg.logQ = &logQ;
-    arg.filename = &filename;
-    // curStack2file((void *)&arg);
-    pthread_create(&pid,NULL,curQueue2file,(void *)&arg);
-    pthread_detach(pid);
 }
 
-// log不再直接打印，而是放到一个64k的数组里（作为缓存区）
-// 满了之后再打印（IO较慢）
+// log不再直接打印，而是放到队列
 void yadi::LOG::log(LOGLEVEL level, char *msg,const char *file,const int line,const char *function)
 {
     timeval tv;
@@ -95,8 +78,6 @@ void yadi::LOG::log(LOGLEVEL level, char *msg,const char *file,const int line,co
     int sizeBuffer = snprintf(buffer,sizeof(buffer),"%s %s %s(%d)-<%s> %s\n",ditimenow,loglevelStr[level],file,line,function,msg);
     insertStack(buffer,sizeBuffer);
 }
-
-
 
 void yadi::LOG::insertStack(char *buffer,int sizeBuffer)
 {

@@ -11,23 +11,19 @@
 #include <stdlib.h>
 #include <pthread.h>
 #include <sys/time.h>
+#include <string.h>
 #include <queue>
 using std::queue;
 
 /**
 常见的日志格式中对于每一条日志应含有的信息包括日期、时间、日志级别、代码位置、日志内容、
 错误码等信息。下面是一个工作中的日志文件的一部分内容：
-
 2018-05-22 15:35:53.850 TRACE TDWZLog [0x00001b10] <36> <TDWZProtocol::Init>,TDWZPro
 2018-05-22 15:35:53.850 TRACE TDWZLog [0x00001b10] <89> <TDWZProtocol::Init>,End 
-2018-05-22 15:35:53.853 TRACE TDWZLog [0x00001b10] <142>    <TDWZProtocol::Connect>,
-2018-05-22 15:35:53.853 TRACE TDWZLog [0x00002f10] <149>    <GetAlarmEventPro>,Enter
-2018-05-22 15:39:36.382 WARN TrackLog [0x000029fc] - [ internal WARN htrace_server_
-
  * 
 */
 static const char *loglevelStr[8] = {"OFF","FATAL","ERROR","WARN","INFO","DEBUG","TRACE","ALL"};
-
+void *curQueue2file(void *parg);
 
 namespace yadi
 {
@@ -75,6 +71,29 @@ public:
     {
         static LOG instance;
         return &instance;
+    }
+
+    // should be done only once
+    void setPrefix(char *pf)
+    {
+        sprintf(prefix,pf);
+         filename = (char *)malloc(64);
+        strncpy(prefix,pf,63);
+        timeval tv;
+        gettimeofday(&tv,0);
+        tm *ditm = localtime(&tv.tv_sec);
+        char suffix[64];
+        strftime(suffix,sizeof(suffix),"%Y%m%d%H%M%S",ditm);
+        snprintf(filename,63,"%s_%s.log",prefix,suffix);
+        // printf("%s\n",filename);
+        fp = fopen(filename,"a");
+        if(!fp) handle_error("log file open");
+        arg.fpp = &fp;
+        arg.logQ = &logQ;
+        arg.filename = &filename;
+        // curStack2file((void *)&arg);
+        pthread_create(&pid,NULL,curQueue2file,(void *)&arg);
+        pthread_detach(pid);
     }
     ~LOG() 
     {

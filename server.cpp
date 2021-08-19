@@ -372,7 +372,7 @@ void yadi::Server::handSend(ClientInfo *cliinfo)
             writensum = 0;
             fileBufferlen =  fread(cliinfo->fileBuffer,1,1024*64,cliinfo->fp);
             if(fileBufferlen==0) break;
-        } 
+        }
     }
     if(writen==-1)
         fseek(cliinfo->fp,-(fileBufferlen-writensum),SEEK_CUR);  

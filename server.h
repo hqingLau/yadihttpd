@@ -7,6 +7,7 @@
 #include <iostream>
 #include <string.h>
 #include <sys/epoll.h>
+#include "log.h"
 #include <map>
 using std::map;
 
@@ -53,13 +54,16 @@ private:
     void handSend(ClientInfo *cliinfo);
 
 public:
-    Server(char *tip,int tport,char *tlogPrefix="log"):port(tport){
+    Server(char *tip,int tport,char *webroot,char *ldir):port(tport){
         epollfd = epoll_create(64);
         epollEvNum = 1024;
         srvEvents = (epoll_event *)malloc(sizeof(epoll_event)*epollEvNum);
         strncpy(ip,tip,63);
-        strncpy(logPrefix,tlogPrefix,63);
-        strcpy(rootdir,"/home/pi/www");
+        // 放上我最喜欢的小猪猪作为前缀
+        sprintf(logPrefix,"%s/yadilog",ldir);
+        LOG::getInstance()->setPrefix(logPrefix);
+        //strncpy(logPrefix,tlogPrefix,63);
+        strcpy(rootdir,webroot);
     }
     ~Server()
     {

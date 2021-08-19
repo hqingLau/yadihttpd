@@ -1,4 +1,31 @@
-## 0.04版本
+## 0.1版本
+
+这是一个基本可以用做文件后台的版本，使用方法如下:
+
+```shell
+pi@centos:~/yadihttpd$ ./yadihttpd 
+usage: ./yadihttpd <port> <websit root> <log dir>
+要实现创建好文件夹和响应静态文件
+如：./yadihttpd 80 /home/pi/www /home/pi/yadihttpdlog
+pi@centos:~/yadihttpd$ sudo ./yadihttpd 80 /home/pi/www /home/pi/yadihttpdlog
+
+# 写一个脚本定期执行,防止因未知原因服务挂掉
+# 而自己不知道
+# 目前yadihttpd已经基本可以稳定运行
+hqinglau@centos:~$ sudo vim yadiCheck.sh 
+hqinglau@centos:~$ cat !$
+cat yadiCheck.sh
+#!/bin/bash
+
+nline=$(ps aux | grep yadihttpd | wc -l)
+if [ $nline -lt 2 ];then
+ /home/pi/yadihttpd/yadihttpd 80 /home/pi/www /home/pi/yadihttpdlog
+fi
+
+# 设置10min检查一次，挂了就启动	
+hqinglau@centos:~$ crontab -l
+*/10 * * * * /home/hqinglau/yadiCheck.sh
+```
 
 示例博客项目：[博客文件树](https://github.com/hqingLau/blog_yadihttpd_example)
 
@@ -8,20 +35,18 @@
 
 📚 大致效果
 
-![image-20210806230216317](https://gitee.com/hqinglau/img/raw/master/img/20210806230217.png)
+![image-20210819154942545](https://gitee.com/hqinglau/img/raw/master/img/20210819154944.png)
 
 
+进入具体条目：
 
-点击`linux_notes`进入以下网页：
-
-![image-20210806230235704](https://gitee.com/hqinglau/img/raw/master/img/20210806230237.png)
+![image-20210819155129701](https://gitee.com/hqinglau/img/raw/master/img/20210819155130.png)
 
 这样看起来还可以。
 
 <img src="https://gitee.com/hqinglau/img/raw/master/img/20210804184835.png" alt="image-20210804184834030" height="100" />
 
-function completed:
-
+完成的功能:
 
 ✅ 打印日志，读取消息头，日志文件名根据时间生成
 
@@ -60,7 +85,7 @@ function completed:
 
 📚 图片读取
 
-![image-20210731210945081](https://gitee.com/hqinglau/img/raw/master/img/20210731210950.png)
+![image-20210819155618366](https://gitee.com/hqinglau/img/raw/master/img/20210819155620.png)
 
 📚 大文件支持 （may be some bugs)
 
@@ -119,6 +144,11 @@ pi@raspberrypi:~/www $ tree
 
 ![image-20210809105519757](https://gitee.com/hqinglau/img/raw/master/img/20210809105521.png)
 
+
+🔍 url过长：感谢大晚上测试我网站的恶意程序
+
+
+🔍 url直接访问目录错误修复，同上。
 
 ### 性能测试
 
