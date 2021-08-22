@@ -16,6 +16,7 @@ void *curQueue2file(void *parg)
     yadi::recordArg arg = *(yadi::recordArg *)parg;
     queue<yadi::logMsg *> *logQ = arg.logQ;
     char *filename = *arg.filename;
+    char *prefix = *arg.prefix;
     // printf("len: %d\n",*(int *)arg.length);
 
     for(;;)
@@ -31,7 +32,7 @@ void *curQueue2file(void *parg)
         // 这里设置5000就换文件了，但是日志里超5000了
         // 找到原因了，log post的时候有个换行，其实还是5000条换文件
         // 不改了，特性。。。
-        if(yadi::LOG::logMsgCount==5000)
+        if(yadi::LOG::logMsgCount==100)
         {
             yadi::LOG::logMsgCount=0;
             timeval tv;
@@ -39,7 +40,7 @@ void *curQueue2file(void *parg)
             tm *ditm = localtime(&tv.tv_sec);
             char suffix[64];
             strftime(suffix,sizeof(suffix),"%Y%m%d%H%M%S",ditm);
-            snprintf(filename,63,"%s_%s.log","yadilog",suffix);
+            snprintf(filename,63,"%s_%s.log",prefix,suffix);
 	        fclose(*arg.fpp);
             // printf("%s\n",filename);
             *arg.fpp = fopen(filename,"a");

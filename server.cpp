@@ -151,8 +151,16 @@ bool yadi::Server::run()
                 while(!isspace(head[ditmpi])) ++ditmpi;
                 strncpy(cliinfo->filepath,&head[ditmpj],ditmpi-ditmpj);
                 cliinfo->filepath[ditmpi-ditmpj] = 0;
-
-                if(cliinfo->filepath[ditmpi-ditmpj-1]=='/')
+		int tempi = 0;
+		for(tempi = 0;tempi<ditmpi-ditmpj;tempi++)
+		{
+			if(cliinfo->filepath[tempi]=='?')
+			{
+				cliinfo->filepath[tempi]=0;
+				break;
+			}
+		}
+                if(cliinfo->filepath[tempi-1]=='/')
                 {
                     sprintf(cliinfo->filepath,"%s%s",cliinfo->filepath,"index.html");
                 }

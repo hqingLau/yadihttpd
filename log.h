@@ -39,12 +39,13 @@ struct recordArg
     queue<logMsg *> *logQ;
     FILE **fpp;
     char **filename;
+    char **prefix;
 };
 
 class LOG
 {
 private:
-    char prefix[64];
+    char *prefix;
     char *filename;
     int msgNum; // log num
     int maxMsgNum; // change file if msgn>maxmsgn
@@ -76,6 +77,7 @@ public:
     // should be done only once
     void setPrefix(char *pf)
     {
+        prefix = (char *)malloc(64);
         sprintf(prefix,pf);
          filename = (char *)malloc(64);
         strncpy(prefix,pf,63);
@@ -91,6 +93,7 @@ public:
         arg.fpp = &fp;
         arg.logQ = &logQ;
         arg.filename = &filename;
+        arg.prefix = &prefix;
         // curStack2file((void *)&arg);
         pthread_create(&pid,NULL,curQueue2file,(void *)&arg);
         pthread_detach(pid);
