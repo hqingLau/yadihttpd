@@ -90,7 +90,7 @@ bool yadi::Server::run()
                 cliinfo->req_content[reqlen] = 0;
                 
                 char head[128];
-                char outputhead[1024*4];
+                char outputhead[1024*16];
                 int ditmpi = 0;
                 while(!(cliinfo->req_content[ditmpi]=='\r'&&cliinfo->req_content[ditmpi+1]=='\n'))
                 {
@@ -109,7 +109,7 @@ bool yadi::Server::run()
                     char fakehtmlPath[64];
                     sprintf(fakehtmlPath,"%s%s",rootdir,"/404.html");
                     FILE *fakehtml1 = fopen(fakehtmlPath,"rb");
-                    size_t headlen = fread(outputhead,1,1024*4,fakehtml1);
+                    size_t headlen = fread(outputhead,1,1024*16,fakehtml1);
                     fclose(fakehtml1);
                     write(cliinfo->cfd,outputhead,headlen);
 		
@@ -139,7 +139,7 @@ bool yadi::Server::run()
                     char fakehtmlPath[64];
                     sprintf(fakehtmlPath,"%s%s",rootdir,"/404.html");
                     FILE *fakehtml1 = fopen(fakehtmlPath,"rb");
-                    size_t headlen = fread(outputhead,1,1024*4,fakehtml1);
+                    size_t headlen = fread(outputhead,1,1024*16,fakehtml1);
                     fclose(fakehtml1);
                     write(cliinfo->cfd,outputhead,headlen);
 		
@@ -192,7 +192,7 @@ bool yadi::Server::run()
                     char fakehtmlPath[64];
                     sprintf(fakehtmlPath,"%s%s",rootdir,"/404.html");
                     FILE *fakehtml1 = fopen(fakehtmlPath,"rb");
-                    size_t headlen = fread(outputhead,1,1024*4,fakehtml1);
+                    size_t headlen = fread(outputhead,1,1024*16,fakehtml1);
                     fclose(fakehtml1);
                     write(cliinfo->cfd,outputhead,headlen);
 		
