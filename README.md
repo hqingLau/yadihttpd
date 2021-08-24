@@ -1,30 +1,16 @@
-## 0.1版本
+## 0.11版本
 
-这是一个基本可以用做文件后台的版本，使用方法如下:
+增加了euid和文件所有者判别。
+
+使用方法如下:
 
 ```shell
 pi@centos:~/yadihttpd$ ./yadihttpd 
 usage: ./yadihttpd <port> <websit root> <log dir>
-要实现创建好文件夹和响应静态文件
+要提前创建好文件夹和响应静态文件
 如：./yadihttpd 80 /home/pi/www /home/pi/yadihttpdlog
 pi@centos:~/yadihttpd$ sudo ./yadihttpd 80 /home/pi/www /home/pi/yadihttpdlog
-
-# 写一个脚本定期执行,防止因未知原因服务挂掉
-# 而自己不知道
-# 目前yadihttpd已经基本可以稳定运行
-hqinglau@centos:~$ sudo vim yadiCheck.sh 
-hqinglau@centos:~$ cat !$
-cat yadiCheck.sh
-#!/bin/bash
-
-nline=$(ps aux | grep yadihttpd | wc -l)
-if [ $nline -lt 2 ];then
- /home/pi/yadihttpd/yadihttpd 80 /home/pi/www /home/pi/yadihttpdlog
-fi
-
-# 设置10min检查一次，挂了就启动	
-hqinglau@centos:~$ crontab -l
-*/10 * * * * /home/hqinglau/yadiCheck.sh
+应设置euid, 如：chmod u+s ./yadihttpd
 ```
 
 示例博客项目：[博客文件树](https://github.com/hqingLau/blog_yadihttpd_example)
@@ -35,16 +21,9 @@ hqinglau@centos:~$ crontab -l
 
 📚 大致效果
 
-![image-20210819154942545](https://gitee.com/hqinglau/img/raw/master/img/20210819154944.png)
+![image-20210819154942545](https://gitee.com/hqinglau/img/raw/master/img/20210824120227.png)
 
 
-进入具体条目：
-
-![image-20210819155129701](https://gitee.com/hqinglau/img/raw/master/img/20210819155130.png)
-
-这样看起来还可以。
-
-<img src="https://gitee.com/hqinglau/img/raw/master/img/20210804184835.png" alt="image-20210804184834030" height="100" />
 
 完成的功能:
 
@@ -55,6 +34,8 @@ hqinglau@centos:~$ crontab -l
 ✅ 日志队列，自动切换，写日志单独线程
 
 ✅ 大文件支持
+
+✅ 文件读取权限限制
 
 ✅ 简易博客
 
