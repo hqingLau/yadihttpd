@@ -36,6 +36,9 @@ struct ClientInfo
 class Server
 {
 private:
+    // 权限管理
+    uid_t euid;
+    uid_t servuid;
     char ip[64];
     int port;
     char logPrefix[64];
@@ -55,6 +58,9 @@ private:
 
 public:
     Server(char *tip,int tport,char *webroot,char *ldir):port(tport){
+        euid = geteuid();
+        servuid = getuid();
+        seteuid(servuid);
         epollfd = epoll_create(64);
         epollEvNum = 1024;
         srvEvents = (epoll_event *)malloc(sizeof(epoll_event)*epollEvNum);

@@ -9,7 +9,9 @@ int main(int argc,char *argv[])
 {
     if(argc<4)
     {
-        printf("usage: %s <port> <websit root> <log dir>\n要实现创建好文件夹和响应静态文件\n如：./yadihttpd 80 /home/pi/www /home/pi/yadihttpdlog\n",argv[0]);
+        printf("usage: %s <port> <websit root> <log dir>\n要提前创建好文件夹和响应静态文件\n如：./yadihttpd 80 /home/pi/www /home/pi/yadihttpdlog\n",argv[0]);
+        printf("应设置euid, 如：chmod u+s ./yadihttpd\n");
+        
         exit(1);
     }
     daemon(1,0);

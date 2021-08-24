@@ -32,7 +32,7 @@ void *curQueue2file(void *parg)
         // 这里设置5000就换文件了，但是日志里超5000了
         // 找到原因了，log post的时候有个换行，其实还是5000条换文件
         // 不改了，特性。。。
-        if(yadi::LOG::logMsgCount==100)
+        if(yadi::LOG::logMsgCount==5000)
         {
             yadi::LOG::logMsgCount=0;
             timeval tv;
