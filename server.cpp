@@ -20,45 +20,8 @@ void garbageRecv(int curfd)
     }
 }
 
-bool yadi::Server::run()
+void yadi::Server::run()
 {
-    servSockfd = socket(AF_INET, SOCK_STREAM, 0);
-    if (servSockfd == -1)
-    {
-        sprintf(logBuffer, "%s: %s", "socket", strerror(errno));
-        YADILOGERROR(logBuffer);
-        handle_error("socket");
-    }
-
-    sockaddr_in sa;
-    bzero(&sa, sizeof(sockaddr));
-    sa.sin_family = AF_INET;
-    inet_pton(AF_INET, ip, &sa.sin_addr.s_addr);
-    //sa.sin_addr.s_addr = inet_addr(ip); //INADDR_ANY;
-    sa.sin_port = htons(port);
-    if (bind(servSockfd, (sockaddr *)&sa, sizeof(sa)) == -1)
-    {
-        sprintf(logBuffer, "%s: %s", "bind", strerror(errno));
-        YADILOGERROR(logBuffer);
-        handle_error("bind");
-    }
-
-    if (listen(servSockfd, 10) == -1)
-    {
-        sprintf(logBuffer, "%s: %s", "listen", strerror(errno));
-        YADILOGERROR(logBuffer);
-        handle_error("listen");
-    }
-
-    sprintf(logBuffer, "%s:%d waiting for request...", ip, port);
-    puts(logBuffer);
-    YADILOGINFO(logBuffer);
-    epoll_event ev;
-    ev.events = EPOLLIN;
-    ev.data.fd = servSockfd;
-    setNonblock(servSockfd);
-    epoll_ctl(epollfd, EPOLL_CTL_ADD, servSockfd, &ev);
-
     int readyFdNum;
     int curfd;
     for (;;)
@@ -132,7 +95,7 @@ bool yadi::Server::run()
                     FILE *fakehtml1 = fopen(fakehtmlPath, "rb");
                     size_t headlen = fread(outputhead, 1, 1024 * 16, fakehtml1);
                     fclose(fakehtml1);
-                    write(cliinfo->cfd, outputhead, headlen);
+                    send(cliinfo->cfd, outputhead, headlen,MSG_NOSIGNAL);
 
 
                     shutdown(cliinfo->cfd, SHUT_RDWR);
@@ -179,7 +142,7 @@ bool yadi::Server::run()
                     FILE *fakehtml1 = fopen(fakehtmlPath, "rb");
                     size_t headlen = fread(outputhead, 1, 1024 * 16, fakehtml1);
                     fclose(fakehtml1);
-                    write(cliinfo->cfd, outputhead, headlen);
+                    send(cliinfo->cfd, outputhead, headlen,MSG_NOSIGNAL);
                     shutdown(cliinfo->cfd, SHUT_RDWR);
                     continue;
                 }
@@ -232,7 +195,7 @@ bool yadi::Server::run()
                     FILE *fakehtml1 = fopen(fakehtmlPath, "rb");
                     size_t headlen = fread(outputhead, 1, 1024 * 16, fakehtml1);
                     fclose(fakehtml1);
-                    write(cliinfo->cfd, outputhead, headlen);
+                    send(cliinfo->cfd, outputhead, headlen,MSG_NOSIGNAL);
                     shutdown(cliinfo->cfd, SHUT_RDWR);
                     continue;
                 }
@@ -267,7 +230,7 @@ bool yadi::Server::run()
                 }
                 else
                     sprintf(outputhead, "HTTP/1.1 200 OK\r\nServer:dihttpd\r\nConnection:close\r\nContent-Type:text/plain\r\n\r\n");
-                write(cliinfo->cfd, outputhead, strlen(outputhead));
+                send(cliinfo->cfd, outputhead, strlen(outputhead),MSG_NOSIGNAL);
 
                 handSend(cliinfo);
 
@@ -301,7 +264,8 @@ bool yadi::Server::run()
                     diev.data.fd = cliinfo->cfd;
                     diev.events = EPOLLIN;
                     epoll_ctl(epollfd, EPOLL_CTL_MOD, cliinfo->cfd, &diev);
-                    fclose(cliinfo->fp);
+                    if(cliinfo->fp)
+                        fclose(cliinfo->fp);
                     cliinfo->fp = nullptr;
                     garbageRecv(cliinfo->cfd);
                     shutdown(cliinfo->cfd, SHUT_RDWR);
@@ -309,7 +273,6 @@ bool yadi::Server::run()
             }
         }
     }
-    return true;
 }
 
 void yadi::Server::handAccept()
@@ -331,6 +294,7 @@ void yadi::Server::handAccept()
     cliinfo->cliport = ntohs(sacli.sin_port);
     cliinfo->cfd = cfd;
     cliinfo->fileBytesSent = 0;
+    cliinfo->fileBufferSent = cliinfo->fileBufferlen = 0;
     cliinfo->md2html = false;
     sprintf(logBuffer, "%s:%d connected", cliinfo->cliip, cliinfo->cliport);
     YADILOGINFO(logBuffer);
@@ -361,19 +325,21 @@ void yadi::Server::handCliTimeout(int curfd)
 {
     //printf("in handCliTimeout\n");
     ClientInfo *cliinfo = climap[tfd2cfd[curfd]];
-
-    if (cliinfo == NULL)
-        return;
-    if (cliinfo->fp)
+    if(!cliinfo) return;
+    if (cliinfo->fp){
         fclose(cliinfo->fp);
+        cliinfo->fp=nullptr;
+    }
     int tfd = cliinfo->tfd;
     int cfd = cliinfo->cfd;
     shutdown(cfd, SHUT_RDWR);
     sprintf(logBuffer, "%s:%d timeout server closed", cliinfo->cliip, cliinfo->cliport);
-    free(climap[cfd]);
     auto iterclimap = climap.find(cfd);
     if (iterclimap != climap.end())
+    {
+        free(climap[cliinfo->cfd]);
         climap.erase(iterclimap);
+    }
     auto itertfdmap = tfd2cfd.find(tfd);
     if (itertfdmap != tfd2cfd.end())
         tfd2cfd.erase(itertfdmap);
@@ -381,16 +347,20 @@ void yadi::Server::handCliTimeout(int curfd)
     epoll_ctl(epollfd, EPOLL_CTL_DEL, tfd, NULL);
     close(cfd);
     close(tfd);
+    cliinfo = nullptr;
     YADILOGINFO(logBuffer);
 }
 
 void yadi::Server::cliCleaner(ClientInfo *cliinfo)
 {
+    if(!cliinfo) return;
     sprintf(logBuffer, "%s:%d client closed", cliinfo->cliip, cliinfo->cliport);
     int tfd = cliinfo->tfd;
     int cfd = cliinfo->cfd;
-    if (cliinfo->fp)
+    if (cliinfo->fp){
         fclose(cliinfo->fp);
+        cliinfo->fp=nullptr;
+    }
     auto iterclimap = climap.find(cliinfo->cfd);
     if (iterclimap != climap.end())
     {
@@ -404,31 +374,25 @@ void yadi::Server::cliCleaner(ClientInfo *cliinfo)
     epoll_ctl(epollfd, EPOLL_CTL_DEL, tfd, NULL);
     close(cfd);
     close(tfd);
-
+    cliinfo = nullptr;
     YADILOGINFO(logBuffer);
 }
 
 void yadi::Server::handSend(ClientInfo *cliinfo)
 {
-    // 一次发送64kB
-    size_t fileBufferlen = fread(cliinfo->fileBuffer, 1, 1024 * 64, cliinfo->fp);
-    size_t writensum = 0;
-    size_t writen;
-    while ((writen = write(cliinfo->cfd, cliinfo->fileBuffer + writensum, fileBufferlen)) != -1)
+    // 一次发送16kB
+    if(!cliinfo->fp) return;
+    if(cliinfo->fileBufferSent==cliinfo->fileBufferlen)
     {
-        writensum += writen;
-        cliinfo->fileBytesSent += writen;
-        // 正常发送了，再读
-        if (writensum == fileBufferlen)
-        {
-            writensum = 0;
-            fileBufferlen = fread(cliinfo->fileBuffer, 1, 1024 * 64, cliinfo->fp);
-            if (fileBufferlen == 0)
-                break;
-        }
+        cliinfo->fileBufferlen = fread(cliinfo->fileBuffer, 1, 1024 * 32, cliinfo->fp);
+        cliinfo->fileBufferSent=0;
+        if(cliinfo->fileBufferlen<=0) return;
     }
-    if (writen == -1)
-        fseek(cliinfo->fp, -(fileBufferlen - writensum), SEEK_CUR);
+    
+    int sentN = send(cliinfo->cfd, cliinfo->fileBuffer+cliinfo->fileBufferSent, cliinfo->fileBufferlen-cliinfo->fileBufferSent,MSG_NOSIGNAL);
+    if(sentN<=0) return;
+    cliinfo->fileBufferSent += sentN;
+    cliinfo->fileBytesSent += sentN;
 }
 
 int yadi::Server::digetline(int cfd,char *buffer,int n)

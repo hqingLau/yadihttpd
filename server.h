@@ -7,6 +7,9 @@
 #include <iostream>
 #include <string.h>
 #include <sys/epoll.h>
+#include <sys/socket.h>
+#include <sys/stat.h>
+#include <arpa/inet.h>
 #include "log.h"
 #include <map>
 using std::map;
@@ -16,6 +19,8 @@ namespace yadi
 struct ClientInfo
 {
     // cli info
+    int fileBufferSent;
+    int fileBufferlen;
     int cfd;
     FILE *fp;
     char req_content[1024];
@@ -71,12 +76,49 @@ public:
         LOG::getInstance()->setPrefix(logPrefix);
         //strncpy(logPrefix,tlogPrefix,63);
         strcpy(rootdir,webroot);
+
+        servSockfd = socket(AF_INET, SOCK_STREAM, 0);
+        if (servSockfd == -1)
+        {
+            sprintf(logBuffer, "%s: %s", "socket", strerror(errno));
+            YADILOGERROR(logBuffer);
+            handle_error("socket");
+        }
+
+        sockaddr_in sa;
+        bzero(&sa, sizeof(sockaddr));
+        sa.sin_family = AF_INET;
+        inet_pton(AF_INET, ip, &sa.sin_addr.s_addr);
+        //sa.sin_addr.s_addr = inet_addr(ip); //INADDR_ANY;
+        sa.sin_port = htons(port);
+        if (bind(servSockfd, (sockaddr *)&sa, sizeof(sa)) == -1)
+        {
+            sprintf(logBuffer, "%s: %s", "bind", strerror(errno));
+            YADILOGERROR(logBuffer);
+            handle_error("bind");
+        }
+
+        if (listen(servSockfd, 10) == -1)
+        {
+            sprintf(logBuffer, "%s: %s", "listen", strerror(errno));
+            YADILOGERROR(logBuffer);
+            handle_error("listen");
+        }
+
+        sprintf(logBuffer, "%s:%d waiting for request...", ip, port);
+        puts(logBuffer);
+        YADILOGINFO(logBuffer);
+        epoll_event ev;
+        ev.events = EPOLLIN;
+        ev.data.fd = servSockfd;
+        setNonblock(servSockfd);
+        epoll_ctl(epollfd, EPOLL_CTL_ADD, servSockfd, &ev);
     }
     ~Server()
     {
         free(srvEvents);
     }
-    bool run();
+    void run();
 };
 }
 
