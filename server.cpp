@@ -9,6 +9,16 @@
 #include <arpa/inet.h>
 #include <unistd.h>
 #include <sys/stat.h>
+#include <errno.h>
+
+void garbageRecv(int curfd)
+{
+    int tmplen = 1;
+    char buf[1025];
+    while(tmplen>0){
+        tmplen = recv(curfd, buf, 1024, 0);
+    }
+}
 
 bool yadi::Server::run()
 {
@@ -76,28 +86,40 @@ bool yadi::Server::run()
                 if (climap.find(curfd) == climap.end())
                     continue;
                 ClientInfo *cliinfo = climap[curfd];
-                int reqlen = recv(curfd, cliinfo->req_content, 1023, 0);
-                if (reqlen == -1 || reqlen == 0)
-                {
-                    if (reqlen == -1 && (errno == EAGAIN || errno == EWOULDBLOCK))
-                        continue;
-                    // method2: 对方关闭链接
-                    // shutdown(cliinfo->cfd,SHUT_RDWR);
-                    cliCleaner(cliinfo);
-                    continue;
-                }
-                cliinfo->req_content[reqlen] = 0;
-
+                if(!cliinfo) continue;
                 char head[128];
                 char outputhead[1024 * 16];
                 int ditmpi = 0;
-                while (!(cliinfo->req_content[ditmpi] == '\r' && cliinfo->req_content[ditmpi + 1] == '\n'))
+
+                int reqlen = 0;
+                int tmplen;
+                char lastc = 0;
+                char curc = 0;
+                int di_stat = 0;
+                while(1) 
                 {
-                    ditmpi++;
-                    // 不符合的url
-                    if (ditmpi == 125)
+                    tmplen = recv(curfd, &cliinfo->req_content[reqlen], 1, 0);
+                    if (tmplen == -1 || tmplen == 0)
+                    {
+                        if (tmplen == -1 && (errno == EAGAIN || errno == EWOULDBLOCK))
+                            continue;
+                        // method2: 对方关闭链接
+                        // shutdown(cliinfo->cfd,SHUT_RDWR);
+                        cliCleaner(cliinfo);
+                        di_stat = 1;
                         break;
+                    }
+                    lastc = curc;
+                    curc = cliinfo->req_content[reqlen];
+                    reqlen++;
+                    if ((lastc == '\r' && curc == '\n')||reqlen==125)
+                    {
+                        break;
+                    }
                 }
+                if(di_stat==1) continue;
+                ditmpi = reqlen;
+                cliinfo->req_content[reqlen] = 0;
                 if (ditmpi == 125)
                 {
                     sprintf(logBuffer, "%s:%d url too long.", cliinfo->cliip, cliinfo->cliport, cliinfo->method);
@@ -112,11 +134,11 @@ bool yadi::Server::run()
                     fclose(fakehtml1);
                     write(cliinfo->cfd, outputhead, headlen);
 
+
                     shutdown(cliinfo->cfd, SHUT_RDWR);
                     continue;
                 }
 
-                cliinfo->cur_req_content = ditmpi + 2;
                 strncpy(head, cliinfo->req_content, ditmpi);
                 head[ditmpi] = 0;
                 ditmpi = 0;
@@ -129,11 +151,26 @@ bool yadi::Server::run()
                 cliinfo->method[ditmpi - ditmpj] = 0;
                 sprintf(logBuffer, "%s:%d req method: %s", cliinfo->cliip, cliinfo->cliport, cliinfo->method);
                 YADILOGINFO(logBuffer);
+                while (isspace(head[ditmpi]))
+                    ++ditmpi;
+                ditmpj = ditmpi;
+                while (!isspace(head[ditmpi]))
+                    ++ditmpi;
+                strncpy(cliinfo->filepath, &head[ditmpj], ditmpi - ditmpj);
+                cliinfo->filepath[ditmpi - ditmpj] = 0;
                 if (strncmp(cliinfo->method, "GET", 3) != 0)
                 {
 
-                    sprintf(logBuffer, "%s:%d only GET method supported now! Got: %s\n", cliinfo->cliip, cliinfo->cliport, cliinfo->method);
+                    sprintf(logBuffer, "%s:%d only GET and Post method supported now! Got: %s\n", cliinfo->cliip, cliinfo->cliport, cliinfo->method);
                     YADILOGINFO(logBuffer);
+                    if (strncmp(cliinfo->method, "POST", 4) == 0)
+                    {
+                        char path[256];
+                        strncpy(path,cliinfo->filepath,255);
+                        goDealWithPost(cliinfo->cfd,path);
+                        continue;
+                    }
+                    garbageRecv(cliinfo->cfd);
                     sprintf(outputhead, "HTTP/1.1 404 not found\r\nConnection:close\r\nServer:dihttpd\r\nContent-Type:text/html\r\n\r\n");
                     send(cliinfo->cfd, outputhead, strlen(outputhead), MSG_NOSIGNAL);
 
@@ -143,17 +180,10 @@ bool yadi::Server::run()
                     size_t headlen = fread(outputhead, 1, 1024 * 16, fakehtml1);
                     fclose(fakehtml1);
                     write(cliinfo->cfd, outputhead, headlen);
-
                     shutdown(cliinfo->cfd, SHUT_RDWR);
                     continue;
                 }
-                while (isspace(head[ditmpi]))
-                    ++ditmpi;
-                ditmpj = ditmpi;
-                while (!isspace(head[ditmpi]))
-                    ++ditmpi;
-                strncpy(cliinfo->filepath, &head[ditmpj], ditmpi - ditmpj);
-                cliinfo->filepath[ditmpi - ditmpj] = 0;
+                garbageRecv(cliinfo->cfd);
                 int tempi = 0;
                 for (tempi = 0; tempi < ditmpi - ditmpj; tempi++)
                 {
@@ -203,7 +233,6 @@ bool yadi::Server::run()
                     size_t headlen = fread(outputhead, 1, 1024 * 16, fakehtml1);
                     fclose(fakehtml1);
                     write(cliinfo->cfd, outputhead, headlen);
-
                     shutdown(cliinfo->cfd, SHUT_RDWR);
                     continue;
                 }
@@ -253,7 +282,7 @@ bool yadi::Server::run()
                 {
                     epoll_event diev;
                     diev.data.fd = cliinfo->cfd;
-                    diev.events = EPOLLIN | EPOLLOUT;
+                    diev.events =  EPOLLOUT;
                     epoll_ctl(epollfd, EPOLL_CTL_MOD, cliinfo->cfd, &diev);
                 }
             }
@@ -274,6 +303,7 @@ bool yadi::Server::run()
                     epoll_ctl(epollfd, EPOLL_CTL_MOD, cliinfo->cfd, &diev);
                     fclose(cliinfo->fp);
                     cliinfo->fp = nullptr;
+                    garbageRecv(cliinfo->cfd);
                     shutdown(cliinfo->cfd, SHUT_RDWR);
                 }
             }
@@ -399,4 +429,247 @@ void yadi::Server::handSend(ClientInfo *cliinfo)
     }
     if (writen == -1)
         fseek(cliinfo->fp, -(fileBufferlen - writensum), SEEK_CUR);
+}
+
+int yadi::Server::digetline(int cfd,char *buffer,int n)
+{
+    int reqlen = 0;
+    int tmplen;
+    char lastc = 0;
+    char curc = 0;
+    while(1) 
+    {
+        tmplen = recv(cfd, &buffer[reqlen], 1, 0);
+        if (tmplen == -1 || tmplen == 0)
+        {
+            return -1;
+        }
+        lastc = curc;
+        curc = buffer[reqlen];
+        reqlen++;  
+        if(reqlen==n)
+        {
+            garbageRecv(cfd);
+            sprintf(buffer, "HTTP/1.1 404 not found\r\nConnection:close\r\nServer:dihttpd\r\nContent-Type:text/html\r\n\r\n");
+            send(cfd, buffer, strlen(buffer), MSG_NOSIGNAL);
+            shutdown(cfd,  SHUT_RDWR );
+            return -1;
+        }
+        if ((lastc == '\r' && curc == '\n'))
+        {
+            buffer[reqlen-2] = 0;
+            return reqlen-2;
+        }
+    }
+}
+
+void shutDownPost(int cfd,char *buffer)
+{
+    garbageRecv(cfd);
+    sprintf(buffer, "HTTP/1.1 404 not found\r\nConnection:close\r\nServer:dihttpd\r\nContent-Type:text/html\r\n\r\n");
+    send(cfd, buffer, strlen(buffer), MSG_NOSIGNAL);
+    shutdown(cfd, SHUT_RDWR);
+}
+
+void yadi::Server::goDealWithPost(int cfd,char *path)
+{
+    char buffer[1024 * 16];
+    if(strcmp(path,"/blogUpload")!=0)
+    {
+        shutDownPost(cfd,buffer);
+        return;
+    }
+
+    char contentype[]="Content-Type: multipart/form-data; boundary=";
+    char boundary[64] = {0};
+    boundary[0] = boundary[1] = '-';
+    while(1)
+    {
+        if(digetline(cfd,buffer,1024)==-1) {
+            shutDownPost(cfd,buffer);
+            return;
+        }
+        //到了post数据区域
+        if(strlen(buffer)==0)
+            break;
+        if(strncmp(buffer,contentype,strlen(contentype))==0)
+        {
+            strcpy(boundary+2,buffer+strlen(contentype));
+            printf("%s\n",boundary);
+        }
+    }
+    if(strlen(boundary)==0)
+    {
+        shutDownPost(cfd,buffer);
+        return;
+    }
+    char passwd[128];
+    char lname[128];
+    char filename[128];
+    char name[64];
+    if((digetline(cfd,buffer,1024)==-1)||(strcmp(buffer,boundary)!=0))
+    {
+        shutDownPost(cfd,buffer);
+        return;
+    }
+    // 下方是post数据
+
+    while(1)
+    {
+        if(digetline(cfd,buffer,1024)==-1)
+            break;
+        char *nameptr = strstr(buffer,"name=\"");
+        if(!nameptr) continue;
+        int i = 0;
+        nameptr = nameptr+6;
+        while(nameptr[i]!='\"')
+        {
+            if(i==60) break;
+            name[i]=nameptr[i];
+            i++;
+        }
+        name[i]=0;
+
+        nameptr = strstr(buffer,"filename=\"");
+        i = 0;
+        if(nameptr)
+        {
+            nameptr = nameptr+10;
+            while(nameptr[i]!='\"')
+            {
+                if(i==127) break;
+                filename[i]=nameptr[i];
+                i++;
+            }
+            filename[i]=0;
+        }
+        
+
+        if(strcmp(name,"lname")==0)
+        {
+            while(strlen(buffer)>0) digetline(cfd,buffer,1024);
+            digetline(cfd,buffer,1024);
+            strncpy(lname,buffer,127);
+        }
+
+        else if(strcmp(name,"passwd")==0)
+        {
+            while(strlen(buffer)>0) digetline(cfd,buffer,1024);
+            digetline(cfd,buffer,1024);
+            strncpy(passwd,buffer,127);
+            if(strcmp(passwd,"leiyadi")!=0)
+            {
+                shutDownPost(cfd,buffer);
+                if(strlen(filename)!=0) unlink(filename);
+                return;
+            }
+        }
+        else if(strcmp(name,"file")==0)
+        {
+            while(strlen(buffer)>0) digetline(cfd,buffer,1024);
+            
+            if(strlen(filename)==0)
+            {
+                shutDownPost(cfd,buffer);
+                return;
+            }
+            int curc = 0;
+            int lastc = 0;
+            int curIndex = 0;
+            char fullPath[128];
+            sprintf(fullPath, "%s/md/%s", rootdir,filename);
+            FILE *fp = fopen(fullPath,"wb");
+
+            int tmplen;
+            int endFlag = 0;
+            while(1) 
+            {
+                tmplen = recv(cfd, &buffer[curIndex], 1, 0);
+                if (tmplen == -1 || tmplen == 0)
+                {
+                    shutDownPost(cfd,buffer);
+                    return;
+                }
+                curc = buffer[curIndex];
+                curIndex++;  
+                while (curc == '\n')
+                {
+                    //\n之前先写入
+                    fwrite(buffer,1,curIndex-2,fp);
+                    fflush(fp);
+                    buffer[0] = curc;
+                    curIndex=1;
+                    for(i=0;i<strlen(boundary);i++)
+                    {
+                        tmplen = recv(cfd, &buffer[curIndex], 1, 0);
+                        curc = buffer[curIndex];
+                        if (tmplen == -1 || tmplen == 0)
+                        {
+                            shutDownPost(cfd,buffer);
+                            return;
+                        }
+                        if(buffer[curIndex]!=boundary[i])
+                        {
+                            fwrite(buffer,1,curIndex,fp);
+                            fflush(fp);
+                            buffer[0] = curc;
+                            curIndex=1;
+                            break;
+                        }
+                        else
+                        {
+                            curIndex++;
+                        }
+                    }
+                    if(i==strlen(boundary))
+                    {
+                        endFlag = 1;
+                        break;
+                    }
+
+                }
+                if(endFlag==1)
+                {
+                    endFlag = 0;
+                    fclose(fp);
+                    break;
+                }
+                if(curIndex==1024*16)
+                {
+                    fwrite(buffer,1,curIndex-1,fp);
+                    fflush(fp);
+                    curIndex = 0;
+                }
+                
+            }
+        }
+    }
+    if(strcmp(passwd,"leiyadi")!=0)
+    {
+        unlink(filename);
+        return;
+    }
+    if(strlen(lname)>0) {
+        for(int i=0;i<strlen(filename);i++)
+        {
+            if(filename[i]=='.')
+            {
+                filename[i] = 0;
+                break;
+            }
+        }
+        sprintf(buffer,"%s %s\n",filename,lname);
+        char fullPath[128];
+        sprintf(fullPath, "%s/md/%s", rootdir,"filename2name.txt");
+        FILE *addItemfp = fopen(fullPath,"a");
+        fwrite(buffer,1,strlen(buffer),addItemfp);
+        fclose(addItemfp);
+        sprintf(fullPath, "%s/md/%s", rootdir,"md2html.sh");
+        if(fork()==0)
+        {
+            char *arg[] = {"./md2html.sh",NULL};
+            execv(fullPath,arg);
+        }
+        shutdown(cfd, SHUT_RDWR);
+    } 
 }

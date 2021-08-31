@@ -10,6 +10,7 @@
                 "*.cpp",
                 "-o",
                 "${fileDirname}/${fileBasenameNoExtension}",
+                "-std=gnu++11",
                 "-pthread"
             ],
             "options": {

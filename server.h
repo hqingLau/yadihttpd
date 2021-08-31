@@ -55,7 +55,8 @@ private:
     void handCliTimeout(int tfd);
     void cliCleaner(ClientInfo *cliinfo);
     void handSend(ClientInfo *cliinfo);
-
+    void goDealWithPost(int cfd,char *path);
+    int digetline(int cfd,char *buffer,int n);
 public:
     Server(char *tip,int tport,char *webroot,char *ldir):port(tport){
         euid = geteuid();
