@@ -1,11 +1,3 @@
-/**
- * 
- * 方向错误了，这里面一堆成员变量，更改都需要锁的，直接在类下面搞
- * 不可行，错误五花八门
- * 靠谱的方案应该是父进程监听，然后队列分配给子进程去处理
- * 
-*/
-
 #include "server.h"
 #include "log.h"
 #include <string.h>
@@ -14,7 +6,7 @@
 
 using std::thread;
 
-#define NTHREADS 10
+#define NTHREADS 1
 void handle_pipe(int sig){}
 
 int main(int argc,char *argv[])
@@ -26,7 +18,7 @@ int main(int argc,char *argv[])
         
         exit(1);
     }
-    //daemon(1,0);
+    daemon(1,0);
     struct sigaction action;
     action.sa_handler = handle_pipe;
     sigemptyset(&action.sa_mask);
@@ -43,17 +35,9 @@ int main(int argc,char *argv[])
         exit(1);
     }
     YADILOGINFO("start main function");
-    yadi::Server server("localhost",port,webroot,logdir);
+    yadi::SuperServer superserver("localhost",port,webroot,logdir,NTHREADS);
 
-    thread t[NTHREADS];
-    for(int i=0;i<NTHREADS;i++)
-    {
-        t[i] =thread(&yadi::Server::run,&server);
-    }
-    for(int i=0;i<NTHREADS;i++)
-    {
-        t[i].join();
-    }
+    superserver.run();
     free(webroot);
     free(logdir);
     return 0;

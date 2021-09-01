@@ -38,44 +38,37 @@ struct ClientInfo
     int tfd;
     unsigned char fileBuffer[1024*64];
 };
-class Server
+
+
+class SuperServer
 {
 private:
-    // 权限管理
-    uid_t euid;
-    uid_t servuid;
-    char ip[64];
-    int port;
     char logPrefix[64];
-    char logBuffer[256];
-    char rootdir[64];
     int servSockfd;
-    map<int,ClientInfo *> climap; // cfd->cline struct
-    map<int,int> tfd2cfd; //tfd->cfd 定时用，超过时间断开链接
+    char logBuffer[256];
     int epollfd;
-    int epollEvNum;
-    epoll_event *srvEvents;
-private:
-    void handAccept();
-    void handCliTimeout(int tfd);
-    void cliCleaner(ClientInfo *cliinfo);
-    void handSend(ClientInfo *cliinfo);
-    void goDealWithPost(int cfd,char *path);
-    int digetline(int cfd,char *buffer,int n);
+    char ip[64];
+    char rootdir[64];
+    int port;
+    int NThreads;
 public:
-    Server(char *tip,int tport,char *webroot,char *ldir):port(tport){
-        euid = geteuid();
-        servuid = getuid();
-        seteuid(servuid);
-        epollfd = epoll_create(64);
-        epollEvNum = 1024;
-        srvEvents = (epoll_event *)malloc(sizeof(epoll_event)*epollEvNum);
+    SuperServer(char *tip,int tport,char *webroot,char *ldir,int nthreads):port(tport)
+    {
+        NThreads = nthreads;
         strncpy(ip,tip,63);
-        // 放上我最喜欢的小猪猪作为前缀
-        sprintf(logPrefix,"%s/yadilog",ldir);
-        LOG::getInstance()->setPrefix(logPrefix);
+        int euid = geteuid();
+        int servuid = getuid();
+        seteuid(servuid);
         //strncpy(logPrefix,tlogPrefix,63);
         strcpy(rootdir,webroot);
+        servSockfd = socket(AF_INET, SOCK_STREAM, 0);
+        if (servSockfd == -1)
+        {
+            sprintf(logBuffer, "%s: %s", "socket", strerror(errno));
+            YADILOGERROR(logBuffer);
+            handle_error("socket");
+        }
+        //strncpy(logPrefix,tlogPrefix,63);
 
         servSockfd = socket(AF_INET, SOCK_STREAM, 0);
         if (servSockfd == -1)
@@ -84,6 +77,10 @@ public:
             YADILOGERROR(logBuffer);
             handle_error("socket");
         }
+        // 放上我最喜欢的小猪猪作为前缀
+        sprintf(logPrefix,"%s/yadilog",ldir);
+        LOG::getInstance()->setPrefix(logPrefix);
+
 
         sockaddr_in sa;
         bzero(&sa, sizeof(sockaddr));
@@ -108,11 +105,43 @@ public:
         sprintf(logBuffer, "%s:%d waiting for request...", ip, port);
         puts(logBuffer);
         YADILOGINFO(logBuffer);
-        epoll_event ev;
-        ev.events = EPOLLIN;
-        ev.data.fd = servSockfd;
-        setNonblock(servSockfd);
-        epoll_ctl(epollfd, EPOLL_CTL_ADD, servSockfd, &ev);
+        seteuid(euid);
+        //setNonblock(servSockfd);
+    }
+    void run();
+};
+
+class Server
+{
+private:
+    // 权限管理
+    uid_t euid;
+    uid_t servuid;
+    
+    char logBuffer[256];
+    char rootdir[64];
+    int servSockfd;
+    map<int,ClientInfo *> climap; // cfd->cline struct
+    map<int,int> tfd2cfd; //tfd->cfd 定时用，超过时间断开链接
+    int epollfd;
+    int epollEvNum;
+    epoll_event *srvEvents;
+private:
+    void handAccept();
+    void handCliTimeout(int tfd);
+    void cliCleaner(ClientInfo *cliinfo);
+    int handSend(ClientInfo *cliinfo);
+    void goDealWithPost(int cfd,char *path);
+    int digetline(int cfd,char *buffer,int n);
+public:
+    Server(char *webroot){
+        euid = geteuid();
+        servuid = getuid();
+        seteuid(servuid);
+        epollfd = epoll_create(64);
+        epollEvNum = 1024;
+        srvEvents = (epoll_event *)malloc(sizeof(epoll_event)*epollEvNum);
+        strcpy(rootdir,webroot);
     }
     ~Server()
     {
