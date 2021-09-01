@@ -11,10 +11,18 @@
 #include <sys/stat.h>
 #include <pthread.h>
 #include <errno.h>
+#include <signal.h>
 
 
 #include <queue>
 using std::queue;
+int uploadLock = 0;
+
+void sig_alarm_handler(int signum)
+{
+    uploadLock = 0;
+    alarm(0);
+}
 
 typedef struct
 {
@@ -56,6 +64,7 @@ void yadi::SuperServer::run()
         pthread_create(&id,NULL,servergo,(void *)rootdir);
         pthread_detach(id);
     }
+    signal(SIGALRM, sig_alarm_handler);
     for(;;)
     {
         cfd = accept(servSockfd, (sockaddr *)&sacli, &saclilen);
@@ -508,12 +517,13 @@ void shutDownPost(int cfd,char *buffer)
 void yadi::Server::goDealWithPost(int cfd,char *path)
 {
     char buffer[1024 * 16];
-    if(strcmp(path,"/blogUpload")!=0)
+    if(uploadLock==1 || strcmp(path,"/blogUpload")!=0)
     {
         shutDownPost(cfd,buffer);
         return;
     }
-
+    uploadLock = 1;
+    alarm(30);
     char contentype[]="Content-Type: multipart/form-data; boundary=";
     char boundary[64] = {0};
     boundary[0] = boundary[1] = '-';

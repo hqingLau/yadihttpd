@@ -126,6 +126,7 @@ private:
     int epollfd;
     int epollEvNum;
     epoll_event *srvEvents;
+
 private:
     void handAccept();
     void handCliTimeout(int tfd);
