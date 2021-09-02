@@ -617,7 +617,7 @@ void yadi::Server::goDealWithPost(int cfd,char *path)
                 shutDownPost(cfd,buffer);
                 return;
             }
-            int curc = 0;
+            char curc = 0;
             int lastc = 0;
             int curIndex = 0;
             char fullPath[128];
@@ -639,10 +639,14 @@ void yadi::Server::goDealWithPost(int cfd,char *path)
                 while (curc == '\n')
                 {
                     //\n之前先写入
-                    fwrite(buffer,1,curIndex-2,fp);
-                    fflush(fp);
-                    buffer[0] = curc;
-                    curIndex=1;
+                    if(curIndex>1)
+                    {
+                        fwrite(buffer,1,curIndex-1,fp);
+                        fflush(fp);
+                        buffer[0] = curc;
+                        curIndex=1;
+                    }
+                    
                     for(i=0;i<strlen(boundary);i++)
                     {
                         tmplen = recv(cfd, &buffer[curIndex], 1, 0);

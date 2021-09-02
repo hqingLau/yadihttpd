@@ -9,7 +9,7 @@
             "type": "cppdbg",
             "request": "launch",
             "program": "${fileDirname}/${fileBasenameNoExtension}",
-            "args": ["10240","/home/pi/wwwtest","./"],
+            "args": ["10240","/home/pi/www","./"],
             "stopAtEntry": false,
             "cwd": "${fileDirname}",
             "environment": [],
