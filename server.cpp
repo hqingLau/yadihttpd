@@ -240,21 +240,14 @@ void yadi::Server::run()
                 int is404 = 0;
                 struct stat statbuf;
                 int fileStat = stat(cliinfo->absoluteFilePath, &statbuf);
-                if (fileStat != 0)
+                if ((fileStat != 0)||(S_ISDIR(statbuf.st_mode) == 1)||(statbuf.st_uid != euid))
                 {
                     is404 = 1;
                 }
-                else if (S_ISDIR(statbuf.st_mode) == 1)
+                else
                 {
-                    is404 = 1;
+                    direqfd = fopen(cliinfo->absoluteFilePath, "rb");
                 }
-                // 增加文件权限管理
-                else if (statbuf.st_uid != euid)
-                {
-                    is404 = 1;
-                }
-                direqfd = fopen(cliinfo->absoluteFilePath, "rb");
-
                 if (direqfd == NULL || is404 == 1)
                 {
                     sprintf(logBuffer, "%s:%d 404 no such file.", cliinfo->cliip, cliinfo->cliport);
