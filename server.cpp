@@ -542,6 +542,7 @@ void yadi::Server::goDealWithPost(int cfd,char *path)
     }
     char passwd[128];
     char lname[128];
+    char label[128];
     char filename[128];
     char name[64];
     if((digetline(cfd,buffer,1024)==-1)||(strcmp(buffer,boundary)!=0))
@@ -601,6 +602,15 @@ void yadi::Server::goDealWithPost(int cfd,char *path)
                 return;
             }
         }
+
+        else if(strcmp(name,"label")==0)
+        {
+            while(strlen(buffer)>0) digetline(cfd,buffer,1024);
+            digetline(cfd,buffer,1024);
+            strncpy(label,buffer,127);
+
+        }
+
         else if(strcmp(name,"file")==0)
         {
             while(strlen(buffer)>0) digetline(cfd,buffer,1024);
@@ -699,7 +709,7 @@ void yadi::Server::goDealWithPost(int cfd,char *path)
                 break;
             }
         }
-        sprintf(buffer,"%s %s\n",filename,lname);
+        sprintf(buffer,"%s %s %s\n",filename,lname,label);
         char fullPath[128];
         sprintf(fullPath, "%s/md/%s", rootdir,"filename2name.txt");
         FILE *addItemfp = fopen(fullPath,"a");
