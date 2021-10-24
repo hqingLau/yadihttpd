@@ -1,10 +1,15 @@
+[![github](https://img.shields.io/badge/作者-hqinglau-white.svg)](https://orzlinux.cn)
+[![github](https://img.shields.io/badge/博客-orzlinux.cn-blue.svg)](https://orzlinux.cn)
+[![github](https://img.shields.io/badge/csdn-@hqinglau-brightgreen.svg)](https://blog.csdn.net/qq_36704378?spm=1010.2135.3001.5343&type=blog)
+
+
 ## 0.13 版本
 
 ✅ 队列多线程
 
 ✅ 增加了上传文件功能，上传之后自动执行脚本。
 
-✅ 增加了euid和文件所有者判别。
+✅ 增加了文件所有者判别。
 
 使用方法如下:
 
