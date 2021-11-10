@@ -6,6 +6,11 @@
 
 ## v0.13
 
+📚 大致效果
+
+![image-20210819154942545](https://gitee.com/hqinglau/img/raw/master/img/20210824120227.png)
+
+
 ✅ 队列多线程
 
 ✅ 增加了上传文件功能，上传之后自动执行脚本。
@@ -27,11 +32,6 @@ pi@centos:~/yadihttpd$ sudo ./yadihttpd 80 /home/pi/www /home/pi/yadihttpdlog
 
 
 [【博客主页】](https://www.orzlinux.cn)
-
-
-📚 大致效果
-
-![image-20210819154942545](https://gitee.com/hqinglau/img/raw/master/img/20210824120227.png)
 
 
 
