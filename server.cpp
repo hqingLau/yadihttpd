@@ -65,6 +65,9 @@ void yadi::SuperServer::run()
         pthread_detach(id);
     }
     signal(SIGALRM, sig_alarm_handler);
+    // 冷静三秒再接收
+    sleep(3);
+    seteuid(getuid());
     for(;;)
     {
         cfd = accept(servSockfd, (sockaddr *)&sacli, &saclilen);
@@ -98,7 +101,7 @@ void yadi::Server::run()
     for (;;)
     {
         handAccept();
-        readyFdNum = epoll_wait(epollfd, srvEvents, epollEvNum, 200);
+        readyFdNum = epoll_wait(epollfd, srvEvents, epollEvNum, 20);
         for (int i = 0; i < readyFdNum; i++)
         {
             curfd = srvEvents[i].data.fd;
@@ -316,6 +319,8 @@ void yadi::Server::run()
             if ((srvEvents[i].events & EPOLLOUT))
             {
                 // 到这里的都是第一次没读完，接着读的
+                if (climap.find(curfd) == climap.end())
+                    continue;
                 ClientInfo *cliinfo = climap[curfd];
                 if (cliinfo == NULL)
                     continue;
@@ -365,8 +370,8 @@ void yadi::Server::handAccept()
     cliinfo->fileBufferSent = cliinfo->fileBufferlen = 0;
     cliinfo->md2html = false;
     sprintf(logBuffer, "%s:%d connected", cliinfo->cliip, cliinfo->cliport);
-    YADILOGINFO(logBuffer);
-    printf("%s\n", logBuffer);
+    //YADILOGINFO(logBuffer);
+    //printf("%s\n", logBuffer);
     epoll_event ev;
     ev.events = EPOLLIN;
     ev.data.fd = cfd;
@@ -374,7 +379,7 @@ void yadi::Server::handAccept()
     epoll_ctl(epollfd, EPOLL_CTL_ADD, cfd, &ev);
     int tfd = timerfd_create(CLOCK_MONOTONIC, TFD_NONBLOCK);
     itimerspec time_intv;
-    time_intv.it_value.tv_sec = 60;
+    time_intv.it_value.tv_sec =300;
     time_intv.it_value.tv_nsec = 0;
     time_intv.it_interval.tv_sec = 0;
     time_intv.it_interval.tv_nsec = 0;
@@ -443,7 +448,7 @@ void yadi::Server::cliCleaner(ClientInfo *cliinfo)
     close(cfd);
     close(tfd);
     cliinfo = nullptr;
-    YADILOGINFO(logBuffer);
+    //YADILOGINFO(logBuffer);
 }
 
 int yadi::Server::handSend(ClientInfo *cliinfo)
@@ -502,7 +507,7 @@ int yadi::Server::digetline(int cfd,char *buffer,int n)
 void shutDownPost(int cfd,char *buffer)
 {
     garbageRecv(cfd);
-    sprintf(buffer, "HTTP/1.1 404 not found\r\nConnection:close\r\nServer:dihttpd\r\nContent-Type:text/html\r\n\r\n");
+    sprintf(buffer, "HTTP/1.1 500 Internal Server Error\r\nConnection:close\r\nServer:dihttpd\r\nContent-Type:text/html\r\n\r\n");
     send(cfd, buffer, strlen(buffer), MSG_NOSIGNAL);
     shutdown(cfd, SHUT_RDWR);
 }
@@ -698,6 +703,7 @@ void yadi::Server::goDealWithPost(int cfd,char *path)
     if(strcmp(passwd,"leiyadi")!=0)
     {
         unlink(filename);
+        shutDownPost(cfd,buffer);
         return;
     }
     if(strlen(lname)>0) {
@@ -721,6 +727,10 @@ void yadi::Server::goDealWithPost(int cfd,char *path)
             char *arg[] = {"./md2html.sh",NULL};
             execv(fullPath,arg);
         }
+        // sprintf(buffer, "HTTP/1.1 200 OK\r\nConnection:close\r\nServer:dihttpd\r\nContent-Type:text/html\r\n\r\n");
+        // send(cfd, buffer, strlen(buffer), MSG_NOSIGNAL);
+        sprintf(buffer, "HTTP/1.1 200 OK\r\nConnection:close\r\nServer:dihttpd\r\nContent-Type:text/html\r\n\r\n");
+        send(cfd, buffer, strlen(buffer), MSG_NOSIGNAL);
         shutdown(cfd, SHUT_RDWR);
     } 
 }

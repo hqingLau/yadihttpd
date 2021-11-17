@@ -6,7 +6,7 @@
 
 using std::thread;
 
-#define NTHREADS 1
+#define NTHREADS 2
 void handle_pipe(int sig){}
 
 int main(int argc,char *argv[])
@@ -18,7 +18,7 @@ int main(int argc,char *argv[])
         
         exit(1);
     }
-    daemon(1,0);
+    //daemon(1,0);
     struct sigaction action;
     action.sa_handler = handle_pipe;
     sigemptyset(&action.sa_mask);

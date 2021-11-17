@@ -70,13 +70,6 @@ public:
         }
         //strncpy(logPrefix,tlogPrefix,63);
 
-        servSockfd = socket(AF_INET, SOCK_STREAM, 0);
-        if (servSockfd == -1)
-        {
-            sprintf(logBuffer, "%s: %s", "socket", strerror(errno));
-            YADILOGERROR(logBuffer);
-            handle_error("socket");
-        }
         // 放上我最喜欢的小猪猪作为前缀
         sprintf(logPrefix,"%s/yadilog",ldir);
         LOG::getInstance()->setPrefix(logPrefix);
@@ -101,7 +94,9 @@ public:
             YADILOGERROR(logBuffer);
             handle_error("listen");
         }
-
+        int opt = 1;
+        setsockopt(servSockfd,SOL_SOCKET,SO_REUSEADDR,(const void *)&opt,sizeof(opt));
+       
         sprintf(logBuffer, "%s:%d waiting for request...", ip, port);
         puts(logBuffer);
         YADILOGINFO(logBuffer);
@@ -138,7 +133,7 @@ public:
     Server(char *webroot){
         euid = geteuid();
         servuid = getuid();
-        seteuid(servuid);
+        
         epollfd = epoll_create(64);
         epollEvNum = 1024;
         srvEvents = (epoll_event *)malloc(sizeof(epoll_event)*epollEvNum);
