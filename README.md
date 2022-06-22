@@ -8,7 +8,7 @@
 
 📚 大致效果
 
-![image-20210819154942545](https://gitee.com/hqinglau/img/raw/master/img/20210824120227.png)
+![image-20210819154942545](https://orzlinux.cn/img/before-gitee-img/img/20210824120227.png)
 
 
 ✅ 队列多线程
@@ -54,21 +54,21 @@ pi@centos:~/yadihttpd$ sudo ./yadihttpd 80 /home/pi/www /home/pi/yadihttpdlog
 
 显示具体行号，函数，文件名
 
-![image-20210730142145686](https://gitee.com/hqinglau/img/raw/master/img/20210730142145.png)
+![image-20210730142145686](https://orzlinux.cn/img/before-gitee-img/img/20210730142145.png)
 
 查看日志线程：
 
-![image-20210803150550856](https://gitee.com/hqinglau/img/raw/master/img/20210803150552.png)
+![image-20210803150550856](https://orzlinux.cn/img/before-gitee-img/img/20210803150552.png)
 
 日志线程一般睡眠状态（队列空，代表不忙，释放锁，阻塞一秒）。
 
 🔴 访问链接前日志：
 
-![image-20210803150859354](https://gitee.com/hqinglau/img/raw/master/img/20210803150901.png)
+![image-20210803150859354](https://orzlinux.cn/img/before-gitee-img/img/20210803150901.png)
 
 🟢 访问链接后日志：
 
-![image-20210803150932453](https://gitee.com/hqinglau/img/raw/master/img/20210803150935.png)
+![image-20210803150932453](https://orzlinux.cn/img/before-gitee-img/img/20210803150935.png)
 
 🟢 日志记录一定条数时（如5000），自动切换文件。
 
@@ -76,13 +76,13 @@ pi@centos:~/yadihttpd$ sudo ./yadihttpd 80 /home/pi/www /home/pi/yadihttpdlog
 
 📚 图片读取
 
-![image-20210819155618366](https://gitee.com/hqinglau/img/raw/master/img/20210819155620.png)
+![image-20210819155618366](https://orzlinux.cn/img/before-gitee-img/img/20210819155620.png)
 
 📚 大文件支持 （may be some bugs)
 
 epollout处理缓冲区、设置非阻塞fd, 服务器可以同时处理多个请求。
 
-![image-20210802174121489](https://gitee.com/hqinglau/img/raw/master/img/20210802174123.png)
+![image-20210802174121489](https://orzlinux.cn/img/before-gitee-img/img/20210802174123.png)
 
 📚 服务器文件根目录布局
 
@@ -121,19 +121,19 @@ pi@raspberrypi:~/www $ tree
 
 🔍 fd泄露排查
 
-![image-20210806225824541](https://gitee.com/hqinglau/img/raw/master/img/20210806225826.png)
+![image-20210806225824541](https://orzlinux.cn/img/before-gitee-img/img/20210806225826.png)
 
 是有地方忘了close了。测试了一会，如下图，貌似没有fd泄露的问题了，但是还有个偶尔段错误还没查出来。
 
-![image-20210806225741355](https://gitee.com/hqinglau/img/raw/master/img/20210806225742.png)
+![image-20210806225741355](https://orzlinux.cn/img/before-gitee-img/img/20210806225742.png)
 
 
 🔍 段错误排查
 
 
-![image-20210809105458451](https://gitee.com/hqinglau/img/raw/master/img/20210809105500.png)
+![image-20210809105458451](https://orzlinux.cn/img/before-gitee-img/img/20210809105500.png)
 
-![image-20210809105519757](https://gitee.com/hqinglau/img/raw/master/img/20210809105521.png)
+![image-20210809105519757](https://orzlinux.cn/img/before-gitee-img/img/20210809105521.png)
 
 
 🔍 url过长：感谢大晚上测试我网站的恶意程序
@@ -142,10 +142,11 @@ pi@raspberrypi:~/www $ tree
 🔍 url直接访问目录错误修复，同上。
 
 
+
 ### 多线程测试
 
-![image-20210902111155596](https://gitee.com/hqinglau/img/raw/master/img/20210902111155.png)
+![image-20210902111155596](https://orzlinux.cn/img/before-gitee-img/img/20210902111155.png)
 
 一个accpet线程，一个日志线程，三个子线程处理请求，每秒请求每个核大概1400。
 
-![image-20210902111409535](https://gitee.com/hqinglau/img/raw/master/img/20210902111409.png)
+![image-20210902111409535](https://orzlinux.cn/img/before-gitee-img/img/20210902111409.png)
