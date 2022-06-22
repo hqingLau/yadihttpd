@@ -41,6 +41,7 @@ void garbageRecv(int curfd)
     char buf[1025];
     while(tmplen>0){
         tmplen = recv(curfd, buf, 1024, 0);
+		sleep(1);
     }
 }
 
@@ -67,7 +68,7 @@ void yadi::SuperServer::run()
     signal(SIGALRM, sig_alarm_handler);
     // 冷静三秒再接收
     sleep(3);
-    seteuid(getuid());
+    //seteuid(getuid());
     for(;;)
     {
         cfd = accept(servSockfd, (sockaddr *)&sacli, &saclilen);
@@ -101,7 +102,7 @@ void yadi::Server::run()
     for (;;)
     {
         handAccept();
-        readyFdNum = epoll_wait(epollfd, srvEvents, epollEvNum, 20);
+        readyFdNum = epoll_wait(epollfd, srvEvents, epollEvNum, 50);
         for (int i = 0; i < readyFdNum; i++)
         {
             curfd = srvEvents[i].data.fd;
@@ -134,13 +135,25 @@ void yadi::Server::run()
                 char lastc = 0;
                 char curc = 0;
                 int di_stat = 0;
+				int rcTime = 0;
                 while(1) 
                 {
+					if (rcTime==10) {
+						rcTime=0;
+						break;
+					}
+
                     tmplen = recv(curfd, &cliinfo->req_content[reqlen], 1, 0);
+					if (errno == EINTR) {
+						rcTime++;
+						continue;
+					}
                     if (tmplen == -1 || tmplen == 0)
                     {
-                        if (tmplen == -1 && (errno == EAGAIN || errno == EWOULDBLOCK))
+                        if (tmplen == -1 && (errno == EAGAIN || errno == EWOULDBLOCK)){
+							rcTime++;
                             continue;
+						}
                         // method2: 对方关闭链接
                         // shutdown(cliinfo->cfd,SHUT_RDWR);
                         cliCleaner(cliinfo);
@@ -201,13 +214,13 @@ void yadi::Server::run()
 
                     sprintf(logBuffer, "%s:%d only GET and Post method supported now! Got: %s\n", cliinfo->cliip, cliinfo->cliport, cliinfo->method);
                     YADILOGINFO(logBuffer);
-                    if (strncmp(cliinfo->method, "POST", 4) == 0)
-                    {
-                        char path[256];
-                        strncpy(path,cliinfo->filepath,255);
-                        goDealWithPost(cliinfo->cfd,path);
-                        continue;
-                    }
+                    //if (strncmp(cliinfo->method, "POST", 4) == 0)
+                    //{
+                    //    char path[256];
+                    //    strncpy(path,cliinfo->filepath,255);
+                    //    goDealWithPost(cliinfo->cfd,path);
+                    //    continue;
+                   // }
                     garbageRecv(cliinfo->cfd);
                     sprintf(outputhead, "HTTP/1.1 404 not found\r\nConnection:close\r\nServer:dihttpd\r\nContent-Type:text/html\r\n\r\n");
                     send(cliinfo->cfd, outputhead, strlen(outputhead), MSG_NOSIGNAL);
@@ -243,7 +256,8 @@ void yadi::Server::run()
                 int is404 = 0;
                 struct stat statbuf;
                 int fileStat = stat(cliinfo->absoluteFilePath, &statbuf);
-                if ((fileStat != 0)||(S_ISDIR(statbuf.st_mode) == 1)||(statbuf.st_uid != euid))
+                //if ((fileStat != 0)||(S_ISDIR(statbuf.st_mode) == 1)||(statbuf.st_uid != euid))
+                if ((fileStat != 0)||(S_ISDIR(statbuf.st_mode) == 1))
                 {
                     is404 = 1;
                 }
@@ -278,10 +292,10 @@ void yadi::Server::run()
                 // printf("req type: %s\n",suffix);
                 if (strncmp(cliinfo->suffix, "jpg", 3) == 0)
                     sprintf(outputhead, "HTTP/1.1 200 OK\r\nConnection:close\r\nServer:dihttpd\r\nContent-Type:image/jpeg\r\n\r\n");
-                if (strncmp(cliinfo->suffix, "png", 3) == 0)
+                else if (strncmp(cliinfo->suffix, "png", 3) == 0)
                     sprintf(outputhead, "HTTP/1.1 200 OK\r\nConnection:close\r\nServer:dihttpd\r\nContent-Type:image/png\r\n\r\n");
 
-                if (strncmp(cliinfo->suffix, "ico", 3) == 0)
+                else if (strncmp(cliinfo->suffix, "ico", 3) == 0)
                     sprintf(outputhead, "HTTP/1.1 200 OK\r\nConnection:close\r\nServer:dihttpd\r\nContent-Type:image/x-icon\r\n\r\n");
                 else if (strncmp(cliinfo->suffix, "html", 4) == 0)
                 {
@@ -379,7 +393,7 @@ void yadi::Server::handAccept()
     epoll_ctl(epollfd, EPOLL_CTL_ADD, cfd, &ev);
     int tfd = timerfd_create(CLOCK_MONOTONIC, TFD_NONBLOCK);
     itimerspec time_intv;
-    time_intv.it_value.tv_sec =300;
+    time_intv.it_value.tv_sec =100;
     time_intv.it_value.tv_nsec = 0;
     time_intv.it_interval.tv_sec = 0;
     time_intv.it_interval.tv_nsec = 0;
@@ -511,6 +525,7 @@ void shutDownPost(int cfd,char *buffer)
     send(cfd, buffer, strlen(buffer), MSG_NOSIGNAL);
     shutdown(cfd, SHUT_RDWR);
 }
+/**
 
 void yadi::Server::goDealWithPost(int cfd,char *path)
 {
@@ -734,3 +749,4 @@ void yadi::Server::goDealWithPost(int cfd,char *path)
         shutdown(cfd, SHUT_RDWR);
     } 
 }
+**/
