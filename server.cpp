@@ -39,9 +39,13 @@ void garbageRecv(int curfd)
 {
     int tmplen = 1;
     char buf[1025];
+	int count = 0;
     while(tmplen>0){
         tmplen = recv(curfd, buf, 1024, 0);
-		sleep(1);
+		count++;
+		if(count==10) {
+			break;
+		}
     }
 }
 
