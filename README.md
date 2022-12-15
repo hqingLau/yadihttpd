@@ -3,8 +3,6 @@
 [![github](https://img.shields.io/badge/博客-orzlinux.cn-brightgreen.svg)](https://orzlinux.cn)
 [![github](https://img.shields.io/badge/release-v0.13-brightgreen.svg)](https://orzlinux.cn)
 
-### 注：toy性质，功能较简单，为稳定性，[https://orzlinux.cn](https://orzlinux.cn)后台转为使用lighttpd。
-
 ## v0.13
 
 
